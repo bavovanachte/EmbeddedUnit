@@ -1,0 +1,82 @@
+1.Overview
+
+    tbcuppa & tbuma is developed by cuppa project.
+    It is the tool which generates the test code for CUnit.
+    このちび河童＆ちび馬の吐き出すコードをEmbedded Unit用に書き換えました．
+
+    Original tbcuppa & tbuma can be downloaded from the following URL.
+
+    cuppa project
+    http://sourceforge.jp/projects/cuppa/
+
+    cuppa (CppUnit PreProcess Aid)
+    http://www.unittest.org/
+
+
+2.Release Contents
+    [tools]
+    +- readme.txt       : japanese
+    +- readme_en.txt    : this file
+    +- makefile         :
+    +- COPYING          : copyright notice
+    +- [tbcuppa]        : tcuppa & bcuppa source code
+    +- [tbuma]          : tuma & buma source code
+
+
+3.Compile
+    toolsディレクトに移動して'make'コマンドを実行してください．
+    toolsディレクトリに以下の４つのアプリケーションが作成されます．
+
+    tcuppa  ：テストグループの雛形を生成します．
+    bcuppa  ：tcuppaで生成されたテストグループを実行するmainを作成します．
+    tuma    ：tcuppaで生成されたテストグループにテストを追加します．
+    buma    ：bcuppaで生成されたmainにテスト実行コードを追加します．
+
+
+4.Usage
+
+4.1.tcuppa
+    My.hに定義されている関数をテストするテストグループ MyTest を生成したい場合
+
+    $ tcuppa My.h MyTest testXxx testYyy
+
+    と入力する．そうするとMy.hをインクルードし空のテスト関数
+
+        static void testXxx(void)
+        static void testYyy(void)
+
+    を実装したMyTest.c が生成される．ヘッダは省略可能,また複数指定可能.
+
+4.2.bcuppa
+    bcuppaはtcuppaによって生成されたテストグループを順次実行する
+    メインルーチンを生成します．
+    先ほど作成した MyTest を実行するコード AllTests を生成するには
+
+    $ bcuppa AllTests MyTest
+
+    と入力する．またカレントディレクトリに ATest.c BTest.cと在った場合
+
+    $ bcuppa AllTests *Test.c
+
+    のようなコマンドの指定が可能です．
+
+4.3.tuma
+    tcuppaで生成されたテストグループにテストを追加します．
+    やはり先ほど作成した MyTest にテスト testZzz を追加したい場合、
+
+    $ tuma MyTest testZzz
+
+    と入力します．
+
+4.4.buma
+    bcuppaで生成された AllTests に実行コードを追加します．
+    新しく YourTest と言うテストグループを生成します.
+
+    $ tcuppa YourTest testXxx testYyy
+
+    そして YourTest を AllTests に追加します．
+
+    $ buma AllTests YourTest
+
+------------------------------------------------------------------------------
+$Id$
