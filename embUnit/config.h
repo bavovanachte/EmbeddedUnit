@@ -35,10 +35,6 @@
 #ifndef __CONFIG_H__
 #define __CONFIG_H__
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
 /*	#define NO_STDIO_PRINTF*/
 	#ifdef	NO_STDIO_PRINTF
 		extern void stdimpl_print(const char *string);
@@ -46,9 +42,5 @@ extern "C" {
 		#include<stdio.h>
 		#define stdimpl_print printf
 	#endif
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif/*__CONFIG_H__*/
