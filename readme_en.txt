@@ -7,7 +7,8 @@
 
 Embedded Unit is unit testing framework for Embedded C System. It's design was
 copied from JUnit and CUnit and more, and then adapted somewhat for Embedded C
-System. Embedded Unit does not require std C libs.
+System. Embedded Unit does not require std C libs. All objects are allocated
+to const area.
 
 ------------------------------------------------------------------------------
 

@@ -39,10 +39,10 @@
 extern "C" {
 #endif
 
-void addFailure(const char* msg, long line, const char* file);	/*TestCase.c*/
+void addFailure(const char *msg, long line, const char *file);	/*TestCase.c*/
 
-void assertImplementationInt(int expected,int actual, long line, const char* file);
-void assertImplementationCStr(const char* expected,const char* actual, long line, const char* file);
+void assertImplementationInt(int expected,int actual, long line, const char *file);
+void assertImplementationCStr(const char *expected,const char *actual, long line, const char *file);
 
 #define TEST_ASSERT_EQUAL_STRING(expected,actual)\
 	if (expected && actual && (stdimpl_strcmp(expected,actual)==0)) {} else {assertImplementationCStr(expected,actual,__LINE__,__FILE__);return;}

@@ -35,7 +35,7 @@
 #include "stdImpl.h"
 #include "AssertImpl.h"
 
-void assertImplementationInt(int expected,int actual, long line, const char* file)
+void assertImplementationInt(int expected,int actual, long line, const char *file)
 {
 	char buffer[36],*bp;
 
@@ -47,7 +47,7 @@ void assertImplementationInt(int expected,int actual, long line, const char* fil
 	addFailure(buffer, line, file);
 }
 
-void assertImplementationCStr(const char* expected,const char* actual, long line, const char* file)
+void assertImplementationCStr(const char *expected,const char *actual, long line, const char *file)
 {
 	char buffer[64],*bp;
 	int el,al;

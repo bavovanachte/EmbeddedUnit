@@ -41,7 +41,7 @@ extern "C" {
 
 /*	#define NO_STDIO_PRINTF*/
 	#ifdef	NO_STDIO_PRINTF
-		extern void stdimpl_print(const char* string);
+		extern void stdimpl_print(const char *string);
 	#else
 		#include<stdio.h>
 		#define stdimpl_print printf
