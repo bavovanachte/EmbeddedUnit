@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -O
 LDFLAGS =
-INCLUDES = -I..
-LIBS = -L../embUnit/
+INCLUDES = ..
+LIBS = ../lib
 RM = rm
 TARGET = embUnitTest
 OBJS = AllTests.o RepeatedTestTest.o assertTest.o stdImplTest.o TestCallerTest.o TestCaseTest.o TestResultTest.o MockTestCase.o
@@ -10,10 +10,10 @@ OBJS = AllTests.o RepeatedTestTest.o assertTest.o stdImplTest.o TestCallerTest.o
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) -o $@ $(OBJS) $(LIBS) -lembUnit
+	$(CC) -o $@ $(OBJS) -L$(LIBS) -lembUnit
 
 .c.o:
-	$(CC) $(CFLAGS) $(INCLUDES) -c $<
+	$(CC) $(CFLAGS) -I$(INCLUDES) -c $<
 
 clean:
 	-$(RM) $(TARGET) $(OBJS)

@@ -1,12 +1,12 @@
 CC = gcc
 CFLAGS = -O
-INCLUDES = -I..
-LIBS = -L../embUnit/
+INCLUDES = ..
+LIBS = ../lib
 AR = ar
 ARFLAGS = ru
 RANLIB = ranlib
 RM = rm
-OUTPUT = .
+OUTPUT = ../lib/
 TARGET = libtextui.a
 OBJS = TextUIRunner.o XMLOutputter.o TextOutputter.o CompilerOutputter.o
 
@@ -17,7 +17,7 @@ $(TARGET): $(OBJS)
 	$(RANLIB) $(OUTPUT)$@
 
 .c.o:
-	$(CC) $(CFLAGS) $(INCLUDES) -c $<
+	$(CC) $(CFLAGS) -I$(INCLUDES) -c $<
 
 TextUIRunner.o: TextUIRunner.h XMLOutputter.h TextOutputter.h CompilerOutputter.h Outputter.h
 XMLOutputter.o: XMLOutputter.h Outputter.h

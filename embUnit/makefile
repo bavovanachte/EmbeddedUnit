@@ -4,7 +4,7 @@ AR = ar
 ARFLAGS = ru
 RANLIB = ranlib
 RM = rm
-OUTPUT = .
+OUTPUT = ../lib/
 TARGET = libembUnit.a
 OBJS = AssertImpl.o RepeatedTest.o stdImpl.o TestCaller.o TestCase.o TestResult.o TestRunner.o TestSuite.o
 

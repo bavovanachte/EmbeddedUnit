@@ -1,6 +1,6 @@
 all:
 	-@mkdir lib
-	-@cd ./embUnit		;$(MAKE) OUTPUT=../lib/
+	-@cd ./embUnit		;$(MAKE)
 	-@cd ./tests		;$(MAKE)
 	-@cd ./samples		;$(MAKE)
 	-@cd ./tools		;$(MAKE)
