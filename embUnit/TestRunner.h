@@ -35,14 +35,12 @@
 #ifndef	__TESTRUNNER_H__
 #define	__TESTRUNNER_H__
 
-#include "Test.h"
-
 #ifdef	__cplusplus
 extern "C" {
 #endif
 
 void TestRunner_start(void);
-void TestRunner_runTest(TestRef test);
+void TestRunner_runTest(Test* test);
 void TestRunner_end(void);
 
 #ifdef	__cplusplus

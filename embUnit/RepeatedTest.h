@@ -35,18 +35,12 @@
 #ifndef	__REPEATEDTEST_H__
 #define	__REPEATEDTEST_H__
 
-#include "Test.h"
-
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
 typedef struct __RepeatedTest	RepeatedTest;
-typedef struct __RepeatedTest*	RepeatedTestRef;
+typedef struct __RepeatedTest*	RepeatedTestRef;	/*downward compatible*/
 
 struct __RepeatedTest {
-	TestImplementRef isa;
-	TestRef test;
+	TestImplement* isa;
+	Test* test;
 	int timesRepeat;
 };
 
@@ -54,15 +48,9 @@ extern const TestImplement RepeatedTestImplement;
 
 #define	new_RepeatedTest(test,tmrp)\
 	{\
-		(TestImplementRef)&RepeatedTestImplement,\
-		(TestRef)test,\
+		(TestImplement*)&RepeatedTestImplement,\
+		(Test*)test,\
 		tmrp,\
 	}
-
-#define	RepeatedTestTypeID MakeTestTypeID('r','e','p','t')
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif/*__REPEATEDTEST_H__*/

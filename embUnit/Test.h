@@ -36,35 +36,30 @@
 #define	__TEST_H__
 
 typedef struct __TestResult		TestResult;
-typedef struct __TestResult*	TestResultRef;
+typedef struct __TestResult*	TestResultRef;/*downward compatible*/
 
 typedef struct __TestImplement	TestImplement;
-typedef struct __TestImplement*	TestImplementRef;
+typedef struct __TestImplement*	TestImplementRef;/*downward compatible*/
 
-typedef unsigned long TestTypeID;
 typedef char*(*TestNameFunction)(void*);
-typedef void(*TestRunFunction)(void*,TestResultRef);
+typedef void(*TestRunFunction)(void*,TestResult*);
 typedef int(*TestCountTestCasesFunction)(void*);
 
 struct __TestImplement {
-	TestTypeID type;
 	TestNameFunction name;
 	TestRunFunction run;
 	TestCountTestCasesFunction countTestCases;
 };
 
 typedef struct __Test	Test;
-typedef struct __Test*	TestRef;
+typedef struct __Test*	TestRef;/*downward compatible*/
 
 struct __Test {
-	TestImplementRef isa;
+	TestImplement* isa;
 };
 
-#define MakeTestTypeID(a,b,c,d)	(TestTypeID)((a<<24)|(b<<16)|(c<<8)|(d<<0))
-
-#define Test_type(t)			(t)->isa->type
-#define Test_name(t)			(t)->isa->name(t)
-#define Test_run(t,r)			(t)->isa->run(t,r)
-#define Test_countTestCases(t)	(t)->isa->countTestCases(t)
+#define Test_name(s)			((Test*)s)->isa->name(s)
+#define Test_run(s,r)			((Test*)s)->isa->run(s,r)
+#define Test_countTestCases(s)	((Test*)s)->isa->countTestCases(s)
 
 #endif/*__TEST_H__*/

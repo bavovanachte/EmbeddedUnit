@@ -34,29 +34,57 @@
  */
 #include "stdImpl.h"
 
-char* stdimpl_strcpy(char *s1, const char *s2)
+char* stdimpl_strcpy(char *dst, const char *src)
 {
+	char *start = dst;
 	char c;
 	do {
-		c = *s2;
-		*s1 = c;
-		s1++;
-		s2++;
+		c = *src;
+		*dst = c;
+		src++;
+		dst++;
 	} while (c);
-	return s1 - 1;
+	return start;
 }
 
-char* stdimpl_strncpy(char *s1, const char *s2,unsigned int size)
+char* stdimpl_strcat(char *dst, const char *src)
 {
-	char *ret = s1;
-	for (; size; size--){
-		if (*s2) {
-			*s1++ = *s2++;	ret = s1;
-		} else {
-			*s1++ = '\0';
-		}
+	char *start = dst;
+	char c;
+	do {
+		c = *dst;
+		dst++;
+	} while (c);
+	dst--;
+	do {
+		c = *src;
+		*dst = c;
+		src++;
+		dst++;
+	} while (c);
+	return start;
+}
+
+char* stdimpl_strncat(char *dst, const char *src,unsigned int count)
+{
+	char *start = dst;
+	char c;
+	do {
+		c = *dst;
+		dst++;
+	} while (c);
+	dst--;
+	if (count) {
+		do {
+			c = *src;
+			*dst = c;
+			src++;
+			dst++;
+			count--;
+		} while (c && count);
+		*dst = '\0';
 	}
-	return ret;
+	return start;
 }
 
 int stdimpl_strlen(const char *str)
@@ -64,7 +92,8 @@ int stdimpl_strlen(const char *str)
     const char *estr = str;
 	char c;
 	do {
-		c = *estr++;
+		c = *estr;
+		estr++;
 	} while (c);
     return ((int)(estr - str - 1));
 }
@@ -81,9 +110,10 @@ int stdimpl_strcmp(const char *s1, const char *s2)
 
 static char* _xtoa(unsigned long v,char *string, int r, int is_neg)
 {
+	char *start = string;
 	char buf[33],*p;
 
-	p=buf;
+	p = buf;
 
 	do {
 		*p++ = "0123456789abcdef"[(v % r) & 0xf];
@@ -99,28 +129,13 @@ static char* _xtoa(unsigned long v,char *string, int r, int is_neg)
 
 	*string = '\0';
 
-	return string;
+	return start;
 }
 
 char* stdimpl_itoa(int v,char *string,int r)
 {
-    if (r == 10 && v < 0) {
+    if ((r == 10) && (v < 0)) {
 		return _xtoa((unsigned long)(-v), string, r, 1);
 	}
-	return _xtoa((unsigned long)v, string, r, 0);
-}
-
-int stdimpl_memcmp(const void *s1, const void *s2,unsigned int count)
-{
-	int v1,v2;
-	if (!count)
-		return 0;
-	do {
-		v1 = *(unsigned char*)s1;
-		v2 = *(unsigned char*)s2;
-		s1 = (unsigned char*)s1 + 1;
-		s2 = (unsigned char*)s2 + 1;
-		count--;
-	} while (count && (v1==v2));
-	return v1 - v2;
+	return _xtoa((unsigned long)(v), string, r, 0);
 }

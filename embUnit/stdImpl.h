@@ -39,16 +39,16 @@
 extern "C" {
 #endif
 
-#ifndef	NULL
+#ifndef NULL
 #define	NULL	0
 #endif
 
 char* stdimpl_strcpy(char *s1, const char *s2);
-char* stdimpl_strncpy(char *s1, const char *s2,unsigned int size);
+char* stdimpl_strcat(char *dst, const char *src);
+char* stdimpl_strncat(char *dst, const char *src,unsigned int count);
 int stdimpl_strlen(const char *str);
 int stdimpl_strcmp(const char *s1, const char *s2);
 char* stdimpl_itoa(int v,char *string,int r);
-int stdimpl_memcmp(const void *s1, const void *s2,unsigned int count);
 
 #ifdef	__cplusplus
 }

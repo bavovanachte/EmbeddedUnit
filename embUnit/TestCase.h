@@ -35,17 +35,11 @@
 #ifndef	__TESTCASE_H__
 #define	__TESTCASE_H__
 
-#include "Test.h"
-
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
 typedef struct __TestCase	TestCase;
-typedef struct __TestCase*	TestCaseRef;
+typedef struct __TestCase*	TestCaseRef;/*compatible embUnit1.0*/
 
 struct __TestCase {
-	TestImplementRef isa;
+	TestImplement* isa;
 	char *name;
 	void(*setUp)(void);
 	void(*tearDown)(void);
@@ -56,17 +50,11 @@ extern const TestImplement TestCaseImplement;
 
 #define new_TestCase(name,setUp,tearDown,runTest)\
 	{\
-		(TestImplementRef)&TestCaseImplement,\
+		(TestImplement*)&TestCaseImplement,\
 		name,\
 		setUp,\
 		tearDown,\
 		runTest,\
 	}
-
-#define TestCaseTypeID MakeTestTypeID('c','a','s','e')
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif/*__TESTCASE_H__*/

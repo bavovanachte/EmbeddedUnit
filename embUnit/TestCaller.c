@@ -32,35 +32,35 @@
  *
  * $Id$
  */
+#include "Test.h"
 #include "TestCase.h"
-#include "TestResult.h"
 #include "TestCaller.h"
 
-char* TestCaller_name(TestCallerRef self)
+char* TestCaller_name(TestCaller* self)
 {
 	return self->name;
 }
 
-void TestCaller_run(TestCallerRef self,TestResultRef result)
+void TestCaller_run(TestCaller* self,TestResult* result)
 {
-	TestCase cs =new_TestCase(0,0,0,0);
+	TestCase cs = new_TestCase(0,0,0,0);
 	int i;
 	cs.setUp= self->setUp;
 	cs.tearDown	= self->tearDown;
 	for (i=0; i<self->numberOfFixtuers; i++) {
 		cs.name	= self->fixtuers[i].name;
 		cs.runTest	= self->fixtuers[i].test;
-		cs.isa->run(&cs,result);
+		/*run test*/
+		Test_run(&cs,result);
 	}
 }
 
-int TestCaller_countTestCases(TestCallerRef self)
+int TestCaller_countTestCases(TestCaller* self)
 {
 	return self->numberOfFixtuers;
 }
 
 const TestImplement TestCallerImplement = {
-	(TestTypeID)				TestCallerTypeID,
 	(TestNameFunction)			TestCaller_name,
 	(TestRunFunction)			TestCaller_run,
 	(TestCountTestCasesFunction)TestCaller_countTestCases,

@@ -41,7 +41,7 @@ static void XMLOutputter_printHeader(OutputterRef self)
 {
 	fprintf(stdout,"<?xml version=\"1.0\" encoding='shift_jis' standalone='yes' ?>\n");
 	if (stylesheet_)
-	fprintf(stdout,"<?xml-stylesheet　type=\"text/css\" href=\"%s\" ?>\n",stylesheet_);
+	fprintf(stdout,"<?xml-stylesheet type=\"text/xsl\" href=\"%s\" ?>\n",stylesheet_);
 	fprintf(stdout,"<TestRun>\n");
 }
 

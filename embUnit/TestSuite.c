@@ -32,38 +32,41 @@
  *
  * $Id$
  */
+#include "Test.h"
 #include "TestSuite.h"
-#include "TestResult.h"
 
-char* TestSuite_name(TestSuiteRef self)
+char* TestSuite_name(TestSuite* self)
 {
 	return self->name;
 }
 
-void TestSuite_run(TestSuiteRef self,TestResultRef result)
+void TestSuite_run(TestSuite* self,TestResult* result)
 {
 	int i;
-	TestRef test;
-	for (i=0; i<self->numberOfTests; i++) {
-		test = self->tests[i];
-		Test_run(test, result);
+	Test* test;
+	if (self->tests) {
+		for (i=0; i<self->numberOfTests; i++) {
+			test = self->tests[i];
+			Test_run(test, result);
+		}
 	}
 }
 
-int TestSuite_countTestCases(TestSuiteRef self)
+int TestSuite_countTestCases(TestSuite* self)
 {
 	int count = 0;
 	int i;
-	TestRef test;
-	for (i=0; i<self->numberOfTests; i++) {
-		test = self->tests[i];
-		count += Test_countTestCases(test);
+	Test* test;
+	if (self->tests) {
+		for (i=0; i<self->numberOfTests; i++) {
+			test = self->tests[i];
+			count += Test_countTestCases(test);
+		}
 	}
 	return count;
 }
 
 const TestImplement TestSuiteImplement = {
-	(TestTypeID)				TestSuiteTypeID,
 	(TestNameFunction)			TestSuite_name,
 	(TestRunFunction)			TestSuite_run,
 	(TestCountTestCasesFunction)TestSuite_countTestCases,

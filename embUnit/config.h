@@ -43,4 +43,6 @@
 		#define stdimpl_print printf
 	#endif
 
+	#define ASSERT_STRING_BUFFER_MAX	64
+
 #endif/*__CONFIG_H__*/

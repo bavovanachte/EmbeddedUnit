@@ -20,11 +20,11 @@ $(TARGET): $(OBJS)
 AssertImpl.o: AssertImpl.h stdImpl.h
 RepeatedTest.o: RepeatedTest.h Test.h
 stdImpl.o: stdImpl.h
-TestCaller.o: TestCaller.h TestResult.h TestCase.h Test.h
-TestCase.o: TestCase.h TestResult.h Test.h
-TestResult.o: TestResult.h Test.h TestListener.h
-TestRunner.o: TestRunner.h TestResult.h Test.h TestListener.h
-TestSuite.o: TestSuite.h TestResult.h Test.h
+TestCaller.o: TestCaller.h TestResult.h TestListener.h TestCase.h Test.h
+TestCase.o: TestCase.h TestResult.h TestListener.h Test.h
+TestResult.o: TestResult.h TestListener.h Test.h
+TestRunner.o: TestRunner.h TestResult.h TestListener.h Test.h stdImpl.h config.h
+TestSuite.o: TestSuite.h TestResult.h TestListener.h Test.h
 
 clean:
 	-$(RM) $(OBJS) $(TARGET)

@@ -32,25 +32,34 @@
  *
  * $Id$
  */
+#include "config.h"
 #include "stdImpl.h"
 #include "AssertImpl.h"
 
 void assertImplementationInt(int expected,int actual, long line, const char *file)
 {
-	char buffer[36],*bp;
+	char buffer[32];	/*"exp -2147483647 was -2147483647"*/
+	char numbuf[12];	/*32bit int decimal maximum column is 11 (-2147483647~2147483647)*/
 
-	bp = stdimpl_strcpy(buffer, "exp ");
-	bp = stdimpl_itoa(expected, bp, 10);
-	bp = stdimpl_strcpy(bp, " was ");
-	bp = stdimpl_itoa(actual, bp, 10);
+	stdimpl_strcpy(buffer, "exp ");
+
+	{	stdimpl_itoa(expected, numbuf, 10);
+		stdimpl_strncat(buffer, numbuf, 11);	}
+
+	stdimpl_strcat(buffer, " was ");
+
+	{	stdimpl_itoa(actual, numbuf, 10);
+		stdimpl_strncat(buffer, numbuf, 11);	}
 
 	addFailure(buffer, line, file);
 }
 
 void assertImplementationCStr(const char *expected,const char *actual, long line, const char *file)
 {
-	char buffer[64],*bp;
-	int el,al;
+	char buffer[ASSERT_STRING_BUFFER_MAX];
+	#define exp_act_limit ((ASSERT_STRING_BUFFER_MAX-11-1)/2)/*	"exp'' was''" = 11 byte	*/
+	int el;
+	int al;
 
 	if (expected) {
 		el = stdimpl_strlen(expected);
@@ -65,29 +74,27 @@ void assertImplementationCStr(const char *expected,const char *actual, long line
 		al = 4;
 		actual = "null";
 	}
-
-	if (el > 26) {
-		if (al > 26) {
-			al = 26;
-			el = 26;
+	if (el > exp_act_limit) {
+		if (al > exp_act_limit) {
+			al = exp_act_limit;
+			el = exp_act_limit;
 		} else {
-			int w = 26 + (26 - al);
+			int w = exp_act_limit + (exp_act_limit - al);
 			if (el > w) {
 				el = w;
 			}
 		}
 	} else {
-		int w = 26 + (26 - el);
+		int w = exp_act_limit + (exp_act_limit - el);
 		if (al > w) {
 			al = w;
 		}
 	}
-
-	bp = stdimpl_strcpy(buffer, "exp'");
-	bp = stdimpl_strncpy(bp, expected, el);
-	bp = stdimpl_strcpy(bp, "' was'");
-	bp = stdimpl_strncpy(bp, actual, al);
-	stdimpl_strcpy(bp, "'");
+	stdimpl_strcpy(buffer, "exp \"");
+	stdimpl_strncat(buffer, expected, el);
+	stdimpl_strcat(buffer, "\" was \"");
+	stdimpl_strncat(buffer, actual, al);
+	stdimpl_strcat(buffer, "\"");
 
 	addFailure(buffer, line, file);
 }

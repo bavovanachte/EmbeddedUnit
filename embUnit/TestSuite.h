@@ -35,36 +35,24 @@
 #ifndef	__TESTSUITE_H__
 #define	__TESTSUITE_H__
 
-#include "Test.h"
-
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
 typedef struct __TestSuite	TestSuite;
-typedef struct __TestSuite*	TestSuiteRef;
+typedef struct __TestSuite*	TestSuiteRef;/*downward compatible*/
 
 struct __TestSuite {
-	TestImplementRef isa;
+	TestImplement* isa;
 	char *name;
 	int numberOfTests;
-	TestRef *tests;
+	Test** tests;
 };
 
 extern const TestImplement TestSuiteImplement;
 
 #define new_TestSuite(name,tests,numberOfTests)\
 	{\
-		(TestImplementRef)&TestSuiteImplement,\
+		(TestImplement*)&TestSuiteImplement,\
 		name,\
 		numberOfTests,\
 		tests,\
 	}
-
-#define TestSuiteTypeID MakeTestTypeID('s','u','i','t')
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif/*__TESTSUITE_H__*/

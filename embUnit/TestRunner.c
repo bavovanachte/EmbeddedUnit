@@ -34,22 +34,24 @@
  */
 #include "config.h"
 #include "stdImpl.h"
+#include "Test.h"
+#include "TestListener.h"
 #include "TestResult.h"
 #include "TestRunner.h"
 
 static TestResult result_;
-static TestRef root_;
+static Test* root_;
 
-static void TestRunner_startTest(TestListnerRef self,TestRef test)
+static void TestRunner_startTest(TestListner* self,Test* test)
 {
 	stdimpl_print(".");
 }
 
-static void TestRunner_endTest(TestListnerRef self,TestRef test)
+static void TestRunner_endTest(TestListner* self,Test* test)
 {
 }
 
-static void TestRunner_addFailure(TestListnerRef self,TestRef test,char *msg,int line,char *file)
+static void TestRunner_addFailure(TestListner* self,Test* test,char* msg,int line,char* file)
 {
 	stdimpl_print("\n");
 	stdimpl_print(Test_name(root_));
@@ -75,15 +77,15 @@ static const TestListnerImplement TestRunnerImplement = {
 };
 
 static const TestListner testrunner_ = {
-	(TestListnerImplementRef)		&TestRunnerImplement,
+	(TestListnerImplement*)&TestRunnerImplement,
 };
 
 void TestRunner_start(void)
 {
-	TestResult_init(&result_, (TestListnerRef)&testrunner_);
+	TestResult_init(&result_, (TestListner*)&testrunner_);
 }
 
-void TestRunner_runTest(TestRef test)
+void TestRunner_runTest(Test* test)
 {
 	root_ = test;
 	Test_run(test, &result_);

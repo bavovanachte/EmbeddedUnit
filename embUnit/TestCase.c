@@ -32,28 +32,27 @@
  *
  * $Id$
  */
+#include "Test.h"
 #include "TestCase.h"
 #include "TestResult.h"
 
-static TestResultRef result_;
-static TestCaseRef self_;
+static TestResult* result_;
+static TestCase* self_;
 
-char* TestCase_name(TestCaseRef self)
+char* TestCase_name(TestCase* self)
 {
 	return self->name;
 }
 
-void TestCase_run(TestCaseRef self,TestResultRef result)
+void TestCase_run(TestCase* self,TestResult* result)
 {
-	if (result) {
-		result->isa->startTest(result, self);
-	}
+	TestResult_startTest(result, (Test*)self);
 	if (self->setUp) {
 		self->setUp();
 	}
 	if (self->runTest) {
-		TestResultRef wr =result_;	/*push*/
-		TestCaseRef ws = self_;	/*push*/
+		TestResult* wr =result_;	/*push*/
+		TestCase* ws = self_;	/*push*/
 		result_ = result;
 		self_ = self;
 		self->runTest();
@@ -63,26 +62,21 @@ void TestCase_run(TestCaseRef self,TestResultRef result)
 	if (self->tearDown) {
 		self->tearDown();
 	}
-	if (result) {
-		result->isa->endTest(result, self);
-	}
+	TestResult_endTest(result, (Test*)self);
 }
 
-int TestCase_countTestCases(TestCaseRef self)
+int TestCase_countTestCases(TestCase* self)
 {
 	return 1;
 }
 
 const TestImplement TestCaseImplement = {
-	(TestTypeID)				TestCaseTypeID,
 	(TestNameFunction)			TestCase_name,
 	(TestRunFunction)			TestCase_run,
 	(TestCountTestCasesFunction)TestCase_countTestCases,
 };
 
-void addFailure(const char* msg, long line, const char* file)
+void addFailure(const char *msg, long line, const char *file)
 {
-	if (result_) {
-		result_->isa->addFailure(result_, self_, (char*)msg, line, (char*)file);
-	}
+	TestResult_addFailure(result_, (Test*)self_, (char*)msg, line, (char*)file);
 }

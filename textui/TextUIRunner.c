@@ -65,7 +65,7 @@ static const TestListnerImplement TextUIRunnerImplement = {
 };
 
 static const TestListner testuirunner_ = {
-	(TestListnerImplementRef)&TextUIRunnerImplement,
+	(TestListnerImplement*)&TextUIRunnerImplement,
 };
 
 /*	Public

@@ -32,29 +32,29 @@
  *
  * $Id$
  */
+#include "Test.h"
 #include "RepeatedTest.h"
 
-char* RepeatedTest_name(RepeatedTestRef self)
+char* RepeatedTest_name(RepeatedTest* self)
 {
 	return Test_name(self->test);
 }
 
-void RepeatedTest_run(RepeatedTestRef self,TestResultRef result)
+void RepeatedTest_run(RepeatedTest* self,TestResult* result)
 {
 	int i;
-	TestRef test = self->test;
+	Test* test = self->test;
 	for (i=0; i<self->timesRepeat; i++) {
 		Test_run(test, result);
 	}
 }
 
-int RepeatedTest_countTestCases(RepeatedTestRef self)
+int RepeatedTest_countTestCases(RepeatedTest* self)
 {
 	return Test_countTestCases(self->test) * self->timesRepeat;
 }
 
 const TestImplement RepeatedTestImplement = {
-	(TestTypeID)				RepeatedTestTypeID,
 	(TestNameFunction)			RepeatedTest_name,
 	(TestRunFunction)			RepeatedTest_run,
 	(TestCountTestCasesFunction)RepeatedTest_countTestCases,

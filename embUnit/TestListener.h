@@ -35,14 +35,12 @@
 #ifndef	__TESTLISTENER_H__
 #define	__TESTLISTENER_H__
 
-#include "Test.h"
-
 typedef struct __TestListnerImplement	TestListnerImplement;
-typedef struct __TestListnerImplement*	TestListnerImplementRef;
+typedef struct __TestListnerImplement*	TestListnerImplementRef;/*downward compatible*/
 
 typedef void(*TestListnerStartTestCallBack)(void*,void*);
 typedef void(*TestListnerEndTestCallBack)(void*,void*);
-typedef void(*TestListnerAddFailureCallBack)(void*,void*,char*,int,char*);
+typedef void(*TestListnerAddFailureCallBack)(void*,void*,const char*,int,const char*);
 
 struct __TestListnerImplement {
 	TestListnerStartTestCallBack startTest;
@@ -50,15 +48,15 @@ struct __TestListnerImplement {
 	TestListnerAddFailureCallBack addFailure;
 };
 
-typedef struct __TestListner	TestListner;
-typedef struct __TestListner*	TestListnerRef;
+/*typedef struct __TestListner	TestListner;*/	/*->TestResult.h*/
+/*typedef struct __TestListner*	TestListnerRef;*/	/*->TestResult.h*/
 
 struct __TestListner {
-	TestListnerImplementRef isa;
+	TestListnerImplement* isa;
 };
 
-#define TestListner_startTest(s,t)			(s)->isa->startTest(s,t)
-#define TestListner_endTest(s,t)			(s)->isa->endTest(s,t)
-#define TestListner_addFailure(s,t,m,l,f)	(s)->isa->addFailure(s,t,m,l,f)
+#define TestListner_startTest(s,t)			((TestListner*)s)->isa->startTest(s,t)
+#define TestListner_endTest(s,t)			((TestListner*)s)->isa->endTest(s,t)
+#define TestListner_addFailure(s,t,m,l,f)	((TestListner*)s)->isa->addFailure(s,t,m,l,f)
 
 #endif/*__TESTLISTENER_H__*/

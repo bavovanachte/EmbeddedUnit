@@ -32,17 +32,18 @@
  *
  * $Id$
  */
+#include "Test.h"
+#include "TestListener.h"
 #include "TestResult.h"
 
-void TestResult_init(TestResultRef self,TestListnerRef listner)
+void TestResult_init(TestResult* self,TestListner* listner)
 {
-	self->isa = (TestListnerImplementRef)&TestResultImplement;
 	self->runCount = 0;
 	self->failureCount = 0;
 	self->listener = listner;
 }
 
-void TestResult_startTest(TestResultRef self,TestRef test)
+void TestResult_startTest(TestResult* self,Test* test)
 {
 	self->runCount++;
 	if (self->listener) {
@@ -50,23 +51,17 @@ void TestResult_startTest(TestResultRef self,TestRef test)
 	}
 }
 
-void TestResult_endTest(TestResultRef self,TestRef test)
+void TestResult_endTest(TestResult* self,Test* test)
 {
 	if (self->listener) {
 		TestListner_endTest(self->listener, test);
 	}
 }
 
-void TestResult_addFailure(TestResultRef self,TestRef test,char *msg,int line,char *file)
+void TestResult_addFailure(TestResult* self,Test* test,const char* msg,int line,const char* file)
 {
 	self->failureCount++;
 	if (self->listener) {
 		TestListner_addFailure(self->listener, test, msg, line, file);
 	}
 }
-
-const TestListnerImplement TestResultImplement = {
-	(TestListnerStartTestCallBack)	TestResult_startTest,
-	(TestListnerEndTestCallBack)	TestResult_endTest,
-	(TestListnerAddFailureCallBack)	TestResult_addFailure,
-};

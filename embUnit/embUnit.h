@@ -36,9 +36,9 @@
 #define	__EMBUNIT_H__
 
 #include <embUnit/Test.h>
+#include <embUnit/TestCase.h>
 #include <embUnit/TestListener.h>
 #include <embUnit/TestResult.h>
-#include <embUnit/TestCase.h>
 #include <embUnit/TestSuite.h>
 #include <embUnit/TestRunner.h>
 #include <embUnit/TestCaller.h>

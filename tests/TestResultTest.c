@@ -20,7 +20,7 @@ static void testTestResult_startTest(void)
 {
 	TestResult result = new_TestResult(NULL);
 
-	result.isa->startTest(&result,NULL);
+	TestResult_startTest(&result,NULL);
 
 	TEST_ASSERT_EQUAL_INT(1, result.runCount);
 	TEST_ASSERT_EQUAL_INT(0, result.failureCount);
@@ -30,7 +30,7 @@ static void testTestResult_endTest(void)
 {
 	TestResult result = new_TestResult(NULL);
 
-	result.isa->endTest(&result,NULL);
+	TestResult_endTest(&result,NULL);
 
 	TEST_ASSERT_EQUAL_INT(0, result.runCount);
 	TEST_ASSERT_EQUAL_INT(0, result.failureCount);
@@ -40,7 +40,7 @@ static void testTestResult_addFailure(void)
 {
 	TestResult result = new_TestResult(NULL);
 
-	result.isa->addFailure(&result,NULL,"",0,"");
+	TestResult_addFailure(&result,NULL,"",0,"");
 
 	TEST_ASSERT_EQUAL_INT(0, result.runCount);
 	TEST_ASSERT_EQUAL_INT(1, result.failureCount);

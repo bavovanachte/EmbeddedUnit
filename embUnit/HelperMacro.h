@@ -36,24 +36,24 @@
 #define	__HELPERMACRO_H__
 
 #define EMB_UNIT_TESTCASE(ca,name,sup,tdw,run) \
-	static const TestCase ca = new_TestCase(name,sup,tdw,run)
+	static const TestCase	ca = new_TestCase(name,sup,tdw,run)
 
 #define EMB_UNIT_TESTSUITE(su,name,array) \
-	static const TestSuite su = new_TestSuite(name,(TestRef*)array,sizeof(array)/sizeof(array[0]))
+	static const TestSuite	su = new_TestSuite(name,(Test**)array,sizeof(array)/sizeof(array[0]))
 
 #define EMB_UNIT_TESTREFS(tests) \
-	static const TestRef tests[] = 
+	static Test* const tests[] = 
 
 #define EMB_UNIT_ADD_TESTREF(testref) \
-	(const TestRef)testref
+				(Test*)	testref
 
 #define EMB_UNIT_TESTCALLER(caller,name,sup,tdw,fixtures) \
-	static const TestCaller caller = new_TestCaller(name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),(TestFixtureRef)fixtures)
+	static const TestCaller caller = new_TestCaller(name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),(TestFixture*)fixtures)
 
 #define EMB_UNIT_TESTFIXTURES(fixtures) \
-	static const TestFixture fixtures[] = 
+	static const TestFixture	fixtures[] = 
 
 #define EMB_UNIT_REPEATEDTEST(repeater,test,tmrp) \
-	static const RepeatedTest repeater = new_RepeatedTest(test,tmrp)
+	static const RepeatedTest	repeater = new_RepeatedTest(test,tmrp)
 
 #endif/*__HELPERMACRO_H__*/
