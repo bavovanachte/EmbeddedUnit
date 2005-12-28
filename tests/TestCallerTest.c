@@ -10,10 +10,13 @@ static void tearDown(void)
 
 static void testOneFixture(void)
 {
-	TestFixture	fixtures[] = {
+	TestCaller caller;
+	
+	TestFixture	testFixtures[] = {
 		new_TestFixture(NULL,NULL),
 	};
-	TestCaller caller = new_TestCaller(NULL,NULL,NULL,1,fixtures);
+	
+	new_TestCaller((&caller),NULL,NULL,NULL,1,testFixtures);
 	TestResult result = new_TestResult(NULL);
 
 	caller.isa->run(&caller,&result);
@@ -24,6 +27,7 @@ static void testOneFixture(void)
 
 static void testMoreThanOne(void)
 {
+	TestCaller caller;
 	TestFixture	fixtures[] = {
 		new_TestFixture(NULL,NULL),
 		new_TestFixture(NULL,NULL),
@@ -31,7 +35,8 @@ static void testMoreThanOne(void)
 		new_TestFixture(NULL,NULL),
 		new_TestFixture(NULL,NULL),
 	};
-	TestCaller caller = new_TestCaller(NULL,NULL,NULL,5,fixtures);
+	
+	new_TestCaller((&caller),NULL,NULL,NULL,5,fixtures);
 	TestResult result = new_TestResult(NULL);
 
 	caller.isa->run(&caller,&result);
@@ -42,7 +47,9 @@ static void testMoreThanOne(void)
 
 static void testZeroFixture(void)
 {
-	TestCaller caller = new_TestCaller(NULL,NULL,NULL,0,NULL);
+	TestCaller caller;
+	
+	new_TestCaller((&caller),NULL,NULL,NULL,0,NULL);
 	TestResult result = new_TestResult(NULL);
 
 	caller.isa->run(&caller,&result);
@@ -51,14 +58,14 @@ static void testZeroFixture(void)
 	TEST_ASSERT_EQUAL_INT(0, caller.isa->countTestCases(&caller));
 }
 
-TestRef TestCallerTest_tests(void)
+TestRef TestCallerTest_tests( TestCaller *test )
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testOneFixture",testOneFixture),
 		new_TestFixture("testMoreThanOne",testMoreThanOne),
 		new_TestFixture("testZeroFixture",testZeroFixture),
 	};
-	EMB_UNIT_TESTCALLER(TestCallerTest,"TestCallerTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTCALLER(test,"TestCallerTest",setUp,tearDown,fixtures);
 
-	return (TestRef)&TestCallerTest;
+	return (TestRef)test;
 }

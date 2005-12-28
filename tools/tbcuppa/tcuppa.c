@@ -74,7 +74,9 @@ int main(int argc, char* argv[]) {
   }
   fprintf(file, "/*embunit:impl=- */\n");
 
-  fprintf(file, "TestRef %s_tests(void)\n"
+
+/*  fprintf(file, "TestRef %s_tests(void)\n" */ /* Changed to over come memory violations in OpenTv environment */
+  fprintf(file, "TestRef %s_tests( TestCaller *test )\n"
   				"{\n"
  			 	"	EMB_UNIT_TESTFIXTURES(fixtures) {\n"
                 ,group
@@ -89,8 +91,8 @@ int main(int argc, char* argv[]) {
   fprintf(file, "	/*embunit:fixtures=- */\n");
 
   fprintf(file,	"	};\n"
-				"	EMB_UNIT_TESTCALLER(%s,\x22%s\x22,setUp,tearDown,fixtures);\n"
-				"	return (TestRef)&%s;\n"
+				"	EMB_UNIT_TESTCALLER(test,\x22%s\x22,setUp,tearDown,fixtures);\n" /* "	EMB_UNIT_TESTCALLER(%s,\x22%s\x22,setUp,tearDown,fixtures);\n"*/ /* Changed to over come memory violations in OpenTv environment */
+				"	return (TestRef)test;\n" /*"	return (TestRef)&%s;\n" */ /* Changed to over come memory violations in OpenTv environment */
 				"};\n"
 				,group,group,group
   );

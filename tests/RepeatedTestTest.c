@@ -44,14 +44,14 @@ static void testRepeatedZero(void)
 	TEST_ASSERT_EQUAL_INT(0, test.isa->countTestCases(&test));
 }
 
-TestRef RepeatedTestTest_tests(void)
+TestRef RepeatedTestTest_tests( TestCaller *test )
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testRepeatedOnce",testRepeatedOnce),
 		new_TestFixture("testRepeatedMoreThanOnce",testRepeatedMoreThanOnce),
 		new_TestFixture("testRepeatedZero",testRepeatedZero),
 	};
-	EMB_UNIT_TESTCALLER(RepeatedTestTest,"RepeatedTestTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTCALLER(test,"RepeatedTestTest",setUp,tearDown,fixtures);
 
-	return (TestRef)&RepeatedTestTest;
+	return (TestRef)test;
 }

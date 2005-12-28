@@ -48,7 +48,7 @@
 				(Test*)	testref
 
 #define EMB_UNIT_TESTCALLER(caller,name,sup,tdw,fixtures) \
-	static const TestCaller caller = new_TestCaller(name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),(TestFixture*)fixtures)
+	new_TestCaller(caller,name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)
 
 #define EMB_UNIT_TESTFIXTURES(fixtures) \
 	static const TestFixture	fixtures[] = 

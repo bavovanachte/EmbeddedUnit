@@ -87,7 +87,7 @@ static void testASSERT(void)
 	verify(&tcase);
 }
 
-TestRef assertTest_tests(void)
+TestRef assertTest_tests( TestCaller *test )
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testASSERT_EQUAL_STRING",testASSERT_EQUAL_STRING),
@@ -97,7 +97,7 @@ TestRef assertTest_tests(void)
 		new_TestFixture("testASSERT_MESSAGE",testASSERT_MESSAGE),
 		new_TestFixture("testASSERT",testASSERT),
 	};
-	EMB_UNIT_TESTCALLER(AssertTest,"AssertTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTCALLER(test,"AssertTest",setUp,tearDown,fixtures);
 
-	return (TestRef)&AssertTest;
+	return (TestRef)test;
 }

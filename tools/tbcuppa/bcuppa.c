@@ -43,19 +43,20 @@ int main(int argc, char* argv[]) {
 
   fprintf(file,	"/*embunit:extern=+ */\n");
   for ( i = 0; i < strvec_size(groups); ++i ) {
-  fprintf(file, "extern TestRef %s_tests(void);\n"
+  fprintf(file, "extern TestRef %s_tests( TestCaller *test );\n" /*  fprintf(file, "extern TestRef %s_tests(void);\n" */ /* Changed for memory violation in OpenTV environment */
 				,strvec_get(groups,i));
   }
   fprintf(file, "/*embunit:extern=- */\n\n");
 
   fprintf(file, "int main(int argc,char *argv[])\n"
 				"{\n"
+				"	static TestCaller test;\n" /* Added for memory violation in OpenTV environment */
                 "	TestRunner_start();\n"
   );
 
   fprintf(file, "	/*embunit:run=+ */\n");
   for ( i = 0; i < strvec_size(groups); ++i ) {
-  fprintf(file,	"		TestRunner_runTest(%s_tests());\n", strvec_get(groups,i));
+  fprintf(file,	"		TestRunner_runTest(%s_tests(&test));\n", strvec_get(groups,i)); /* fprintf(file,	"		TestRunner_runTest(%s_tests());\n", strvec_get(groups,i)); */ /* Changed for memory violation in OpenTV environment */
   }
   fprintf(file, "	/*embunit:run=- */\n");
   

@@ -46,7 +46,7 @@ static void testTestResult_addFailure(void)
 	TEST_ASSERT_EQUAL_INT(1, result.failureCount);
 }
 
-TestRef TestResultTest_tests(void)
+TestRef TestResultTest_tests( TestCaller *test )
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testTestResult_result",testTestResult_result),
@@ -54,7 +54,7 @@ TestRef TestResultTest_tests(void)
 		new_TestFixture("testTestResult_endTest",testTestResult_endTest),
 		new_TestFixture("testTestResult_addFailure",testTestResult_addFailure),
 	};
-	EMB_UNIT_TESTCALLER(TestResultTest,"TestResultTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTCALLER(test,"TestResultTest",setUp,tearDown,fixtures);
 
-	return (TestRef)&TestResultTest;
+	return (TestRef)test;
 }

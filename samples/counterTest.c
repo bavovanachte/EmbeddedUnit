@@ -54,7 +54,7 @@ static void testClr(void)
 	TEST_ASSERT_EQUAL_INT(0, Counter_value(counterRef));
 }
 
-TestRef CounterTest_tests(void)
+TestRef CounterTest_tests( TestCaller *test )
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testInit",testInit),
@@ -63,7 +63,7 @@ TestRef CounterTest_tests(void)
 		new_TestFixture("testDec",testDec),
 		new_TestFixture("testClr",testClr),
 	};
-	EMB_UNIT_TESTCALLER(CounterTest,"CounterTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTCALLER(test,"CounterTest",setUp,tearDown,fixtures);
 
-	return (TestRef)&CounterTest;
+	return (TestRef)test;
 }

@@ -1,6 +1,7 @@
 CC = gcc
 CFLAGS = -O
-INCLUDE =-I./tbcuppa/
+# final / removed for windows environment
+INCLUDE =-I./tbcuppa
 RM = rm
 
 all: bcuppa tcuppa buma tuma
@@ -18,6 +19,6 @@ tuma:./tbuma/tuma.c ./tbcuppa/strvec.c
 	$(CC) -o $@ $(INCLUDE) ./tbuma/tuma.c ./tbcuppa/strvec.c
 
 clean:
-	$(RM) bcuppa tcuppa buma tuma
+	$(RM) bcuppa tcuppa buma tuma *.exe
 
 .PHONY: clean all

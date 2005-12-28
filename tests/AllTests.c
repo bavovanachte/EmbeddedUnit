@@ -1,21 +1,23 @@
 #include <embUnit/embUnit.h>
 
-extern TestRef assertTest_tests(void);
-extern TestRef stdImplTest_tests(void);
-extern TestRef TestCaseTest_tests(void);
-extern TestRef TestCallerTest_tests(void);
-extern TestRef TestResultTest_tests(void);
-extern TestRef RepeatedTestTest_tests(void);
+extern TestRef assertTest_tests( TestCaller *test );
+extern TestRef stdImplTest_tests( TestCaller *test );
+extern TestRef TestCaseTest_tests( TestCaller *test );
+extern TestRef TestCallerTest_tests( TestCaller *test );
+extern TestRef TestResultTest_tests( TestCaller *test );
+extern TestRef RepeatedTestTest_tests( TestCaller *test );
 
 int main (int argc, const char* argv[])
 {
+	static TestCaller test;
+	
 	TestRunner_start();
-		TestRunner_runTest(assertTest_tests());
-		TestRunner_runTest(stdImplTest_tests());
-		TestRunner_runTest(TestCaseTest_tests());
-		TestRunner_runTest(TestCallerTest_tests());
-		TestRunner_runTest(TestResultTest_tests());
-		TestRunner_runTest(RepeatedTestTest_tests());
+		TestRunner_runTest(assertTest_tests(&test));
+		TestRunner_runTest(stdImplTest_tests(&test));
+		TestRunner_runTest(TestCaseTest_tests(&test));
+		TestRunner_runTest(TestCallerTest_tests(&test));
+		TestRunner_runTest(TestResultTest_tests(&test));
+		TestRunner_runTest(RepeatedTestTest_tests(&test));
 	TestRunner_end();
 	return 0;
 }
