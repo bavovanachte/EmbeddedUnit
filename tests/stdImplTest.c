@@ -81,20 +81,8 @@ static void testitoa(void)
 	TEST_ASSERT_EQUAL_STRING("a", buf);
 	TEST_ASSERT(p == buf);
 
-	p = stdimpl_itoa(-10, buf, 2);
-	TEST_ASSERT_EQUAL_STRING("11111111111111111111111111110110", buf);
-	TEST_ASSERT(p == buf);
-
-	p = stdimpl_itoa(-10, buf, 8);
-	TEST_ASSERT_EQUAL_STRING("37777777766", buf);
-	TEST_ASSERT(p == buf);
-
 	p = stdimpl_itoa(-10, buf, 10);
 	TEST_ASSERT_EQUAL_STRING("-10", buf);
-	TEST_ASSERT(p == buf);
-
-	p = stdimpl_itoa(-10, buf, 16);
-	TEST_ASSERT_EQUAL_STRING("fffffff6", buf);
 	TEST_ASSERT(p == buf);
 }
 

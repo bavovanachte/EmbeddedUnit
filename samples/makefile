@@ -1,6 +1,5 @@
 CC = gcc
 CFLAGS = -O
-INCLUDES = ..
 LIBS = ../lib
 RM = rm
 TARGET = samples
@@ -12,7 +11,7 @@ $(TARGET): $(OBJS)
 	$(CC) -o $@ $(OBJS) -L$(LIBS) -lembUnit
 
 .c.o:
-	$(CC) $(CFLAGS) -I$(INCLUDES) -c $<
+	$(CC) $(CFLAGS) -I.. -I../embUnit -c $<
 
 clean:
 	-$(RM) $(TARGET) $(OBJS)
