@@ -1,7 +1,6 @@
 CC = gcc
 CFLAGS = -O
 LDFLAGS =
-INCLUDES = ..
 LIBS = ../lib
 RM = rm
 TARGET = embUnitTest
@@ -13,7 +12,7 @@ $(TARGET): $(OBJS)
 	$(CC) -o $@ $(OBJS) -L$(LIBS) -lembUnit
 
 .c.o:
-	$(CC) $(CFLAGS) -I$(INCLUDES) -c $<
+	$(CC) $(CFLAGS) -I.. -I../embUnit -c $<
 
 clean:
 	-$(RM) $(TARGET) $(OBJS)
