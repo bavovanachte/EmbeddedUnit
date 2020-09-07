@@ -1,0 +1,8 @@
+*.o
+tests/embUnitTest
+lib/*.a
+tools/bcuppa
+tools/tcuppa
+tools/tuma
+tools/buma
+samples/samples
