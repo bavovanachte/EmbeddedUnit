@@ -1,0 +1,15 @@
+name: C/C++ CI
+
+on: push
+
+jobs:
+  build-linux:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build library
+      run: make all
+    - name: Run tests
+      run: cd tests; make all; ./embUnitTest
