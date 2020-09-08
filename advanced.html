@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Advanced Features &mdash; EmbeddedUnit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Writing embUnit Tests" href="writing_tests.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> EmbeddedUnit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#getting-started">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing embUnit Tests</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#embunit-tools">embUnit Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-test-runners">Advanced Test Runners</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EmbeddedUnit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Advanced Features</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/advanced.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="advanced-features">
+<h1>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="embunit-tools">
+<h2>embUnit Tools<a class="headerlink" href="#embunit-tools" title="Permalink to this headline">¶</a></h2>
+<p>Embedded Unit is distributed with four tools to help by generating test template code. The following four tools are distributed:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tcuppa</p></td>
+<td><p>generate test template source file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>bcuppa</p></td>
+<td><p>generate the main file, including main()</p></td>
+</tr>
+<tr class="row-even"><td><p>tuma</p></td>
+<td><p>add a code to the code generated by tcuppa.</p></td>
+</tr>
+<tr class="row-odd"><td><p>buma</p></td>
+<td><p>add a code to the code generated by bcuppa.</p></td>
+</tr>
+</tbody>
+</table>
+<p>For more information read the README in /tools folder.</p>
+</div>
+<div class="section" id="advanced-test-runners">
+<h2>Advanced Test Runners<a class="headerlink" href="#advanced-test-runners" title="Permalink to this headline">¶</a></h2>
+<p>EmbUnit offers three more advanced result outputters as an additional static library,
+They can be taken into use by linking the library and replacing the main -function TextUIRunner
+and giving it the preferred outputter as reference. An example is below.</p>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="n">TextUIRunner_setOutputter</span><span class="p">(</span><span class="n">TextOutputter_outputter</span><span class="p">());</span>
+ <span class="n">TextUIRunner_start</span><span class="p">();</span>
+ <span class="n">TextUIRunner_runTest</span><span class="p">(</span><span class="n">shutterTest_tests</span><span class="p">());</span>
+ <span class="n">TextUIRunner_end</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+<p>The outputter can be selected from one of the following:</p>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="n">TextUIRunner_setOutputter</span><span class="p">(</span><span class="n">TextOutputter_outputter</span><span class="p">());</span>
+ <span class="n">TextUIRunner_setOutputter</span><span class="p">(</span><span class="n">CompilerOutputter_outputter</span><span class="p">());</span>
+ <span class="n">TextUIRunner_setOutputter</span><span class="p">(</span><span class="n">XMLOutputter_outputter</span><span class="p">());</span>
+</pre></div>
+</td></tr></table></div>
+<p>Below is an output of same tests formatted with each outputter:</p>
+<ul class="simple">
+<li><p>Standard TextOutputter</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">shutterTest</span>
+<span class="mi">1</span><span class="p">)</span> <span class="n">OK</span> <span class="n">testConstruct</span>
+<span class="mi">2</span><span class="p">)</span> <span class="n">OK</span> <span class="n">testRequestUp</span>
+<span class="mi">3</span><span class="p">)</span> <span class="n">OK</span> <span class="n">testRequestDown</span>
+<span class="mi">4</span><span class="p">)</span> <span class="n">NG</span> <span class="n">testBuffer</span> <span class="p">(</span><span class="n">shuttertest</span><span class="o">.</span><span class="n">c</span> <span class="mi">168</span><span class="p">)</span> <span class="n">exp</span> <span class="mi">0</span> <span class="n">was</span> <span class="mi">1</span>
+
+<span class="n">run</span> <span class="mi">4</span> <span class="n">failures</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>CompilerOutputter</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shuttertest</span><span class="o">.</span><span class="n">c</span> <span class="mi">168</span><span class="p">:</span> <span class="n">testBuffer</span><span class="p">:</span> <span class="n">exp</span> <span class="mi">0</span> <span class="n">was</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>XMLOutputter</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&#39;shift_jis&#39; standalone=&#39;yes&#39; ?&gt;</span>
+<span class="nt">&lt;TestRun&gt;</span>
+    <span class="nt">&lt;shutterTest&gt;</span>
+        <span class="nt">&lt;Test</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Name&gt;</span>testConstruct<span class="nt">&lt;/Name&gt;</span>
+        <span class="nt">&lt;/Test&gt;</span>
+        <span class="nt">&lt;Test</span> <span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Name&gt;</span>testRequestUp<span class="nt">&lt;/Name&gt;</span>
+        <span class="nt">&lt;/Test&gt;</span>
+        <span class="nt">&lt;Test</span> <span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Name&gt;</span>testRequestDown<span class="nt">&lt;/Name&gt;</span>
+        <span class="nt">&lt;/Test&gt;</span>
+        <span class="nt">&lt;FailedTest</span> <span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Name&gt;</span>testBuffer<span class="nt">&lt;/Name&gt;</span>
+            <span class="nt">&lt;Location&gt;</span>
+                <span class="nt">&lt;File&gt;</span>shuttertest.c<span class="nt">&lt;/File&gt;</span>
+                <span class="nt">&lt;Line&gt;</span>168<span class="nt">&lt;/Line&gt;</span>
+            <span class="nt">&lt;/Location&gt;</span>
+            <span class="nt">&lt;Message&gt;</span>exp 0 was 1<span class="nt">&lt;/Message&gt;</span>
+        <span class="nt">&lt;/FailedTest&gt;</span>
+    <span class="nt">&lt;/shutterTest&gt;</span>
+    <span class="nt">&lt;Statistics&gt;</span>
+    <span class="nt">&lt;Tests&gt;</span>4<span class="nt">&lt;/Tests&gt;</span>
+    <span class="nt">&lt;Failures&gt;</span>1<span class="nt">&lt;/Failures&gt;</span>
+    <span class="nt">&lt;/Statistics&gt;</span>
+<span class="nt">&lt;/TestRun&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="writing_tests.html" class="btn btn-neutral float-left" title="Writing embUnit Tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Bavo Van Achte, Yusuke Sasaki
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

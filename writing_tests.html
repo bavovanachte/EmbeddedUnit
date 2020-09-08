@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Writing embUnit Tests &mdash; EmbeddedUnit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Advanced Features" href="advanced.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> EmbeddedUnit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#getting-started">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing embUnit Tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tests-test-cases-and-suites">Tests, Test Cases and Suites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-tests">Running the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-and-executing">Building and Executing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#embunit-assertions">embUnit Assertions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced Features</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EmbeddedUnit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Writing embUnit Tests</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/writing_tests.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="writing-embunit-tests">
+<h1>Writing embUnit Tests<a class="headerlink" href="#writing-embunit-tests" title="Permalink to this headline">¶</a></h1>
+<p>The following class diagram shows the architecture of EmbeddedUnit.</p>
+<div class="section" id="tests-test-cases-and-suites">
+<h2>Tests, Test Cases and Suites<a class="headerlink" href="#tests-test-cases-and-suites" title="Permalink to this headline">¶</a></h2>
+<p>Below is a program listing for unit tests of module counter.c. The full example can be found in /examples folder.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line no.</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Include references for embUnit framework and unit under test.</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>setUp() and tearDown() functions for test case.</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>Unit test for checking the counter is initialized on construction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>Collect all the unit tests under fixtures with a string as name of test.</p></td>
+</tr>
+<tr class="row-even"><td><p>36</p></td>
+<td><p>Create a new test case from setUp(), tearDown(), and fixtures.</p></td>
+</tr>
+<tr class="row-odd"><td><p>38</p></td>
+<td><p>Return with pointer to test suite just created.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"> <span class="cp">#include</span> <span class="cpf">&lt;embUnit/embUnit.h&gt;</span><span class="cp"></span>
+</span> <span class="cp">#include</span> <span class="cpf">&quot;counter.h&quot;</span><span class="cp"></span>
+
+ <span class="n">CounterRef</span> <span class="n">counterRef</span><span class="p">;</span>
+
+<span class="hll"> <span class="k">static</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span> <span class="p">{</span>
+     <span class="n">counterRef</span> <span class="o">=</span> <span class="n">Counter_counter</span><span class="p">();</span>
+ <span class="p">}</span>
+
+ <span class="k">static</span> <span class="kt">void</span> <span class="nf">tearDown</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="n">Counter_dealloc</span><span class="p">(</span><span class="n">counterRef</span><span class="p">);</span>
+ <span class="p">}</span>
+
+<span class="hll"> <span class="k">static</span> <span class="kt">void</span> <span class="nf">testInit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span> <span class="p">{</span>
+     <span class="n">TEST_ASSERT_EQUAL_INT</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Counter_value</span><span class="p">(</span><span class="n">counterRef</span><span class="p">));</span>
+ <span class="p">}</span>
+
+ <span class="k">static</span> <span class="kt">void</span> <span class="nf">testSetValue</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="n">Counter_setValue</span><span class="p">(</span><span class="n">counterRef</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+     <span class="n">TEST_ASSERT_EQUAL_INT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Counter_value</span><span class="p">(</span><span class="n">counterRef</span><span class="p">));</span>
+
+     <span class="n">Counter_setValue</span><span class="p">(</span><span class="n">counterRef</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+     <span class="n">TEST_ASSERT_EQUAL_INT</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">Counter_value</span><span class="p">(</span><span class="n">counterRef</span><span class="p">));</span>
+ <span class="p">}</span>
+
+ <span class="n">TestRef</span> <span class="nf">CounterTest_tests</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+ <span class="p">{</span>
+<span class="hll">   <span class="n">EMB_UNIT_TESTFIXTURES</span><span class="p">(</span><span class="n">fixtures</span><span class="p">)</span> <span class="p">{</span>
+</span>     <span class="n">new_TestFixture</span><span class="p">(</span><span class="s">&quot;testInit&quot;</span><span class="p">,</span><span class="n">testInit</span><span class="p">),</span>
+     <span class="n">new_TestFixture</span><span class="p">(</span><span class="s">&quot;testSetValue&quot;</span><span class="p">,</span><span class="n">testSetValue</span><span class="p">),</span>
+     <span class="p">};</span>
+<span class="hll">
+</span>   <span class="n">EMB_UNIT_TESTCALLER</span><span class="p">(</span><span class="n">CounterTest</span><span class="p">,</span><span class="s">&quot;CounterTest&quot;</span><span class="p">,</span><span class="n">setUp</span><span class="p">,</span><span class="n">tearDown</span><span class="p">,</span><span class="n">fixtures</span><span class="p">);</span>
+<span class="hll">   <span class="k">return</span> <span class="p">(</span><span class="n">TestRef</span><span class="p">)</span><span class="o">&amp;</span><span class="n">CounterTest</span><span class="p">;</span>
+</span> <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="running-the-tests">
+<h2>Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">¶</a></h2>
+<p>Below is a program listing for running the testcase via standard test runner. The full example can be found in /examples folder.</p>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="cp">#include</span> <span class="cpf">&lt;embUnit/embUnit.h&gt;</span><span class="cp"></span>
+ <span class="n">TestRef</span> <span class="nf">CounterTest_tests</span><span class="p">(</span> <span class="n">TestCaller</span> <span class="o">*</span><span class="n">test</span> <span class="p">);</span>
+
+ <span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+ <span class="p">{</span>
+     <span class="k">static</span> <span class="n">TestCaller</span> <span class="n">test</span><span class="p">;</span>
+
+     <span class="n">TestRunner_start</span><span class="p">();</span>
+     <span class="n">TestRunner_runTest</span><span class="p">(</span><span class="n">CounterTest_tests</span><span class="p">(</span><span class="o">&amp;</span><span class="n">test</span><span class="p">));</span>
+     <span class="n">TestRunner_end</span><span class="p">();</span>
+     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="building-and-executing">
+<h2>Building and Executing<a class="headerlink" href="#building-and-executing" title="Permalink to this headline">¶</a></h2>
+<p>Below is a makefile for automated build of counter.c tests. The full example can be found in /examples folder.</p>
+<div class="highlight-make notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">CC</span> <span class="o">=</span> gcc
+<span class="nv">CFLAGS</span> <span class="o">=</span> -O
+<span class="nv">INCLUDES</span> <span class="o">=</span> ..
+<span class="nv">LIBS</span> <span class="o">=</span> ../lib
+<span class="nv">RM</span> <span class="o">=</span> rm
+<span class="nv">TARGET</span> <span class="o">=</span> samples
+<span class="nv">OBJS</span> <span class="o">=</span> AllTests.o counter.o counterTest.o
+
+<span class="nf">all</span><span class="o">:</span> <span class="k">$(</span><span class="nv">TARGET</span><span class="k">)</span>
+
+<span class="nf">$(TARGET)</span><span class="o">:</span> <span class="k">$(</span><span class="nv">OBJS</span><span class="k">)</span>
+    <span class="k">$(</span>CC<span class="k">)</span> -o <span class="nv">$@</span> <span class="k">$(</span>OBJS<span class="k">)</span> -L<span class="k">$(</span>LIBS<span class="k">)</span> -lembUnit
+
+<span class="nf">.c.o</span><span class="o">:</span>
+    <span class="k">$(</span>CC<span class="k">)</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -I<span class="k">$(</span>INCLUDES<span class="k">)</span> -c $&lt;
+
+<span class="nf">clean</span><span class="o">:</span>
+    -<span class="k">$(</span>RM<span class="k">)</span> <span class="k">$(</span>TARGET<span class="k">)</span> <span class="k">$(</span>OBJS<span class="k">)</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">clean</span> <span class="n">all</span>
+</pre></div>
+</td></tr></table></div>
+<p>Build your tests with make. Execute the created executable to run the tests.
+The standard test runner gives you the results in following format (results are not from earlier example):</p>
+<div class="line-block">
+<div class="line">….</div>
+<div class="line">shutterTest.testBuffer (shuttertest.c 168) exp 0 was 1</div>
+<div class="line"><br /></div>
+<div class="line">run 4 failures 1</div>
+</div>
+</div>
+<div class="section" id="embunit-assertions">
+<h2>embUnit Assertions<a class="headerlink" href="#embunit-assertions" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Assertion</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TEST_ASSERT_EQUAL_STRING(expected,actual)</p></td>
+<td><p>Assert that strings actual and expected are equivalent</p></td>
+</tr>
+<tr class="row-odd"><td><p>TEST_ASSERT_EQUAL_INT(expected,actual)</p></td>
+<td><p>Assert that integers actual and expected are equivalent</p></td>
+</tr>
+<tr class="row-even"><td><p>TEST_ASSERT_NULL(pointer)</p></td>
+<td><p>Assert that pointer value == NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>TEST_ASSERT_MESSAGE(condition, message)</p></td>
+<td><p>Assert that condition is TRUE (non-zero)</p></td>
+</tr>
+<tr class="row-even"><td><p>TEST_ASSERT(condition)</p></td>
+<td><p>Assert that condition is TRUE (non-zero)</p></td>
+</tr>
+<tr class="row-odd"><td><p>TEST_FAIL(message)</p></td>
+<td><p>Register a failed assertion with the specified message. No logical test is performed.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="advanced.html" class="btn btn-neutral float-right" title="Advanced Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Bavo Van Achte, Yusuke Sasaki
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
