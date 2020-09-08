@@ -1,0 +1,13 @@
+name: "Doc build"
+on: push
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install plantuml
+      run: sudo apt-get install -y plantuml
+    - uses: ammaraskar/sphinx-action@master
+      with:
+        docs-folder: "docs/"
