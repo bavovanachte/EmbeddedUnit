@@ -48,7 +48,9 @@ char* stdimpl_strcat(char *dst, const char *src);
 char* stdimpl_strncat(char *dst, const char *src,unsigned int count);
 int stdimpl_strlen(const char *str);
 int stdimpl_strcmp(const char *s1, const char *s2);
-char* stdimpl_itoa(int v,char *string,int r);
+int stdimpl_memcmp(const void *s1, const void *s2, int s);
+char* stdimpl_itoa(long v,char *string,int r);
+char* stdimpl_utoa(unsigned long v,char *string,int r);
 
 #ifdef	__cplusplus
 }

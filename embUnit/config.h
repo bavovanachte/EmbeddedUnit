@@ -45,4 +45,6 @@
 
 	#define ASSERT_STRING_BUFFER_MAX	64
 
+	#define ASSERT_MEMORY_BUFFER_MAX	256
+
 #endif/*__CONFIG_H__*/

@@ -1,18 +1,5 @@
 #include <embUnit/embUnit.h>
-
-// TEST_ASSERT_EQUAL_MEMORY(expected,actual,size)
-// TEST_ASSERT_EQUAL_UINT(expected,actual)
-// TEST_ASSERT_EQUAL_HEX(expected,actual)
-// TEST_ASSERT_EQUAL_PTR(expected,actual)
-// TEST_ASSERT_EQUAL_INT_WITH_MARGIN(expected,actual,margin)
-// TEST_ASSERT_EQUAL_WITH_MARGIN(expected,actual,margin)
-// TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(expected,actual,margin)
-// TEST_ASSERT_NOT_LOWER_THAN_INT(min, actual)
-// TEST_ASSERT_NOT_HIGHER_THAN_INT(max, actual)
-// TEST_ASSERT_RANGE_INT(min, max, actual)
-// TEST_ASSERT_NOT_LOWER_THAN_UINT(min, actual)
-// TEST_ASSERT_NOT_HIGHER_THAN_UINT(max, actual)
-// TEST_ASSERT_RANGE_UINT(min, max, actual)
+#include <stdint.h>
 
 static void setUp(void)
 {
@@ -82,6 +69,255 @@ static void testASSERT_EQUAL_INT(void)
 	verify_failure(&tcase_fail);
 	TestCase tcase_success = new_TestCase("assert_equal_int",NULL,NULL,assert_equal_int_runTest_success);
 	verify_success(&tcase_success);
+};
+
+static void assert_equal_int_with_margin_runTest_fail(void)
+{
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(8, 16, 7);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(8, 16, 7);
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(-8, -16, 7);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(-8, -16, 7);
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(-8, 8, 15);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(-8, 8, 15);
+}
+
+static void assert_equal_int_with_margin_runTest_success(void)
+{
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(8, 16, 8);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(8, 16, 8);
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(8, 16, 9);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(8, 16, 9);
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(-8, -16, 8);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(-8, -16, 8);
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(-8, -16, 9);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(-8, -16, 9);
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(-8, 8, 16);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(-8, 8, 16);
+	TEST_ASSERT_EQUAL_INT_WITH_MARGIN(-8, 8, 17);
+	TEST_ASSERT_EQUAL_WITH_MARGIN(-8, 8, 17);
+}
+
+static void testASSERT_EQUAL_INT_WITH_MARGIN(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_equal_int_with_margin",NULL,NULL,assert_equal_int_with_margin_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_equal_int_with_margin",NULL,NULL,assert_equal_int_with_margin_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_not_lower_than_int_runTest_fail(void)
+{
+	TEST_ASSERT_NOT_LOWER_THAN_INT(0, -1);
+	TEST_ASSERT_NOT_LOWER_THAN_INT(-8, -9);
+	TEST_ASSERT_NOT_LOWER_THAN_INT(8, 7);
+}
+
+static void assert_not_lower_than_int_runTest_success(void)
+{
+	TEST_ASSERT_NOT_LOWER_THAN_INT(0, 0);
+	TEST_ASSERT_NOT_LOWER_THAN_INT(0, 1);
+	TEST_ASSERT_NOT_LOWER_THAN_INT(-8, -8);
+	TEST_ASSERT_NOT_LOWER_THAN_INT(-8, -7);
+	TEST_ASSERT_NOT_LOWER_THAN_INT(8, 8);
+	TEST_ASSERT_NOT_LOWER_THAN_INT(8, 9);
+}
+
+static void testASSERT_NOT_LOWER_THAN_INT(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_not_lower_than_int",NULL,NULL,assert_not_lower_than_int_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_not_lower_than_int",NULL,NULL,assert_not_lower_than_int_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_not_higher_than_int_runTest_fail(void)
+{
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(0, 1);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(-8, -7);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(-8, 8);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(8, 9);
+}
+
+static void assert_not_higher_than_int_runTest_success(void)
+{
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(0, 0);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(0, -1);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(-8, -8);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(-8, -9);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(8, -8);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(8, 8);
+	TEST_ASSERT_NOT_HIGHER_THAN_INT(8, 7);
+}
+
+static void testASSERT_NOT_HIGHER_THAN_INT(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_not_higher_than_int",NULL,NULL,assert_not_higher_than_int_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_not_higher_than_int",NULL,NULL,assert_not_higher_than_int_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_range_int_runTest_fail(void)
+{
+	TEST_ASSERT_RANGE_INT(-8, 8, 9);
+	TEST_ASSERT_RANGE_INT(8, 8, 9);
+	TEST_ASSERT_RANGE_INT(-8, -1, 0);
+	TEST_ASSERT_RANGE_INT(1, 8, 0);
+	TEST_ASSERT_RANGE_INT(8, 1, 5);
+	TEST_ASSERT_RANGE_INT(8, 1, 8);
+	TEST_ASSERT_RANGE_INT(8, 1, 1);
+}
+
+static void assert_range_int_runTest_success(void)
+{
+	TEST_ASSERT_RANGE_INT(-8, 8, -8);
+	TEST_ASSERT_RANGE_INT(-8, 8, -7);
+	TEST_ASSERT_RANGE_INT(-8, 8, 8);
+	TEST_ASSERT_RANGE_INT(-8, 8, 7);
+	TEST_ASSERT_RANGE_INT(8, 8, 8);
+	TEST_ASSERT_RANGE_INT(-8, -1, -5);
+	TEST_ASSERT_RANGE_INT(1, 8, 5);
+}
+
+static void testASSERT_RANGE_INT(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_range_int",NULL,NULL,assert_range_int_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_range_int",NULL,NULL,assert_range_int_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_equal_hex_runTest_fail(void)
+{
+	TEST_ASSERT_EQUAL_HEX(0x123, 0x456u);
+}
+
+static void assert_equal_hex_runTest_success(void)
+{
+	volatile unsigned int uint1 = 0x123;
+	volatile unsigned int uint2 = 0x123;
+	TEST_ASSERT_EQUAL_UINT(uint1, uint2);
+}
+
+static void testASSERT_EQUAL_HEX(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_equal_hex",NULL,NULL,assert_equal_hex_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_equal_hex",NULL,NULL,assert_equal_hex_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_equal_uint_runTest_fail(void)
+{
+	TEST_ASSERT_EQUAL_UINT(123u,456u);
+}
+
+static void assert_equal_uint_runTest_success(void)
+{
+	volatile unsigned int uint1 = 123u;
+	volatile unsigned int uint2 = 123u;
+	TEST_ASSERT_EQUAL_UINT(uint1, uint2);
+}
+
+static void testASSERT_EQUAL_UINT(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_equal_uint",NULL,NULL,assert_equal_uint_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_equal_uint",NULL,NULL,assert_equal_uint_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_equal_uint_with_margin_runTest_fail(void)
+{
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(8, 16, 7);
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(0, 8, 7);
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(-9, -1, 7);
+}
+
+static void assert_equal_uint_with_margin_runTest_success(void)
+{
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(8, 16, 8);
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(8, 16, 9);
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(0, 8, 8);
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(0, 8, 9);
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(-9, -1, 8);
+	TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(-9, -1, 20); /* Checking for overflow behaviour */
+}
+
+static void testASSERT_EQUAL_UINT_WITH_MARGIN(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_equal_uint_with_margin",NULL,NULL,assert_equal_uint_with_margin_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_equal_uint_with_margin",NULL,NULL,assert_equal_uint_with_margin_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_not_lower_than_uint_runTest_fail(void)
+{
+	TEST_ASSERT_NOT_LOWER_THAN_UINT(8u, 7u);
+}
+
+static void assert_not_lower_than_uint_runTest_success(void)
+{
+	TEST_ASSERT_NOT_LOWER_THAN_UINT(0u, 0u);
+	TEST_ASSERT_NOT_LOWER_THAN_UINT(0u, 1u);
+	TEST_ASSERT_NOT_LOWER_THAN_UINT(8u, 8u);
+	TEST_ASSERT_NOT_LOWER_THAN_UINT(8u, 9u);
+}
+
+static void testASSERT_NOT_LOWER_THAN_UINT(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_not_lower_than_uint",NULL,NULL,assert_not_lower_than_uint_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_not_lower_than_uint",NULL,NULL,assert_not_lower_than_uint_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_not_higher_than_uint_runTest_fail(void)
+{
+	TEST_ASSERT_NOT_HIGHER_THAN_UINT(0u, 1u);
+	TEST_ASSERT_NOT_HIGHER_THAN_UINT(8u, 9u);
+}
+
+static void assert_not_higher_than_uint_runTest_success(void)
+{
+	TEST_ASSERT_NOT_HIGHER_THAN_UINT(0u, 0u);
+	TEST_ASSERT_NOT_HIGHER_THAN_UINT(8u, 8u);
+	TEST_ASSERT_NOT_HIGHER_THAN_UINT(8u, 7u);
+}
+
+static void testASSERT_NOT_HIGHER_THAN_UINT(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_not_higher_than_uint",NULL,NULL,assert_not_higher_than_uint_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_not_higher_than_uint",NULL,NULL,assert_not_higher_than_uint_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_range_uint_runTest_fail(void)
+{
+	TEST_ASSERT_RANGE_UINT(8u, 8u, 9u);
+	TEST_ASSERT_RANGE_UINT(1u, 8u, 0u);
+	TEST_ASSERT_RANGE_UINT(8u, 1u, 5u);
+	TEST_ASSERT_RANGE_UINT(8u, 1u, 8u);
+	TEST_ASSERT_RANGE_UINT(8u, 1u, 1u);
+}
+
+static void assert_range_uint_runTest_success(void)
+{
+	TEST_ASSERT_RANGE_UINT(8u, 8u, 8u);
+	TEST_ASSERT_RANGE_UINT(1u, 8u, 5u);
+	TEST_ASSERT_RANGE_UINT(1u, 8u, 1u);
+	TEST_ASSERT_RANGE_UINT(1u, 8u, 8u);
+	TEST_ASSERT_RANGE_UINT(0u, -1u, 2000u);
+}
+
+static void testASSERT_RANGE_UINT(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_range_uint",NULL,NULL,assert_range_uint_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_range_uint",NULL,NULL,assert_range_uint_runTest_success);
+	verify_success(&tcase_success);
 }
 
 static void assert_null_runTest_fail(void)
@@ -101,6 +337,53 @@ static void testASSERT_NULL(void)
 	TestCase tcase_fail = new_TestCase("assert_null",NULL,NULL,assert_null_runTest_fail);
 	verify_failure(&tcase_fail);
 	TestCase tcase_success = new_TestCase("assert_null",NULL,NULL,assert_null_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_equal_ptr_runTest_fail(void)
+{
+	char value = 'a';
+	char value2 = 'b';
+	char *volatile p1 = &value;
+	char *volatile p2 = &value2;
+	TEST_ASSERT_EQUAL_PTR(p1, p2);
+}
+
+static void assert_equal_ptr_runTest_success(void)
+{
+	char value = 'a';
+	char *volatile p1 = &value;
+	char *volatile p2 = &value;
+	TEST_ASSERT_EQUAL_PTR(p1, p2);
+}
+
+static void testASSERT_EQUAL_PTR(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_equal_ptr",NULL,NULL,assert_equal_ptr_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_equal_ptr",NULL,NULL,assert_equal_ptr_runTest_success);
+	verify_success(&tcase_success);
+}
+
+static void assert_equal_memory_runTest_fail(void)
+{
+	int volatile p1[] = {1, 2, 3, 4};
+	int volatile p2[] = {2, 3, 4, 1};
+	TEST_ASSERT_EQUAL_MEMORY(p1, p2, sizeof(char) * 4);
+}
+
+static void assert_equal_memory_runTest_success(void)
+{
+	int volatile p1[] = {1, 2, 3, 4};
+	int volatile p2[] = {1, 2, 3, 4};
+	TEST_ASSERT_EQUAL_MEMORY(p1, p2, sizeof(int) * 4);
+}
+
+static void testASSERT_EQUAL_MEMORY(void)
+{
+	TestCase tcase_fail = new_TestCase("assert_equal_memory",NULL,NULL,assert_equal_memory_runTest_fail);
+	verify_failure(&tcase_fail);
+	TestCase tcase_success = new_TestCase("assert_equal_memory",NULL,NULL,assert_equal_memory_runTest_success);
 	verify_success(&tcase_success);
 }
 
@@ -165,7 +448,19 @@ TestRef assertTest_tests( TestCaller *test )
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testASSERT_EQUAL_STRING",testASSERT_EQUAL_STRING),
 		new_TestFixture("testASSERT_EQUAL_INT",testASSERT_EQUAL_INT),
+		new_TestFixture("testASSERT_EQUAL_INT_WITH_MARGIN",testASSERT_EQUAL_INT_WITH_MARGIN),
+		new_TestFixture("testASSERT_NOT_LOWER_THAN_INT",testASSERT_NOT_LOWER_THAN_INT),
+		new_TestFixture("testASSERT_NOT_HIGHER_THAN_INT",testASSERT_NOT_HIGHER_THAN_INT),
+		new_TestFixture("testASSERT_RANGE_INT",testASSERT_RANGE_INT),
+		new_TestFixture("testASSERT_EQUAL_HEX",testASSERT_EQUAL_HEX),
+		new_TestFixture("testASSERT_EQUAL_UINT",testASSERT_EQUAL_UINT),
+		new_TestFixture("testASSERT_EQUAL_UINT_WITH_MARGIN",testASSERT_EQUAL_UINT_WITH_MARGIN),
+		new_TestFixture("testASSERT_NOT_LOWER_THAN_UINT",testASSERT_NOT_LOWER_THAN_INT),
+		new_TestFixture("testASSERT_NOT_HIGHER_THAN_UINT",testASSERT_NOT_HIGHER_THAN_INT),
+		new_TestFixture("testASSERT_RANGE_UINT",testASSERT_RANGE_INT),
 		new_TestFixture("testASSERT_NULL",testASSERT_NULL),
+		new_TestFixture("testASSERT_EQUAL_PTR",testASSERT_EQUAL_PTR),
+		new_TestFixture("testASSERT_EQUAL_MEMORY",testASSERT_EQUAL_MEMORY),
 		new_TestFixture("testASSERT_NOT_NULL",testASSERT_NOT_NULL),
 		new_TestFixture("testASSERT_MESSAGE",testASSERT_MESSAGE),
 		new_TestFixture("testASSERT",testASSERT),
