@@ -21,4 +21,5 @@ help:
 
 .PHONY: doxygen
 doxygen:
+	mkdir -p build/html/doxygen
 	doxygen doxygen/Doxyfile
