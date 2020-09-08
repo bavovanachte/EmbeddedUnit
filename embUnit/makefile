@@ -7,6 +7,7 @@ RM = rm
 OUTPUT = ../lib/
 TARGET = libembUnit.a
 OBJS = AssertImpl.o RepeatedTest.o stdImpl.o TestCaller.o TestCase.o TestResult.o TestRunner.o TestSuite.o
+INCLUDES = -I.
 
 all: $(TARGET)
 
