@@ -93,5 +93,3 @@ XMLOutputter
         <Failures>1</Failures>
         </Statistics>
     </TestRun>
-
-
