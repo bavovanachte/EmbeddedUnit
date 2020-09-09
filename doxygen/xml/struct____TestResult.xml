@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____TestResult" kind="struct" language="C++" prot="public">
+    <compoundname>__TestResult</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____TestResult_1ab4ca8b8e0107fec4ee1ea0a5970e010a" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short __TestResult::runCount</definition>
+        <argsstring></argsstring>
+        <name>runCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="48" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestResult_1a2d497d5a9fc2cbe196b1dde335d3e181" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short __TestResult::failureCount</definition>
+        <argsstring></argsstring>
+        <name>failureCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="49" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestResult_1aa22c28c9f9c69e4c7bc8e386648ca241" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestListner" kindref="compound">TestListner</ref> *</type>
+        <definition>TestListner* __TestResult::listener</definition>
+        <argsstring></argsstring>
+        <name>listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="50" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="41">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="39">
+        <label>__TestResult</label>
+        <link refid="struct____TestResult"/>
+        <childnode refid="40" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="41" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="47" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" bodystart="47" bodyend="51"/>
+    <listofallmembers>
+      <member refid="struct____TestResult_1a2d497d5a9fc2cbe196b1dde335d3e181" prot="public" virt="non-virtual"><scope>__TestResult</scope><name>failureCount</name></member>
+      <member refid="struct____TestResult_1aa22c28c9f9c69e4c7bc8e386648ca241" prot="public" virt="non-virtual"><scope>__TestResult</scope><name>listener</name></member>
+      <member refid="struct____TestResult_1ab4ca8b8e0107fec4ee1ea0a5970e010a" prot="public" virt="non-virtual"><scope>__TestResult</scope><name>runCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

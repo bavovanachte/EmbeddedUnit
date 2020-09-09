@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="AssertImpl_8c" kind="file" language="C++">
+    <compoundname>AssertImpl.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="stdImpl_8h" local="yes">stdImpl.h</includes>
+    <includes refid="AssertImpl_8h" local="yes">AssertImpl.h</includes>
+    <incdepgraph>
+      <node id="0">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c</label>
+        <link refid="AssertImpl_8c"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AssertImpl.h</label>
+        <link refid="AssertImpl_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdImpl.h</label>
+        <link refid="stdImpl_8h"/>
+      </node>
+      <node id="1">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="AssertImpl_8c_1aecffab95d0f78ef0e3fb361ed94e3d1b" prot="public" static="no">
+        <name>exp_act_limit_cstr</name>
+        <initializer>((ASSERT_STRING_BUFFER_MAX-11-1)/2)/*	&quot;exp&apos;&apos; was&apos;&apos;&quot; = 11 byte	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" line="109" column="10"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8c_1a71d5e8bfa4d8c34f825cfb2c9649c043" prot="public" static="no">
+        <name>exp_act_limit_mem</name>
+        <initializer>((ASSERT_MEMORY_BUFFER_MAX-11-1)/2)/*	&quot;exp&apos;&apos; was&apos;&apos;&quot; = 11 byte	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" line="166" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="AssertImpl_8c_1a7d12cd10de3e7ba341f11f88acfdd9d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertImplementationInt</definition>
+        <argsstring>(long expected, long actual, unsigned char base, unsigned long line, const char *file)</argsstring>
+        <name>assertImplementationInt</name>
+        <param>
+          <type>long</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation for failing assert for integers</para><para>The given set of parameters is used to add a failure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected value for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual value for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base in which to print a failure (10 for decimal, 16 for hex) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number on which the assertion is done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name in which the assertion is done </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" line="47" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" bodystart="47" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="AssertImpl_8c_1a3b8c61e27377171a4ced696c984da829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertImplementationUInt</definition>
+        <argsstring>(unsigned long expected, unsigned long actual, unsigned char base, unsigned long line, const char *file)</argsstring>
+        <name>assertImplementationUInt</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>actual</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation for failing assert for unsigned integers</para><para>The given set of parameters is used to add a failure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected value for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual value for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base in which to print a failure (10 for decimal, 16 for hex) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number on which the assertion is done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name in which the assertion is done </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" line="77" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" bodystart="77" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="AssertImpl_8c_1acad26cbc9c64b37bd0a56639b89ac00e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertImplementationCStr</definition>
+        <argsstring>(const char *expected, const char *actual, unsigned long line, const char *file)</argsstring>
+        <name>assertImplementationCStr</name>
+        <param>
+          <type>const char *</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation for failing assert for string</para><para>The given set of parameters is used to add a failure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected string for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual string for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number on which the assertion is done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name in which the assertion is done </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" line="106" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" bodystart="106" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="AssertImpl_8c_1ada334aa191a5ef4cc38ca205d6652b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertImplementationMem</definition>
+        <argsstring>(const void *exp, const void *act, int size, unsigned long line, const char *file)</argsstring>
+        <name>assertImplementationMem</name>
+        <param>
+          <type>const void *</type>
+          <declname>exp</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>act</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation for failing assert for memory</para><para>The given set of parameters is used to add a failure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected memory for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>act</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual memory for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the memory for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number on which the assertion is done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name in which the assertion is done </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" line="160" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" bodystart="160" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdImpl_8h" kindref="compound">stdImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AssertImpl_8h" kindref="compound">AssertImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="AssertImpl_8h_1a7d12cd10de3e7ba341f11f88acfdd9d9" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AssertImpl_8c_1a7d12cd10de3e7ba341f11f88acfdd9d9" kindref="member">assertImplementationInt</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>expected,</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>base,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[42];<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&quot;expected:<sp/>-2147483647<sp/>actual:<sp/>-2147483647&quot;<sp/>when<sp/>base=10*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&quot;expected:<sp/>0x12345678<sp/>actual:<sp/>0x12345678&quot;<sp/>when<sp/>base=16*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>numbuf[12];<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*32bit<sp/>int<sp/>decimal<sp/>maximum<sp/>column<sp/>is<sp/>11<sp/>(-2147483647~2147483647)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcpy(buffer,<sp/></highlight><highlight class="stringliteral">&quot;expected:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>(base==16)?</highlight><highlight class="stringliteral">&quot;0x&quot;</highlight><highlight class="normal">:</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/>stdimpl_itoa(expected,<sp/>numbuf,<sp/>base);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>numbuf,<sp/>11);<sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcat(buffer,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>actual:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>(base==16)?</highlight><highlight class="stringliteral">&quot;0x&quot;</highlight><highlight class="normal">:</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/>stdimpl_itoa(actual,<sp/>numbuf,<sp/>base);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>numbuf,<sp/>11);<sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>addFailure(buffer,<sp/>line,<sp/>file);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AssertImpl_8c_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>expected,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>base,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[42];<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&quot;expected:<sp/>-4294967295<sp/>actual:<sp/>-4294967295&quot;<sp/>when<sp/>base=10*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&quot;expected:<sp/>0x12345678<sp/>actual:<sp/>0x12345678&quot;<sp/>when<sp/>base=16*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>numbuf[12];<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*32bit<sp/>unsigned<sp/>int<sp/>decimal<sp/>maximum<sp/>column<sp/>is<sp/>11<sp/>(-4294967295~4294967296)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcpy(buffer,<sp/></highlight><highlight class="stringliteral">&quot;expected:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>(base==16)?</highlight><highlight class="stringliteral">&quot;0x&quot;</highlight><highlight class="normal">:</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/>stdimpl_utoa(expected,<sp/>numbuf,<sp/>base);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>numbuf,<sp/>11);<sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcat(buffer,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>actual:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>(base==16)?</highlight><highlight class="stringliteral">&quot;0x&quot;</highlight><highlight class="normal">:</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/>stdimpl_utoa(actual,<sp/>numbuf,<sp/>base);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>numbuf,<sp/>11);<sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>addFailure(buffer,<sp/>line,<sp/>file);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="AssertImpl_8h_1acad26cbc9c64b37bd0a56639b89ac00e" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AssertImpl_8c_1acad26cbc9c64b37bd0a56639b89ac00e" kindref="member">assertImplementationCStr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*expected,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*actual,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[ASSERT_STRING_BUFFER_MAX];</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>exp_act_limit_cstr<sp/>((ASSERT_STRING_BUFFER_MAX-11-1)/2)</highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/>&quot;exp&apos;&apos;<sp/>was&apos;&apos;&quot;<sp/>=<sp/>11<sp/>byte<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>el;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>al;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(expected)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>=<sp/>stdimpl_strlen(expected);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expected<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;null&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actual)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>=<sp/>stdimpl_strlen(actual);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actual<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;null&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(el<sp/>&gt;<sp/>exp_act_limit_cstr)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(al<sp/>&gt;<sp/>exp_act_limit_cstr)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>=<sp/>exp_act_limit_cstr;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>=<sp/>exp_act_limit_cstr;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w<sp/>=<sp/>exp_act_limit_cstr<sp/>+<sp/>(exp_act_limit_cstr<sp/>-<sp/>al);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(el<sp/>&gt;<sp/>w)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>=<sp/>w;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w<sp/>=<sp/>exp_act_limit_cstr<sp/>+<sp/>(exp_act_limit_cstr<sp/>-<sp/>el);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(al<sp/>&gt;<sp/>w)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>=<sp/>w;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcpy(buffer,<sp/></highlight><highlight class="stringliteral">&quot;exp<sp/>\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>expected,<sp/>el);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcat(buffer,<sp/></highlight><highlight class="stringliteral">&quot;\&quot;<sp/>was<sp/>\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>actual,<sp/>al);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcat(buffer,<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>addFailure(buffer,<sp/>line,<sp/>file);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="AssertImpl_8h_1a04b5c15cb155134f8077199951363700" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AssertImpl_8c_1ada334aa191a5ef4cc38ca205d6652b9e" kindref="member">assertImplementationMem</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*exp,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*act,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>expected<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)exp;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>actual<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)act;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[ASSERT_MEMORY_BUFFER_MAX];</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>numbuf[4];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>exp_act_limit_mem<sp/>((ASSERT_MEMORY_BUFFER_MAX-11-1)/2)</highlight><highlight class="comment">/*<sp/>&quot;exp&apos;&apos;<sp/>was&apos;&apos;&quot;<sp/>=<sp/>11<sp/>byte<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>el;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>al;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>it;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(expected)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>=<sp/>3<sp/>*<sp/>size;<sp/></highlight><highlight class="comment">/*<sp/>&quot;<sp/>xx&quot;<sp/>=<sp/>3<sp/>byte<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expected<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;null&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actual)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>=<sp/><sp/>3<sp/>*<sp/>size;<sp/></highlight><highlight class="comment">/*<sp/>&quot;<sp/>xx&quot;<sp/>=<sp/>3<sp/>byte<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actual<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;null&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(el<sp/>&gt;<sp/>exp_act_limit_mem)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(al<sp/>&gt;<sp/>exp_act_limit_mem)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>=<sp/>exp_act_limit_mem;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>=<sp/>exp_act_limit_mem;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w<sp/>=<sp/>exp_act_limit_mem<sp/>+<sp/>(exp_act_limit_mem<sp/>-<sp/>al);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(el<sp/>&gt;<sp/>w)<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>=<sp/>w;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w<sp/>=<sp/>exp_act_limit_mem<sp/>+<sp/>(exp_act_limit_mem<sp/>-<sp/>el);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(al<sp/>&gt;<sp/>w)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>=<sp/>w;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcpy(buffer,<sp/></highlight><highlight class="stringliteral">&quot;exp<sp/>\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(el<sp/>&gt;=<sp/>3)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_itoa(expected[it],<sp/>numbuf,<sp/>16);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>numbuf,<sp/>2);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it++;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>el<sp/>-=<sp/>3;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcat(buffer,<sp/></highlight><highlight class="stringliteral">&quot;\&quot;<sp/>was<sp/>\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(al<sp/>&gt;=<sp/>3)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_itoa(actual[it],<sp/>numbuf,<sp/>16);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/>numbuf,<sp/>2);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_strncat(buffer,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it++;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>al<sp/>-=<sp/>3;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_strcat(buffer,<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>addFailure(buffer,<sp/>line,<sp/>file);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c"/>
+  </compounddef>
+</doxygen>

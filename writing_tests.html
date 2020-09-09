@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Advanced Features" href="advanced.html" />
+    <link rel="next" title="Assertions" href="assertions.html" />
     <link rel="prev" title="Introduction" href="intro.html" /> 
 </head>
 
@@ -90,9 +90,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#tests-test-cases-and-suites">Tests, Test Cases and Suites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-the-tests">Running the Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#building-and-executing">Building and Executing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#embunit-assertions">embUnit Assertions</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="assertions.html">Assertions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced Features</a></li>
 </ul>
 
@@ -162,6 +162,48 @@
   <div class="section" id="writing-embunit-tests">
 <h1>Writing embUnit Tests<a class="headerlink" href="#writing-embunit-tests" title="Permalink to this headline">¶</a></h1>
 <p>The following class diagram shows the architecture of EmbeddedUnit.</p>
+<p class="plantuml">
+<img src="_images/plantuml-3fbbf5fcf788c4397ec682147237cd09b88d55a8.png" alt="&#64;startuml
+
+abstract Test {
+   # &lt;b&gt;TestImplement* isa&lt;/b&gt;
+}
+class TestSuite {
+   + &lt;b&gt;TestImplement* isa&lt;/b&gt;
+        + char *name
+        + int numberOfTests
+        + Test* [] tests
+}
+class RepeatedTest {
+   + &lt;b&gt;TestImplement* isa&lt;/b&gt;
+        + Test* test;
+        + int timesRepeat;
+}
+class TestCaller {
+   + &lt;b&gt;TestImplement* isa&lt;/b&gt;
+        + char *name
+        + void(*setUp)(void)
+        + void(*tearDown)(void)
+        + int numberOfFixtures
+        + TestFixture [] fixtures
+}
+class TestCase {
+   + &lt;b&gt;TestImplement* isa&lt;/b&gt;
+        + char *name
+        + void(*setUp)(void)
+        + void(*tearDown)(void)
+        + void(*runTest)(void)
+}
+
+TestListener &lt;|-- TestRunner
+TestRunner -- Test: +Runs
+Test - TestResult: Collects results
+Test &lt;|-- TestSuite
+Test &lt;|-- RepeatedTest
+Test &lt;|-- TestCaller
+Test &lt;|-- TestCase
+&#64;enduml"/>
+</p>
 <div class="section" id="tests-test-cases-and-suites">
 <h2>Tests, Test Cases and Suites<a class="headerlink" href="#tests-test-cases-and-suites" title="Permalink to this headline">¶</a></h2>
 <p>Below is a program listing for unit tests of module counter.c. The full example can be found in /examples folder.</p>
@@ -358,40 +400,6 @@ The standard test runner gives you the results in following format (results are 
 <div class="line">run 4 failures 1</div>
 </div>
 </div>
-<div class="section" id="embunit-assertions">
-<h2>embUnit Assertions<a class="headerlink" href="#embunit-assertions" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Assertion</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>TEST_ASSERT_EQUAL_STRING(expected,actual)</p></td>
-<td><p>Assert that strings actual and expected are equivalent</p></td>
-</tr>
-<tr class="row-odd"><td><p>TEST_ASSERT_EQUAL_INT(expected,actual)</p></td>
-<td><p>Assert that integers actual and expected are equivalent</p></td>
-</tr>
-<tr class="row-even"><td><p>TEST_ASSERT_NULL(pointer)</p></td>
-<td><p>Assert that pointer value == NULL</p></td>
-</tr>
-<tr class="row-odd"><td><p>TEST_ASSERT_MESSAGE(condition, message)</p></td>
-<td><p>Assert that condition is TRUE (non-zero)</p></td>
-</tr>
-<tr class="row-even"><td><p>TEST_ASSERT(condition)</p></td>
-<td><p>Assert that condition is TRUE (non-zero)</p></td>
-</tr>
-<tr class="row-odd"><td><p>TEST_FAIL(message)</p></td>
-<td><p>Register a failed assertion with the specified message. No logical test is performed.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 
 
@@ -402,7 +410,7 @@ The standard test runner gives you the results in following format (results are 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="advanced.html" class="btn btn-neutral float-right" title="Advanced Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="assertions.html" class="btn btn-neutral float-right" title="Assertions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="TestResult_8h" kind="file" language="C++">
+    <compoundname>TestResult.h</compoundname>
+    <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
+    <includedby refid="TestCase_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</includedby>
+    <includedby refid="TestResult_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c</includedby>
+    <includedby refid="TestRunner_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c</includedby>
+    <invincdepgraph>
+      <node id="92">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c</label>
+        <link refid="TestResult_8c"/>
+      </node>
+      <node id="89">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h</label>
+        <link refid="TestResult_8h"/>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+      </node>
+      <node id="91">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</label>
+        <link refid="TestCase_8c"/>
+      </node>
+      <node id="93">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c</label>
+        <link refid="TestRunner_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct____TestResult" prot="public">__TestResult</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="TestResult_8h_1af7cacea6b75df0a64a1558bfc961fcd9" prot="public" static="no">
+        <name>new_TestResult</name>
+        <param><defname>listener</defname></param>
+        <initializer>{\
+		0,\
+		0,\
+		(<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*)listener,\
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="53" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="TestResult_8h_1a94d59eec3cf671836075008d3e8d660b" prot="public" static="no">
+        <type>struct <ref refid="struct____TestListner" kindref="compound">__TestListner</ref></type>
+        <definition>typedef struct __TestListner TestListner</definition>
+        <argsstring></argsstring>
+        <name>TestListner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="60" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestResult_8h_1ab111cb7e33eaf00ae5acb0e8d734151c" prot="public" static="no">
+        <type>struct <ref refid="struct____TestListner" kindref="compound">__TestListner</ref> *</type>
+        <definition>typedef struct __TestListner* TestListnerRef</definition>
+        <argsstring></argsstring>
+        <name>TestListnerRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="45" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="TestResult_8h_1a7987b3e86dc431313bd53e39e40d194a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestResult_init</definition>
+        <argsstring>(TestResult *self, TestListner *listner)</argsstring>
+        <name>TestResult_init</name>
+        <param>
+          <type><ref refid="struct____TestResult" kindref="compound">TestResult</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____TestListner" kindref="compound">TestListner</ref> *</type>
+          <declname>listner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="60" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="TestResult_8h_1a5188a47b9be9565948ebbe5239dca888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestResult_startTest</definition>
+        <argsstring>(TestResult *self, Test *test)</argsstring>
+        <name>TestResult_startTest</name>
+        <param>
+          <type><ref refid="struct____TestResult" kindref="compound">TestResult</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="61" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="TestResult_8h_1a69fe90a8a403f05b2188dc83167249ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestResult_endTest</definition>
+        <argsstring>(TestResult *self, Test *test)</argsstring>
+        <name>TestResult_endTest</name>
+        <param>
+          <type><ref refid="struct____TestResult" kindref="compound">TestResult</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="62" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="TestResult_8h_1ace2141f841ea4f7d1f76c8b399b286bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestResult_addFailure</definition>
+        <argsstring>(TestResult *self, Test *test, const char *msg, int line, const char *file)</argsstring>
+        <name>TestResult_addFailure</name>
+        <param>
+          <type><ref refid="struct____TestResult" kindref="compound">TestResult</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+          <declname>test</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h" line="63" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c" bodystart="60" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__TESTRESULT_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__TESTRESULT_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*typedef<sp/>struct<sp/>__TestResult<sp/><sp/><sp/><sp/><sp/><sp/><sp/>TestResult;*/</highlight><highlight class="comment">/*<sp/>-&gt;<sp/>Test.h*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*typedef<sp/>struct<sp/>__TestResult*<sp/><sp/><sp/><sp/><sp/><sp/>TestResultRef;*/</highlight><highlight class="comment">/*<sp/>-&gt;<sp/>Test.h*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestListner" kindref="compound">__TestListner</ref><sp/><sp/><sp/><sp/><ref refid="struct____TestListner" kindref="compound">TestListner</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestListner" kindref="compound">__TestListner</ref>*<sp/><sp/><sp/><ref refid="struct____TestListner" kindref="compound">TestListnerRef</ref>;</highlight><highlight class="comment">/*downward<sp/>compatible*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="struct____TestResult" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestResult" kindref="compound">__TestResult</ref><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>runCount;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>failureCount;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____TestListner" kindref="compound">TestListner</ref>*<sp/>listener;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new_TestResult(listener)\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(TestListner*)listener,\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestResult_init(<ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*<sp/>listner);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestResult_startTest(<ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestResult_endTest(<ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestResult_addFailure(<ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>msg,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__TESTRESULT_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="TestCaller_8h" kind="file" language="C++">
+    <compoundname>TestCaller.h</compoundname>
+    <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
+    <includedby refid="TestCaller_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</includedby>
+    <invincdepgraph>
+      <node id="66">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+      </node>
+      <node id="67">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</label>
+        <link refid="TestCaller_8c"/>
+      </node>
+      <node id="65">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h</label>
+        <link refid="TestCaller_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct____TestFixture" prot="public">__TestFixture</innerclass>
+    <innerclass refid="struct____TestCaller" prot="public">__TestCaller</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="TestCaller_8h_1a23d66df8c9228f3bed6dedea1b795548" prot="public" static="no">
+        <name>new_TestFixture</name>
+        <param><defname>name</defname></param>
+        <param><defname>test</defname></param>
+        <initializer>{\
+		name,\
+		test,\
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="45" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TestCaller_8h_1a5b3e6d23deebbec453b8dc1fe56534b9" prot="public" static="no">
+        <name>new_TestCaller</name>
+        <param><defname>caller</defname></param>
+        <param><defname>nm</defname></param>
+        <param><defname>sup</defname></param>
+        <param><defname>tdw</defname></param>
+        <param><defname>NoFixtures</defname></param>
+        <param><defname>fixtures</defname></param>
+        <initializer>caller-&gt;isa = (<ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*)&amp;TestCallerImplement; \
+caller-&gt;name = nm; \
+caller-&gt;setUp = sup; \
+caller-&gt;tearDown = tdw; \
+caller-&gt;numberOfFixtuers = NoFixtures; \
+caller-&gt;fixtuers = (<ref refid="struct____TestFixture" kindref="compound">TestFixture</ref>*)fixtures</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="65" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="TestCaller_8h_1af6abc6c77e9f3f235020edb46b11f5e2" prot="public" static="no">
+        <type>struct <ref refid="struct____TestFixture" kindref="compound">__TestFixture</ref></type>
+        <definition>typedef struct __TestFixture TestFixture</definition>
+        <argsstring></argsstring>
+        <name>TestFixture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="66" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestCaller_8h_1aae1b3e55c741b6a3ce96883355964db4" prot="public" static="no">
+        <type>struct <ref refid="struct____TestFixture" kindref="compound">__TestFixture</ref> *</type>
+        <definition>typedef struct __TestFixture* TestFixtureRef</definition>
+        <argsstring></argsstring>
+        <name>TestFixtureRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestCaller_8h_1a59efc6aa5d5bd64c7ca50f5f4d3d3ea8" prot="public" static="no">
+        <type>struct <ref refid="struct____TestCaller" kindref="compound">__TestCaller</ref></type>
+        <definition>typedef struct __TestCaller TestCaller</definition>
+        <argsstring></argsstring>
+        <name>TestCaller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestCaller_8h_1a8d2183509deb9090581cea93b29a1498" prot="public" static="no">
+        <type>struct <ref refid="struct____TestCaller" kindref="compound">__TestCaller</ref> *</type>
+        <definition>typedef struct __TestCaller* TestCallerRef</definition>
+        <argsstring></argsstring>
+        <name>TestCallerRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="52" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="TestCaller_8h_1abe0ba7bb5b17d8fc246280f2525bac3d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct____TestImplement" kindref="compound">TestImplement</ref></type>
+        <definition>const TestImplement TestCallerImplement</definition>
+        <argsstring></argsstring>
+        <name>TestCallerImplement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="63" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__TESTCALLER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__TESTCALLER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestFixture" kindref="compound">__TestFixture</ref><sp/><sp/><sp/><sp/><ref refid="struct____TestFixture" kindref="compound">TestFixture</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestFixture" kindref="compound">__TestFixture</ref>*<sp/><sp/><sp/><ref refid="struct____TestFixture" kindref="compound">TestFixtureRef</ref>;</highlight><highlight class="comment">/*downward<sp/>compatible*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="struct____TestFixture" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestFixture" kindref="compound">__TestFixture</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>void(*test)(void);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new_TestFixture(name,test)\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name,\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>test,\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestCaller" kindref="compound">__TestCaller</ref><sp/><sp/><sp/><sp/><sp/>TestCaller;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestCaller" kindref="compound">__TestCaller</ref>*<sp/><sp/><sp/><sp/><ref refid="struct____TestCaller" kindref="compound">TestCallerRef</ref>;</highlight><highlight class="comment">/*downward<sp/>compatible*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="struct____TestCaller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestCaller" kindref="compound">__TestCaller</ref><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*<sp/>isa;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>void(*setUp)(void);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>void(*tearDown)(void);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numberOfFixtuers;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____TestFixture" kindref="compound">TestFixture</ref><sp/>*fixtuers;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref><sp/>TestCallerImplement;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new_TestCaller(caller,nm,sup,tdw,NoFixtures,fixtures)<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor">caller-&gt;isa<sp/>=<sp/>(TestImplement*)&amp;TestCallerImplement;<sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor">caller-&gt;name<sp/>=<sp/>nm;<sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor">caller-&gt;setUp<sp/>=<sp/>sup;<sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor">caller-&gt;tearDown<sp/>=<sp/>tdw;<sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor">caller-&gt;numberOfFixtuers<sp/>=<sp/>NoFixtures;<sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor">caller-&gt;fixtuers<sp/>=<sp/>(TestFixture*)fixtures</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__TESTCALLER_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h"/>
+  </compounddef>
+</doxygen>

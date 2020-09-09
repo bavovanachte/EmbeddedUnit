@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="HelperMacro_8h" kind="file" language="C++">
+    <compoundname>HelperMacro.h</compoundname>
+    <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
+    <invincdepgraph>
+      <node id="31">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+      </node>
+      <node id="30">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h</label>
+        <link refid="HelperMacro_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="HelperMacro_8h_1abf7226e11ddec99f1b695cee8668daf8" prot="public" static="no">
+        <name>EMB_UNIT_TESTCASE</name>
+        <param><defname>ca</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>sup</defname></param>
+        <param><defname>tdw</defname></param>
+        <param><defname>run</defname></param>
+        <initializer>static const <ref refid="struct____TestCase" kindref="compound">TestCase</ref>	ca = new_TestCase(name,sup,tdw,run)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="37" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HelperMacro_8h_1a79fa5d811049007bf78fd770d3d6ad3c" prot="public" static="no">
+        <name>EMB_UNIT_TESTSUITE</name>
+        <param><defname>su</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>array</defname></param>
+        <initializer>static const <ref refid="struct____TestSuite" kindref="compound">TestSuite</ref>	su = new_TestSuite(name,(<ref refid="struct____Test" kindref="compound">Test</ref>**)array,sizeof(array)/sizeof(array[0]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="40" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HelperMacro_8h_1a21fcc49ab0a0cc48889e8fd09c241876" prot="public" static="no">
+        <name>EMB_UNIT_TESTREFS</name>
+        <param><defname>tests</defname></param>
+        <initializer>static <ref refid="struct____Test" kindref="compound">Test</ref>* const tests[] =</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="43" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HelperMacro_8h_1a24a8e7d9b0e0efb9261d1ea7d76bdb03" prot="public" static="no">
+        <name>EMB_UNIT_ADD_TESTREF</name>
+        <param><defname>testref</defname></param>
+        <initializer>(<ref refid="struct____Test" kindref="compound">Test</ref>*)	testref</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="46" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HelperMacro_8h_1ad406aea8e6dd13c9d14b713658f1122e" prot="public" static="no">
+        <name>EMB_UNIT_TESTCALLER</name>
+        <param><defname>caller</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>sup</defname></param>
+        <param><defname>tdw</defname></param>
+        <param><defname>fixtures</defname></param>
+        <initializer>new_TestCaller(caller,name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="49" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HelperMacro_8h_1a72e1c5df141bcb892897252d43129d6e" prot="public" static="no">
+        <name>EMB_UNIT_TESTFIXTURES</name>
+        <param><defname>fixtures</defname></param>
+        <initializer>static const <ref refid="struct____TestFixture" kindref="compound">TestFixture</ref>	fixtures[] =</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="52" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HelperMacro_8h_1adf691ecd77b7835c79450f5843b27a9f" prot="public" static="no">
+        <name>EMB_UNIT_REPEATEDTEST</name>
+        <param><defname>repeater</defname></param>
+        <param><defname>test</defname></param>
+        <param><defname>tmrp</defname></param>
+        <initializer>static const <ref refid="struct____RepeatedTest" kindref="compound">RepeatedTest</ref>	repeater = new_RepeatedTest(test,tmrp)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="55" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__HELPERMACRO_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HELPERMACRO_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTCASE(ca,name,sup,tdw,run)<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>TestCase<sp/><sp/><sp/>ca<sp/>=<sp/>new_TestCase(name,sup,tdw,run)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTSUITE(su,name,array)<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>TestSuite<sp/><sp/>su<sp/>=<sp/>new_TestSuite(name,(Test**)array,sizeof(array)/sizeof(array[0]))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTREFS(tests)<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>Test*<sp/>const<sp/>tests[]<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_ADD_TESTREF(testref)<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Test*)<sp/>testref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTCALLER(caller,name,sup,tdw,fixtures)<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>new_TestCaller(caller,name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTFIXTURES(fixtures)<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>TestFixture<sp/><sp/><sp/><sp/>fixtures[]<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_REPEATEDTEST(repeater,test,tmrp)<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>RepeatedTest<sp/><sp/><sp/>repeater<sp/>=<sp/>new_RepeatedTest(test,tmrp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__HELPERMACRO_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h"/>
+  </compounddef>
+</doxygen>

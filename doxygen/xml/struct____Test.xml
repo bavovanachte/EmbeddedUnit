@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____Test" kind="struct" language="C++" prot="public">
+    <compoundname>__Test</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____Test_1a63ebd7755f0e6144e761d9d642f0d3c8" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref> *</type>
+        <definition>TestImplement* __Test::isa</definition>
+        <argsstring></argsstring>
+        <name>isa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" line="57" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>__Test</label>
+        <link refid="struct____Test"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="10">
+        <label>__TestResult</label>
+        <link refid="struct____TestResult"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>__TestImplement</label>
+        <link refid="struct____TestImplement"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>run</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" line="56" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" bodystart="56" bodyend="58"/>
+    <listofallmembers>
+      <member refid="struct____Test_1a63ebd7755f0e6144e761d9d642f0d3c8" prot="public" virt="non-virtual"><scope>__Test</scope><name>isa</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

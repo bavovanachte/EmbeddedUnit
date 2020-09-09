@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="TestCase_8h" kind="file" language="C++">
+    <compoundname>TestCase.h</compoundname>
+    <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
+    <includedby refid="TestCaller_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</includedby>
+    <includedby refid="TestCase_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</includedby>
+    <invincdepgraph>
+      <node id="75">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+      </node>
+      <node id="77">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</label>
+        <link refid="TestCase_8c"/>
+      </node>
+      <node id="74">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h</label>
+        <link refid="TestCase_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</label>
+        <link refid="TestCaller_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct____TestCase" prot="public">__TestCase</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="TestCase_8h_1af4c37a8c2c530145d0501e3bce9ae684" prot="public" static="no">
+        <name>new_TestCase</name>
+        <param><defname>name</defname></param>
+        <param><defname>setUp</defname></param>
+        <param><defname>tearDown</defname></param>
+        <param><defname>runTest</defname></param>
+        <initializer>{\
+		(<ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*)&amp;TestCaseImplement,\
+		name,\
+		setUp,\
+		tearDown,\
+		runTest,\
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="50" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="TestCase_8h_1ab9d849163b3cd471e5bf5c30dccb0ef4" prot="public" static="no">
+        <type>struct <ref refid="struct____TestCase" kindref="compound">__TestCase</ref></type>
+        <definition>typedef struct __TestCase TestCase</definition>
+        <argsstring></argsstring>
+        <name>TestCase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="78" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestCase_8h_1af0269ebe7046e533268070634e735b61" prot="public" static="no">
+        <type>struct <ref refid="struct____TestCase" kindref="compound">__TestCase</ref> *</type>
+        <definition>typedef struct __TestCase* TestCaseRef</definition>
+        <argsstring></argsstring>
+        <name>TestCaseRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="TestCase_8h_1a34148ed294a80d779b8ef4ba56b78e81" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct____TestImplement" kindref="compound">TestImplement</ref></type>
+        <definition>const TestImplement TestCaseImplement</definition>
+        <argsstring></argsstring>
+        <name>TestCaseImplement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="48" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__TESTCASE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__TESTCASE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestCase" kindref="compound">__TestCase</ref><sp/><sp/><sp/><ref refid="struct____TestCase" kindref="compound">TestCase</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestCase" kindref="compound">__TestCase</ref>*<sp/><sp/><ref refid="struct____TestCase" kindref="compound">TestCaseRef</ref>;</highlight><highlight class="comment">/*compatible<sp/>embUnit1.0*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="struct____TestCase" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestCase" kindref="compound">__TestCase</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*<sp/>isa;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>void(*setUp)(void);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>void(*tearDown)(void);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>void(*runTest)(void);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref><sp/>TestCaseImplement;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new_TestCase(name,setUp,tearDown,runTest)\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(TestImplement*)&amp;TestCaseImplement,\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name,\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setUp,\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tearDown,\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runTest,\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__TESTCASE_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h"/>
+  </compounddef>
+</doxygen>

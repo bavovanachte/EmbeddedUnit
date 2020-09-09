@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____TestListner" kind="struct" language="C++" prot="public">
+    <compoundname>__TestListner</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____TestListner_1a84985b91c108dd9f72007b73ebb15d43" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestListnerImplement" kindref="compound">TestListnerImplement</ref> *</type>
+        <definition>TestListnerImplement* __TestListner::isa</definition>
+        <argsstring></argsstring>
+        <name>isa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="54" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="34">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="53" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="53" bodyend="55"/>
+    <listofallmembers>
+      <member refid="struct____TestListner_1a84985b91c108dd9f72007b73ebb15d43" prot="public" virt="non-virtual"><scope>__TestListner</scope><name>isa</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

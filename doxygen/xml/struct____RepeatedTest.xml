@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____RepeatedTest" kind="struct" language="C++" prot="public">
+    <compoundname>__RepeatedTest</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____RepeatedTest_1a3e1a7f204e43fc134fdc64546ae55425" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref> *</type>
+        <definition>TestImplement* __RepeatedTest::isa</definition>
+        <argsstring></argsstring>
+        <name>isa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" line="41" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____RepeatedTest_1acbcf1ee7b8407113829b119ec5d74121" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+        <definition>Test* __RepeatedTest::test</definition>
+        <argsstring></argsstring>
+        <name>test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" line="42" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____RepeatedTest_1a247b22071c0a81cdc88dca7482aa0f79" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int __RepeatedTest::timesRepeat</definition>
+        <argsstring></argsstring>
+        <name>timesRepeat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" line="43" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>__Test</label>
+        <link refid="struct____Test"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="4">
+        <label>__TestResult</label>
+        <link refid="struct____TestResult"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>__RepeatedTest</label>
+        <link refid="struct____RepeatedTest"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>test</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>__TestImplement</label>
+        <link refid="struct____TestImplement"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>run</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" line="40" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" bodystart="40" bodyend="44"/>
+    <listofallmembers>
+      <member refid="struct____RepeatedTest_1a3e1a7f204e43fc134fdc64546ae55425" prot="public" virt="non-virtual"><scope>__RepeatedTest</scope><name>isa</name></member>
+      <member refid="struct____RepeatedTest_1acbcf1ee7b8407113829b119ec5d74121" prot="public" virt="non-virtual"><scope>__RepeatedTest</scope><name>test</name></member>
+      <member refid="struct____RepeatedTest_1a247b22071c0a81cdc88dca7482aa0f79" prot="public" virt="non-virtual"><scope>__RepeatedTest</scope><name>timesRepeat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

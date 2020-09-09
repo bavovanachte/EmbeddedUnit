@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="TestCase_8c" kind="file" language="C++">
+    <compoundname>TestCase.c</compoundname>
+    <includes refid="Test_8h" local="yes">Test.h</includes>
+    <includes refid="TestCase_8h" local="yes">TestCase.h</includes>
+    <includes refid="TestResult_8h" local="yes">TestResult.h</includes>
+    <incdepgraph>
+      <node id="69">
+        <label>Test.h</label>
+        <link refid="Test_8h"/>
+      </node>
+      <node id="71">
+        <label>TestResult.h</label>
+        <link refid="TestResult_8h"/>
+      </node>
+      <node id="68">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</label>
+        <link refid="TestCase_8c"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>TestCase.h</label>
+        <link refid="TestCase_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="TestCase_8c_1acf81b99797e96c7d602ffc4c3cb012b0" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct____TestResult" kindref="compound">TestResult</ref> *</type>
+        <definition>TestResult* result_</definition>
+        <argsstring></argsstring>
+        <name>result_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="TestCase_8c_1afbfb8f49d431114f9a6096b8eff2c2fb" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct____TestCase" kindref="compound">TestCase</ref> *</type>
+        <definition>TestCase* self_</definition>
+        <argsstring></argsstring>
+        <name>self_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" line="39" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="TestCase_8c_1a34148ed294a80d779b8ef4ba56b78e81" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct____TestImplement" kindref="compound">TestImplement</ref></type>
+        <definition>const TestImplement TestCaseImplement</definition>
+        <argsstring></argsstring>
+        <name>TestCaseImplement</name>
+        <initializer>= {
+	(TestNameFunction)			TestCase_name,
+	(TestRunFunction)			TestCase_run,
+	(TestCountTestCasesFunction)TestCase_countTestCases,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" line="72" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="TestCase_8c_1a5febabe8f36ada4218aaa731ef1ba436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* TestCase_name</definition>
+        <argsstring>(TestCase *self)</argsstring>
+        <name>TestCase_name</name>
+        <param>
+          <type><ref refid="struct____TestCase" kindref="compound">TestCase</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" line="41" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="TestCase_8c_1ab3392821d1a52c3fe2ff4998b266b3d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestCase_run</definition>
+        <argsstring>(TestCase *self, TestResult *result)</argsstring>
+        <name>TestCase_run</name>
+        <param>
+          <type><ref refid="struct____TestCase" kindref="compound">TestCase</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____TestResult" kindref="compound">TestResult</ref> *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" line="46" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" bodystart="46" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="TestCase_8c_1a345890719cf682d2a29c2aef35087614" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TestCase_countTestCases</definition>
+        <argsstring>(TestCase *self)</argsstring>
+        <name>TestCase_countTestCases</name>
+        <param>
+          <type><ref refid="struct____TestCase" kindref="compound">TestCase</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" line="67" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="TestCase_8c_1ab9d5d699c59cde5cec96e8f94b978f1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addFailure</definition>
+        <argsstring>(const char *msg, long line, const char *file)</argsstring>
+        <name>addFailure</name>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" line="78" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c" bodystart="78" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Test_8h" kindref="compound">Test.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TestCase_8h" kindref="compound">TestCase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TestResult_8h" kindref="compound">TestResult.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/>result_;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct____TestCase" kindref="compound">TestCase</ref>*<sp/>self_;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>TestCase_name(<ref refid="struct____TestCase" kindref="compound">TestCase</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;name;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestCase_run(<ref refid="struct____TestCase" kindref="compound">TestCase</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/>result)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>TestResult_startTest(result,<sp/>(<ref refid="struct____Test" kindref="compound">Test</ref>*)</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(self-&gt;setUp)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;setUp();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(self-&gt;runTest)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/>wr<sp/>=result_;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*push*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct____TestCase" kindref="compound">TestCase</ref>*<sp/>ws<sp/>=<sp/>self_;<sp/><sp/><sp/></highlight><highlight class="comment">/*push*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result_<sp/>=<sp/>result;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self_<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;runTest();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result_<sp/>=<sp/>wr;<sp/><sp/><sp/></highlight><highlight class="comment">/*pop*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self_<sp/>=<sp/>ws;<sp/></highlight><highlight class="comment">/*pop*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(self-&gt;tearDown)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;tearDown();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>TestResult_endTest(result,<sp/>(<ref refid="struct____Test" kindref="compound">Test</ref>*)</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TestCase_countTestCases(<ref refid="struct____TestCase" kindref="compound">TestCase</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref><sp/>TestCaseImplement<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestNameFunction)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TestCase_name,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestRunFunction)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TestCase_run,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestCountTestCasesFunction)TestCase_countTestCases,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addFailure(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>TestResult_addFailure(result_,<sp/>(<ref refid="struct____Test" kindref="compound">Test</ref>*)self_,<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)msg,<sp/>line,<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)file);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c"/>
+  </compounddef>
+</doxygen>

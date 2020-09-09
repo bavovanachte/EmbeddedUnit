@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_405a3171375bbefc89bc8f4806fdd62a" kind="dir">
+    <compoundname>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit</compoundname>
+    <innerfile refid="AssertImpl_8c">AssertImpl.c</innerfile>
+    <innerfile refid="AssertImpl_8h">AssertImpl.h</innerfile>
+    <innerfile refid="config_8h">config.h</innerfile>
+    <innerfile refid="embUnit_8h">embUnit.h</innerfile>
+    <innerfile refid="HelperMacro_8h">HelperMacro.h</innerfile>
+    <innerfile refid="RepeatedTest_8c">RepeatedTest.c</innerfile>
+    <innerfile refid="RepeatedTest_8h">RepeatedTest.h</innerfile>
+    <innerfile refid="stdImpl_8c">stdImpl.c</innerfile>
+    <innerfile refid="stdImpl_8h">stdImpl.h</innerfile>
+    <innerfile refid="Test_8h">Test.h</innerfile>
+    <innerfile refid="TestCaller_8c">TestCaller.c</innerfile>
+    <innerfile refid="TestCaller_8h">TestCaller.h</innerfile>
+    <innerfile refid="TestCase_8c">TestCase.c</innerfile>
+    <innerfile refid="TestCase_8h">TestCase.h</innerfile>
+    <innerfile refid="TestListener_8h">TestListener.h</innerfile>
+    <innerfile refid="TestResult_8c">TestResult.c</innerfile>
+    <innerfile refid="TestResult_8h">TestResult.h</innerfile>
+    <innerfile refid="TestRunner_8c">TestRunner.c</innerfile>
+    <innerfile refid="TestRunner_8h">TestRunner.h</innerfile>
+    <innerfile refid="TestSuite_8c">TestSuite.c</innerfile>
+    <innerfile refid="TestSuite_8h">TestSuite.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/"/>
+  </compounddef>
+</doxygen>

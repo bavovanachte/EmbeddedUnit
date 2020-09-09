@@ -1,0 +1,1070 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="AssertImpl_8h" kind="file" language="C++">
+    <compoundname>AssertImpl.h</compoundname>
+    <includes refid="stdImpl_8h" local="no">stdImpl.h</includes>
+    <includedby refid="AssertImpl_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c</includedby>
+    <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h</label>
+        <link refid="AssertImpl_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdImpl.h</label>
+        <link refid="stdImpl_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c</label>
+        <link refid="AssertImpl_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h</label>
+        <link refid="AssertImpl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="AssertImpl_8h_1a1432f008fb6fb923371d4d0402571bf6" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_STRING</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if (expected &amp;&amp; actual &amp;&amp; (stdimpl_strcmp(expected,actual)==0)) {} else {<ref refid="AssertImpl_8h_1acad26cbc9c64b37bd0a56639b89ac00e" kindref="member">assertImplementationCStr</ref>(expected,actual,__LINE__,__FILE__);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert string equality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="55" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a91e7af396bbb7112e7122224d9f453c2" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_MEMORY</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <param><defname>size</defname></param>
+        <initializer>if ((expected!=NULL) &amp;&amp; (actual!=NULL) &amp;&amp; (stdimpl_memcmp(expected,actual,size)==0)) {} else {<ref refid="AssertImpl_8h_1a04b5c15cb155134f8077199951363700" kindref="member">assertImplementationMem</ref>(expected,actual,size,__LINE__,__FILE__);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert memory equality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the memory to compare </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="64" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1af52a321a93c580a6213fef3e0f85c237" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_INT</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if (expected == actual) {} else {<ref refid="AssertImpl_8h_1a7d12cd10de3e7ba341f11f88acfdd9d9" kindref="member">assertImplementationInt</ref>(expected,actual, 10,__LINE__,__FILE__);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert signed integer equality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="72" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1aff20a2bc399f4d31f69aa468542f11d1" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_UINT</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if (expected == actual) {} else {<ref refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>(expected,actual, 10,__LINE__,__FILE__);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert unsigned integer equality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="80" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1ab1497984306b3fe78e851341d82c7147" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_HEX</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if (expected == actual) {} else {<ref refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>(expected,actual, 16,__LINE__,__FILE__);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert hexadecimal integer equality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="88" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a765240c346d79b58ef22d81982aced18" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_PTR</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if ((void*)expected == (void*)actual) {} else {<ref refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>((int)expected,(int)actual, 16,__LINE__,__FILE__);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert pointer equality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected poiunter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual pointer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="96" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a0dabc9ae6eaa3b46536521b5a99854c7" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_INT_WITH_MARGIN</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <param><defname>margin</defname></param>
+        <initializer><ref refid="AssertImpl_8h_1a154b724ab91c33b7d977b17e964b16a4" kindref="member">TEST_ASSERT_EQUAL_WITH_MARGIN</ref>(expected,actual,margin)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert signed integer equality with margin</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>margin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allowed margin to be applied during assertion </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="105" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a154b724ab91c33b7d977b17e964b16a4" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_WITH_MARGIN</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <param><defname>margin</defname></param>
+        <initializer>do { \
+		long __margin = margin; \
+		if (margin &lt; 0) __margin = -margin; \
+		if( expected &gt; actual ) { \
+			if( (expected - actual) &lt;= __margin ) {} \
+			else {<ref refid="AssertImpl_8h_1a7d12cd10de3e7ba341f11f88acfdd9d9" kindref="member">assertImplementationInt</ref>(expected,actual,10,__LINE__,__FILE__);} \
+		} \
+		else { \
+			if( (actual - expected) &lt;= __margin ) {} \
+			else {<ref refid="AssertImpl_8h_1a7d12cd10de3e7ba341f11f88acfdd9d9" kindref="member">assertImplementationInt</ref>(expected,actual,10,__LINE__,__FILE__);} \
+		} \
+	} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert signed integer equality with margin</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>margin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allowed margin to be applied during assertion </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="114" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a7cc9b8a44d2711eb07fb2a0ed92ffb8d" prot="public" static="no">
+        <name>TEST_ASSERT_EQUAL_UINT_WITH_MARGIN</name>
+        <param><defname>expected</defname></param>
+        <param><defname>actual</defname></param>
+        <param><defname>margin</defname></param>
+        <initializer>do { \
+		unsigned long __margin = margin; \
+		if( expected &gt; actual ) { \
+			if( (expected - actual) &lt;= __margin ) {} \
+			else {<ref refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>(expected,actual,10,__LINE__,__FILE__);} \
+		} \
+		else { \
+			if( (actual - expected) &lt;= __margin ) {} \
+			else {<ref refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>(expected,actual,10,__LINE__,__FILE__);} \
+		} \
+	} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert unsigned integer equality with margin</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>margin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allowed margin to be applied during assertion </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="134" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1ae4e883189e1d231587845a4761aa6783" prot="public" static="no">
+        <name>TEST_ASSERT_NOT_LOWER_THAN_INT</name>
+        <param><defname>min</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if (actual &lt; min) { \
+		<ref refid="AssertImpl_8h_1a7d12cd10de3e7ba341f11f88acfdd9d9" kindref="member">assertImplementationInt</ref>(min, actual, 10, __LINE__, __FILE__); \
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert signed integer to be higher than or equal to a minimum value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="152" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a735d523a0ba4034f6e15feed21a65a05" prot="public" static="no">
+        <name>TEST_ASSERT_NOT_HIGHER_THAN_INT</name>
+        <param><defname>max</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if (actual &gt; max) { \
+		<ref refid="AssertImpl_8h_1a7d12cd10de3e7ba341f11f88acfdd9d9" kindref="member">assertImplementationInt</ref>(max, actual, 10, __LINE__, __FILE__); \
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert signed integer to be lower than or equal to a maximum value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="162" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a7e50e547df9295fb216debc703b84496" prot="public" static="no">
+        <name>TEST_ASSERT_RANGE_INT</name>
+        <param><defname>min</defname></param>
+        <param><defname>max</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>do { \
+		<ref refid="AssertImpl_8h_1ae4e883189e1d231587845a4761aa6783" kindref="member">TEST_ASSERT_NOT_LOWER_THAN_INT</ref>(min, actual)\
+		<ref refid="AssertImpl_8h_1a735d523a0ba4034f6e15feed21a65a05" kindref="member">TEST_ASSERT_NOT_HIGHER_THAN_INT</ref>(max, actual)\
+	} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert signed integer to be within the range (boundaries are allowed) of given minimum and maximum</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="173" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1aafd9c8bc24dbf7000aeb891f7ecdfd7a" prot="public" static="no">
+        <name>TEST_ASSERT_NOT_LOWER_THAN_UINT</name>
+        <param><defname>min</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if (actual &lt; min) { \
+		<ref refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>(min, actual, 10, __LINE__, __FILE__); \
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert unsigned integer to be higher than or equal to a minimum value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="184" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a10c24d423941a1a21b284114fd4126c9" prot="public" static="no">
+        <name>TEST_ASSERT_NOT_HIGHER_THAN_UINT</name>
+        <param><defname>max</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>if (actual &gt; max) { \
+		<ref refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>(max, actual, 10, __LINE__, __FILE__); \
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert unsigned integer to be lower than or equal to a maximum value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="194" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1ae170691e04d93ad13a0ebd08bc8ba47a" prot="public" static="no">
+        <name>TEST_ASSERT_RANGE_UINT</name>
+        <param><defname>min</defname></param>
+        <param><defname>max</defname></param>
+        <param><defname>actual</defname></param>
+        <initializer>do { \
+		<ref refid="AssertImpl_8h_1aafd9c8bc24dbf7000aeb891f7ecdfd7a" kindref="member">TEST_ASSERT_NOT_LOWER_THAN_UINT</ref>(min, actual)\
+		<ref refid="AssertImpl_8h_1a10c24d423941a1a21b284114fd4126c9" kindref="member">TEST_ASSERT_NOT_HIGHER_THAN_UINT</ref>(max, actual)\
+	} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert unsigned integer to be within the range (boundaries are allowed) of given minimum and maximum</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="205" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a4d807ccb46fae06886f16ea8a86590ca" prot="public" static="no">
+        <name>TEST_ASSERT_NULL</name>
+        <param><defname>pointer</defname></param>
+        <initializer><ref refid="AssertImpl_8h_1ae525f7ac1168f789c109324166cd6e13" kindref="member">TEST_ASSERT_MESSAGE</ref>(pointer == NULL,#pointer &quot; was not null.&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert a pointer to be NULL</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer under test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="215" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1afae78efdc83dcc60f08347b8390525b9" prot="public" static="no">
+        <name>TEST_ASSERT_NOT_NULL</name>
+        <param><defname>pointer</defname></param>
+        <initializer><ref refid="AssertImpl_8h_1ae525f7ac1168f789c109324166cd6e13" kindref="member">TEST_ASSERT_MESSAGE</ref>(pointer != NULL,#pointer &quot; was null.&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert a pointer to be non-NULL</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer under test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="222" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1ae525f7ac1168f789c109324166cd6e13" prot="public" static="no">
+        <name>TEST_ASSERT_MESSAGE</name>
+        <param><defname>condition</defname></param>
+        <param><defname>message</defname></param>
+        <initializer>if (condition) {} else {<ref refid="AssertImpl_8h_1a3650e4aa89d05fbc5f0152f014576093" kindref="member">TEST_FAIL</ref>(message);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert a condition to pass</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Condition under test </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print when assertion fails </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="230" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1ae0a72bc174ac97e90c4a711e5e52d540" prot="public" static="no">
+        <name>TEST_ASSERT</name>
+        <param><defname>condition</defname></param>
+        <initializer>if (condition) {} else {<ref refid="AssertImpl_8h_1a3650e4aa89d05fbc5f0152f014576093" kindref="member">TEST_FAIL</ref>(#condition);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert a condition to pass</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Condition under test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="237" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AssertImpl_8h_1a3650e4aa89d05fbc5f0152f014576093" prot="public" static="no">
+        <name>TEST_FAIL</name>
+        <param><defname>message</defname></param>
+        <initializer>if (0) {} else {addFailure(message,__LINE__,__FILE__);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark a test as failed</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="244" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="AssertImpl_8h_1a8738f43fd67a4ab60fd8392f7efbff49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addFailure</definition>
+        <argsstring>(const char *msg, unsigned long line, const char *file)</argsstring>
+        <name>addFailure</name>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="AssertImpl_8h_1a7d12cd10de3e7ba341f11f88acfdd9d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertImplementationInt</definition>
+        <argsstring>(long expected, long actual, unsigned char base, unsigned long line, const char *file)</argsstring>
+        <name>assertImplementationInt</name>
+        <param>
+          <type>long</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation for failing assert for integers</para><para>The given set of parameters is used to add a failure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected value for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual value for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base in which to print a failure (10 for decimal, 16 for hex) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number on which the assertion is done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name in which the assertion is done </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="45" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" bodystart="47" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertImplementationUInt</definition>
+        <argsstring>(unsigned long expected, unsigned long actual, unsigned char base, unsigned long line, const char *file)</argsstring>
+        <name>assertImplementationUInt</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>actual</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation for failing assert for unsigned integers</para><para>The given set of parameters is used to add a failure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected value for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual value for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base in which to print a failure (10 for decimal, 16 for hex) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number on which the assertion is done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name in which the assertion is done </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="46" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" bodystart="77" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="AssertImpl_8h_1acad26cbc9c64b37bd0a56639b89ac00e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertImplementationCStr</definition>
+        <argsstring>(const char *expected, const char *actual, unsigned long line, const char *file)</argsstring>
+        <name>assertImplementationCStr</name>
+        <param>
+          <type>const char *</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation for failing assert for string</para><para>The given set of parameters is used to add a failure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected string for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual string for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number on which the assertion is done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name in which the assertion is done </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="47" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" bodystart="106" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="AssertImpl_8h_1a04b5c15cb155134f8077199951363700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertImplementationMem</definition>
+        <argsstring>(const void *expected, const void *actual, int size, unsigned long line, const char *file)</argsstring>
+        <name>assertImplementationMem</name>
+        <param>
+          <type>const void *</type>
+          <declname>expected</declname>
+          <defname>exp</defname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>actual</declname>
+          <defname>act</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation for failing assert for memory</para><para>The given set of parameters is used to add a failure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected memory for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>act</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual memory for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the memory for the assert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number on which the assertion is done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name in which the assertion is done </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h" line="48" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c" bodystart="160" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__ASSERTIMPL_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ASSERTIMPL_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="stdImpl_8h" kindref="compound">stdImpl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addFailure(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);<sp/></highlight><highlight class="comment">/*TestCase.c*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AssertImpl_8h_1a7d12cd10de3e7ba341f11f88acfdd9d9" kindref="member">assertImplementationInt</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>expected,</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>base,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AssertImpl_8h_1a3b8c61e27377171a4ced696c984da829" kindref="member">assertImplementationUInt</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>expected,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>base,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AssertImpl_8h_1acad26cbc9c64b37bd0a56639b89ac00e" kindref="member">assertImplementationCStr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*expected,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*actual,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AssertImpl_8h_1a04b5c15cb155134f8077199951363700" kindref="member">assertImplementationMem</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*expected,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*actual,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="AssertImpl_8h_1a1432f008fb6fb923371d4d0402571bf6" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_STRING(expected,actual)\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(expected<sp/>&amp;&amp;<sp/>actual<sp/>&amp;&amp;<sp/>(stdimpl_strcmp(expected,actual)==0))<sp/>{}<sp/>else<sp/>{assertImplementationCStr(expected,actual,__LINE__,__FILE__);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="AssertImpl_8h_1a91e7af396bbb7112e7122224d9f453c2" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_MEMORY(expected,actual,size)\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>((expected!=NULL)<sp/>&amp;&amp;<sp/>(actual!=NULL)<sp/>&amp;&amp;<sp/>(stdimpl_memcmp(expected,actual,size)==0))<sp/>{}<sp/>else<sp/>{assertImplementationMem(expected,actual,size,__LINE__,__FILE__);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="AssertImpl_8h_1af52a321a93c580a6213fef3e0f85c237" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_INT(expected,actual)\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(expected<sp/>==<sp/>actual)<sp/>{}<sp/>else<sp/>{assertImplementationInt(expected,actual,<sp/>10,__LINE__,__FILE__);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="AssertImpl_8h_1aff20a2bc399f4d31f69aa468542f11d1" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_UINT(expected,actual)\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(expected<sp/>==<sp/>actual)<sp/>{}<sp/>else<sp/>{assertImplementationUInt(expected,actual,<sp/>10,__LINE__,__FILE__);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="AssertImpl_8h_1ab1497984306b3fe78e851341d82c7147" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_HEX(expected,actual)\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(expected<sp/>==<sp/>actual)<sp/>{}<sp/>else<sp/>{assertImplementationUInt(expected,actual,<sp/>16,__LINE__,__FILE__);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="AssertImpl_8h_1a765240c346d79b58ef22d81982aced18" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_PTR(expected,actual)\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>((void*)expected<sp/>==<sp/>(void*)actual)<sp/>{}<sp/>else<sp/>{assertImplementationUInt((int)expected,(int)actual,<sp/>16,__LINE__,__FILE__);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="AssertImpl_8h_1a0dabc9ae6eaa3b46536521b5a99854c7" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_INT_WITH_MARGIN(expected,actual,margin)\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>TEST_ASSERT_EQUAL_WITH_MARGIN(expected,actual,margin)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="AssertImpl_8h_1a154b724ab91c33b7d977b17e964b16a4" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_WITH_MARGIN(expected,actual,margin)\</highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>__margin<sp/>=<sp/>margin;<sp/>\</highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(margin<sp/>&lt;<sp/>0)<sp/>__margin<sp/>=<sp/>-margin;<sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>expected<sp/>&gt;<sp/>actual<sp/>)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>(expected<sp/>-<sp/>actual)<sp/>&lt;=<sp/>__margin<sp/>)<sp/>{}<sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{assertImplementationInt(expected,actual,10,__LINE__,__FILE__);}<sp/>\</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>(actual<sp/>-<sp/>expected)<sp/>&lt;=<sp/>__margin<sp/>)<sp/>{}<sp/>\</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{assertImplementationInt(expected,actual,10,__LINE__,__FILE__);}<sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="AssertImpl_8h_1a7cc9b8a44d2711eb07fb2a0ed92ffb8d" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_EQUAL_UINT_WITH_MARGIN(expected,actual,margin)\</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="136"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>__margin<sp/>=<sp/>margin;<sp/>\</highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>expected<sp/>&gt;<sp/>actual<sp/>)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="138"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>(expected<sp/>-<sp/>actual)<sp/>&lt;=<sp/>__margin<sp/>)<sp/>{}<sp/>\</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{assertImplementationUInt(expected,actual,10,__LINE__,__FILE__);}<sp/>\</highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>(actual<sp/>-<sp/>expected)<sp/>&lt;=<sp/>__margin<sp/>)<sp/>{}<sp/>\</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{assertImplementationUInt(expected,actual,10,__LINE__,__FILE__);}<sp/>\</highlight></codeline>
+<codeline lineno="144"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="145"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="AssertImpl_8h_1ae4e883189e1d231587845a4761aa6783" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_NOT_LOWER_THAN_INT(min,<sp/>actual)\</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(actual<sp/>&lt;<sp/>min)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assertImplementationInt(min,<sp/>actual,<sp/>10,<sp/>__LINE__,<sp/>__FILE__);<sp/>\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="AssertImpl_8h_1a735d523a0ba4034f6e15feed21a65a05" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_NOT_HIGHER_THAN_INT(max,<sp/>actual)\</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(actual<sp/>&gt;<sp/>max)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assertImplementationInt(max,<sp/>actual,<sp/>10,<sp/>__LINE__,<sp/>__FILE__);<sp/>\</highlight></codeline>
+<codeline lineno="165"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="AssertImpl_8h_1a7e50e547df9295fb216debc703b84496" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_RANGE_INT(min,<sp/>max,<sp/>actual)\</highlight></codeline>
+<codeline lineno="174"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="175"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_ASSERT_NOT_LOWER_THAN_INT(min,<sp/>actual)\</highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_ASSERT_NOT_HIGHER_THAN_INT(max,<sp/>actual)\</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="AssertImpl_8h_1aafd9c8bc24dbf7000aeb891f7ecdfd7a" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_NOT_LOWER_THAN_UINT(min,<sp/>actual)\</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(actual<sp/>&lt;<sp/>min)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assertImplementationUInt(min,<sp/>actual,<sp/>10,<sp/>__LINE__,<sp/>__FILE__);<sp/>\</highlight></codeline>
+<codeline lineno="187"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="AssertImpl_8h_1a10c24d423941a1a21b284114fd4126c9" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_NOT_HIGHER_THAN_UINT(max,<sp/>actual)\</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(actual<sp/>&gt;<sp/>max)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="196"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assertImplementationUInt(max,<sp/>actual,<sp/>10,<sp/>__LINE__,<sp/>__FILE__);<sp/>\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="AssertImpl_8h_1ae170691e04d93ad13a0ebd08bc8ba47a" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_RANGE_UINT(min,<sp/>max,<sp/>actual)\</highlight></codeline>
+<codeline lineno="206"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_ASSERT_NOT_LOWER_THAN_UINT(min,<sp/>actual)\</highlight></codeline>
+<codeline lineno="208"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_ASSERT_NOT_HIGHER_THAN_UINT(max,<sp/>actual)\</highlight></codeline>
+<codeline lineno="209"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="AssertImpl_8h_1a4d807ccb46fae06886f16ea8a86590ca" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_NULL(pointer)\</highlight></codeline>
+<codeline lineno="216"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>TEST_ASSERT_MESSAGE(pointer<sp/>==<sp/>NULL,#pointer<sp/>&quot;<sp/>was<sp/>not<sp/>null.&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="AssertImpl_8h_1afae78efdc83dcc60f08347b8390525b9" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_NOT_NULL(pointer)\</highlight></codeline>
+<codeline lineno="223"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>TEST_ASSERT_MESSAGE(pointer<sp/>!=<sp/>NULL,#pointer<sp/>&quot;<sp/>was<sp/>null.&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="AssertImpl_8h_1ae525f7ac1168f789c109324166cd6e13" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT_MESSAGE(condition,<sp/>message)\</highlight></codeline>
+<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(condition)<sp/>{}<sp/>else<sp/>{TEST_FAIL(message);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237" refid="AssertImpl_8h_1ae0a72bc174ac97e90c4a711e5e52d540" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_ASSERT(condition)\</highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(condition)<sp/>{}<sp/>else<sp/>{TEST_FAIL(#condition);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="AssertImpl_8h_1a3650e4aa89d05fbc5f0152f014576093" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_FAIL(message)\</highlight></codeline>
+<codeline lineno="245"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(0)<sp/>{}<sp/>else<sp/>{addFailure(message,__LINE__,__FILE__);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__ASSERTIMPL_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h"/>
+  </compounddef>
+</doxygen>

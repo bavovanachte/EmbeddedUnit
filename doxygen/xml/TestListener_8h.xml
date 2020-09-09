@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="TestListener_8h" kind="file" language="C++">
+    <compoundname>TestListener.h</compoundname>
+    <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
+    <includedby refid="TestResult_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c</includedby>
+    <includedby refid="TestRunner_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c</includedby>
+    <invincdepgraph>
+      <node id="81">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c</label>
+        <link refid="TestResult_8c"/>
+      </node>
+      <node id="80">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+      </node>
+      <node id="79">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h</label>
+        <link refid="TestListener_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c</label>
+        <link refid="TestRunner_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct____TestListnerImplement" prot="public">__TestListnerImplement</innerclass>
+    <innerclass refid="struct____TestListner" prot="public">__TestListner</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="TestListener_8h_1a643097e3adcf1f53b8eaa162b657618b" prot="public" static="no">
+        <name>TestListner_startTest</name>
+        <param><defname>s</defname></param>
+        <param><defname>t</defname></param>
+        <initializer>((<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*)s)-&gt;isa-&gt;startTest(s,t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="57" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TestListener_8h_1adddf100a60767a0431fb76518515a2ca" prot="public" static="no">
+        <name>TestListner_endTest</name>
+        <param><defname>s</defname></param>
+        <param><defname>t</defname></param>
+        <initializer>((<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*)s)-&gt;isa-&gt;endTest(s,t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="58" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TestListener_8h_1af8987efdbdcf69bbdd0e9c7ce316a803" prot="public" static="no">
+        <name>TestListner_addFailure</name>
+        <param><defname>s</defname></param>
+        <param><defname>t</defname></param>
+        <param><defname>m</defname></param>
+        <param><defname>l</defname></param>
+        <param><defname>f</defname></param>
+        <initializer>((<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*)s)-&gt;isa-&gt;addFailure(s,t,m,l,f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="59" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="TestListener_8h_1af4622cbddb476c134e9509781f1e27ba" prot="public" static="no">
+        <type>struct <ref refid="struct____TestListnerImplement" kindref="compound">__TestListnerImplement</ref></type>
+        <definition>typedef struct __TestListnerImplement TestListnerImplement</definition>
+        <argsstring></argsstring>
+        <name>TestListnerImplement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="45" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestListener_8h_1a06c8639f44a6ca71d9c224b1599bf376" prot="public" static="no">
+        <type>struct <ref refid="struct____TestListnerImplement" kindref="compound">__TestListnerImplement</ref> *</type>
+        <definition>typedef struct __TestListnerImplement* TestListnerImplementRef</definition>
+        <argsstring></argsstring>
+        <name>TestListnerImplementRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestListener_8h_1a4f79a33485561b1cbba8a7420d9df6a8" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* TestListnerStartTestCallBack) (void *, void *)</definition>
+        <argsstring>)(void *, void *)</argsstring>
+        <name>TestListnerStartTestCallBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="40" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestListener_8h_1a2c0a6bd93642aa74ff9de58b569a3b8c" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* TestListnerEndTestCallBack) (void *, void *)</definition>
+        <argsstring>)(void *, void *)</argsstring>
+        <name>TestListnerEndTestCallBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="41" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="TestListener_8h_1aaa221943a2f07e95ca55ccef3151b4bb" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* TestListnerAddFailureCallBack) (void *, void *, const char *, int, const char *)</definition>
+        <argsstring>)(void *, void *, const char *, int, const char *)</argsstring>
+        <name>TestListnerAddFailureCallBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="42" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__TESTLISTENER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__TESTLISTENER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestListnerImplement" kindref="compound">__TestListnerImplement</ref><sp/><sp/><sp/><ref refid="struct____TestListnerImplement" kindref="compound">TestListnerImplement</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestListnerImplement" kindref="compound">__TestListnerImplement</ref>*<sp/><sp/><ref refid="struct____TestListnerImplement" kindref="compound">TestListnerImplementRef</ref>;</highlight><highlight class="comment">/*downward<sp/>compatible*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(*TestListnerStartTestCallBack)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(*TestListnerEndTestCallBack)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(*TestListnerAddFailureCallBack)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,int,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="struct____TestListnerImplement" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestListnerImplement" kindref="compound">__TestListnerImplement</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>TestListnerStartTestCallBack<sp/>startTest;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>TestListnerEndTestCallBack<sp/>endTest;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>TestListnerAddFailureCallBack<sp/>addFailure;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*typedef<sp/>struct<sp/>__TestListner<sp/><sp/>TestListner;*/</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*-&gt;TestResult.h*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*typedef<sp/>struct<sp/>__TestListner*<sp/>TestListnerRef;*/</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*-&gt;TestResult.h*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="struct____TestListner" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____TestListner" kindref="compound">__TestListner</ref><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____TestListnerImplement" kindref="compound">TestListnerImplement</ref>*<sp/>isa;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TestListner_startTest(s,t)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TestListner*)s)-&gt;isa-&gt;startTest(s,t)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TestListner_endTest(s,t)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TestListner*)s)-&gt;isa-&gt;endTest(s,t)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TestListner_addFailure(s,t,m,l,f)<sp/><sp/><sp/>((TestListner*)s)-&gt;isa-&gt;addFailure(s,t,m,l,f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__TESTLISTENER_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assertions &mdash; EmbeddedUnit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Advanced Features" href="advanced.html" />
+    <link rel="prev" title="Writing embUnit Tests" href="writing_tests.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> EmbeddedUnit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#getting-started">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing embUnit Tests</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Assertions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced Features</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EmbeddedUnit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Assertions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/assertions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="assertions">
+<h1>Assertions<a class="headerlink" href="#assertions" title="Permalink to this headline">¶</a></h1>
+<p>The different assertion macros available are described below. These are available in <a class="reference external" href="././doxygen/html/AssertImpl_8h.html">AssertImpl.h</a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_STRING">
+<span class="target" id="AssertImpl_8h_1a1432f008fb6fb923371d4d0402571bf6"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_STRING</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_STRING" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert string equality</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_MEMORY">
+<span class="target" id="AssertImpl_8h_1a91e7af396bbb7112e7122224d9f453c2"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_MEMORY</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em>, <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_MEMORY" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert memory equality</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code>: Size of the memory to compare </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_INT">
+<span class="target" id="AssertImpl_8h_1af52a321a93c580a6213fef3e0f85c237"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_INT</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_INT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert signed integer equality</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_UINT">
+<span class="target" id="AssertImpl_8h_1aff20a2bc399f4d31f69aa468542f11d1"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_UINT</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_UINT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert unsigned integer equality</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_HEX">
+<span class="target" id="AssertImpl_8h_1ab1497984306b3fe78e851341d82c7147"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_HEX</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_HEX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert hexadecimal integer equality</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_PTR">
+<span class="target" id="AssertImpl_8h_1a765240c346d79b58ef22d81982aced18"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_PTR</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_PTR" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert pointer equality</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected poiunter </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual pointer </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_INT_WITH_MARGIN">
+<span class="target" id="AssertImpl_8h_1a0dabc9ae6eaa3b46536521b5a99854c7"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_INT_WITH_MARGIN</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em>, <em>margin</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_INT_WITH_MARGIN" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert signed integer equality with margin</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">margin</span></code>: Allowed margin to be applied during assertion </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_WITH_MARGIN">
+<span class="target" id="AssertImpl_8h_1a154b724ab91c33b7d977b17e964b16a4"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_WITH_MARGIN</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em>, <em>margin</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_WITH_MARGIN" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert signed integer equality with margin</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">margin</span></code>: Allowed margin to be applied during assertion </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_EQUAL_UINT_WITH_MARGIN">
+<span class="target" id="AssertImpl_8h_1a7cc9b8a44d2711eb07fb2a0ed92ffb8d"></span><code class="sig-name descname">TEST_ASSERT_EQUAL_UINT_WITH_MARGIN</code><span class="sig-paren">(</span><em>expected</em>, <em>actual</em>, <em>margin</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_EQUAL_UINT_WITH_MARGIN" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert unsigned integer equality with margin</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expected</span></code>: Expected value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">margin</span></code>: Allowed margin to be applied during assertion </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_NOT_LOWER_THAN_INT">
+<span class="target" id="AssertImpl_8h_1ae4e883189e1d231587845a4761aa6783"></span><code class="sig-name descname">TEST_ASSERT_NOT_LOWER_THAN_INT</code><span class="sig-paren">(</span><em>min</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_NOT_LOWER_THAN_INT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert signed integer to be higher than or equal to a minimum value</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code>: Minimum allowed value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_NOT_HIGHER_THAN_INT">
+<span class="target" id="AssertImpl_8h_1a735d523a0ba4034f6e15feed21a65a05"></span><code class="sig-name descname">TEST_ASSERT_NOT_HIGHER_THAN_INT</code><span class="sig-paren">(</span><em>max</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_NOT_HIGHER_THAN_INT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert signed integer to be lower than or equal to a maximum value</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code>: Maximum allowed value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_RANGE_INT">
+<span class="target" id="AssertImpl_8h_1a7e50e547df9295fb216debc703b84496"></span><code class="sig-name descname">TEST_ASSERT_RANGE_INT</code><span class="sig-paren">(</span><em>min</em>, <em>max</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_RANGE_INT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert signed integer to be within the range (boundaries are allowed) of given minimum and maximum</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code>: Minimum allowed value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code>: Maximum allowed value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_NOT_LOWER_THAN_UINT">
+<span class="target" id="AssertImpl_8h_1aafd9c8bc24dbf7000aeb891f7ecdfd7a"></span><code class="sig-name descname">TEST_ASSERT_NOT_LOWER_THAN_UINT</code><span class="sig-paren">(</span><em>min</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_NOT_LOWER_THAN_UINT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert unsigned integer to be higher than or equal to a minimum value</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code>: Minimum allowed value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_NOT_HIGHER_THAN_UINT">
+<span class="target" id="AssertImpl_8h_1a10c24d423941a1a21b284114fd4126c9"></span><code class="sig-name descname">TEST_ASSERT_NOT_HIGHER_THAN_UINT</code><span class="sig-paren">(</span><em>max</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_NOT_HIGHER_THAN_UINT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert unsigned integer to be lower than or equal to a maximum value</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code>: Maximum allowed value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_RANGE_UINT">
+<span class="target" id="AssertImpl_8h_1ae170691e04d93ad13a0ebd08bc8ba47a"></span><code class="sig-name descname">TEST_ASSERT_RANGE_UINT</code><span class="sig-paren">(</span><em>min</em>, <em>max</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_RANGE_UINT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert unsigned integer to be within the range (boundaries are allowed) of given minimum and maximum</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code>: Minimum allowed value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code>: Maximum allowed value </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual</span></code>: Actual value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_NULL">
+<span class="target" id="AssertImpl_8h_1a4d807ccb46fae06886f16ea8a86590ca"></span><code class="sig-name descname">TEST_ASSERT_NULL</code><span class="sig-paren">(</span><em>pointer</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_NULL" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert a pointer to be NULL</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pointer</span></code>: Pointer under test </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_NOT_NULL">
+<span class="target" id="AssertImpl_8h_1afae78efdc83dcc60f08347b8390525b9"></span><code class="sig-name descname">TEST_ASSERT_NOT_NULL</code><span class="sig-paren">(</span><em>pointer</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_NOT_NULL" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert a pointer to be non-NULL</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pointer</span></code>: Pointer under test </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT_MESSAGE">
+<span class="target" id="AssertImpl_8h_1ae525f7ac1168f789c109324166cd6e13"></span><code class="sig-name descname">TEST_ASSERT_MESSAGE</code><span class="sig-paren">(</span><em>condition</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT_MESSAGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert a condition to pass</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code>: Condition under test </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code>: Message to print when assertion fails </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_ASSERT">
+<span class="target" id="AssertImpl_8h_1ae0a72bc174ac97e90c4a711e5e52d540"></span><code class="sig-name descname">TEST_ASSERT</code><span class="sig-paren">(</span><em>condition</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_ASSERT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assert a condition to pass</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code>: Condition under test </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt id="c.TEST_FAIL">
+<span class="target" id="AssertImpl_8h_1a3650e4aa89d05fbc5f0152f014576093"></span><code class="sig-name descname">TEST_FAIL</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_FAIL" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Mark a test as failed</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code>: Message to print </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="advanced.html" class="btn btn-neutral float-right" title="Advanced Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="writing_tests.html" class="btn btn-neutral float-left" title="Writing embUnit Tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Bavo Van Achte, Yusuke Sasaki
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

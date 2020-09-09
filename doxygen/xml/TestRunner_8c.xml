@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="TestRunner_8c" kind="file" language="C++">
+    <compoundname>TestRunner.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="stdImpl_8h" local="yes">stdImpl.h</includes>
+    <includes refid="Test_8h" local="yes">Test.h</includes>
+    <includes refid="TestListener_8h" local="yes">TestListener.h</includes>
+    <includes refid="TestResult_8h" local="yes">TestResult.h</includes>
+    <includes refid="TestRunner_8h" local="yes">TestRunner.h</includes>
+    <incdepgraph>
+      <node id="98">
+        <label>Test.h</label>
+        <link refid="Test_8h"/>
+      </node>
+      <node id="100">
+        <label>TestResult.h</label>
+        <link refid="TestResult_8h"/>
+      </node>
+      <node id="99">
+        <label>TestListener.h</label>
+        <link refid="TestListener_8h"/>
+      </node>
+      <node id="94">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c</label>
+        <link refid="TestRunner_8c"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>TestRunner.h</label>
+        <link refid="TestRunner_8h"/>
+      </node>
+      <node id="97">
+        <label>stdImpl.h</label>
+        <link refid="stdImpl_8h"/>
+      </node>
+      <node id="95">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="TestRunner_8c_1afb2ec6cf0ab3f3e57bc2304e0df97c29" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct____TestResult" kindref="compound">TestResult</ref></type>
+        <definition>TestResult result_</definition>
+        <argsstring></argsstring>
+        <name>result_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="41" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="TestRunner_8c_1ae7d2412cfc2be09c449a45d7c1bdae32" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+        <definition>Test* root_</definition>
+        <argsstring></argsstring>
+        <name>root_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="42" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="TestRunner_8c_1add5fa185fa3056ca8bccfa37b7c995e2" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="struct____TestListnerImplement" kindref="compound">TestListnerImplement</ref></type>
+        <definition>const TestListnerImplement TestRunnerImplement</definition>
+        <argsstring></argsstring>
+        <name>TestRunnerImplement</name>
+        <initializer>= {
+	(TestListnerStartTestCallBack)	TestRunner_startTest,
+	(TestListnerEndTestCallBack)	TestRunner_endTest,
+	(TestListnerAddFailureCallBack)	TestRunner_addFailure,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="72" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="TestRunner_8c_1afcda7589f876587dfbb7864a00690897" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="struct____TestListner" kindref="compound">TestListner</ref></type>
+        <definition>const TestListner testrunner_</definition>
+        <argsstring></argsstring>
+        <name>testrunner_</name>
+        <initializer>= {
+	(<ref refid="struct____TestListnerImplement" kindref="compound">TestListnerImplement</ref>*)&amp;TestRunnerImplement,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="78" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="TestRunner_8c_1aee93d3a220a6199b681579b77347b597" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TestRunner_startTest</definition>
+        <argsstring>(TestListner *self, Test *test)</argsstring>
+        <name>TestRunner_startTest</name>
+        <param>
+          <type><ref refid="struct____TestListner" kindref="compound">TestListner</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="44" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="TestRunner_8c_1ac8ac38b29c14f01bb5379c611e94e72c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TestRunner_endTest</definition>
+        <argsstring>(TestListner *self, Test *test)</argsstring>
+        <name>TestRunner_endTest</name>
+        <param>
+          <type><ref refid="struct____TestListner" kindref="compound">TestListner</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="49" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="TestRunner_8c_1a52f5d33675bb3cd646651d81032eda47" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TestRunner_addFailure</definition>
+        <argsstring>(TestListner *self, Test *test, char *msg, int line, char *file)</argsstring>
+        <name>TestRunner_addFailure</name>
+        <param>
+          <type><ref refid="struct____TestListner" kindref="compound">TestListner</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+          <declname>test</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="53" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="53" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="TestRunner_8c_1a4c02992f24ed60ed4f64543e0d66e09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunner_start</definition>
+        <argsstring>(void)</argsstring>
+        <name>TestRunner_start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="82" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="TestRunner_8c_1a22a1a004ba5ec96bd6a46419cfdb694d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunner_runTest</definition>
+        <argsstring>(Test *test)</argsstring>
+        <name>TestRunner_runTest</name>
+        <param>
+          <type><ref refid="struct____Test" kindref="compound">Test</ref> *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="87" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="TestRunner_8c_1afdaa7dac279a7a598e2dd064f072a670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunner_end</definition>
+        <argsstring>(void)</argsstring>
+        <name>TestRunner_end</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" line="93" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c" bodystart="93" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdImpl_8h" kindref="compound">stdImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Test_8h" kindref="compound">Test.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TestListener_8h" kindref="compound">TestListener.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TestResult_8h" kindref="compound">TestResult.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TestRunner_8h" kindref="compound">TestRunner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct____TestResult" kindref="compound">TestResult</ref><sp/>result_;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>root_;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestRunner_startTest(<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestRunner_endTest(<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestRunner_addFailure(<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>msg,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_print(Test_name(root_));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_print(Test_name(test));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[16];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;<sp/>(&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(file);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_itoa(line,<sp/>buf,<sp/>10);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(buf);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;)<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_print(msg);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestListnerImplement" kindref="compound">TestListnerImplement</ref><sp/>TestRunnerImplement<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestListnerStartTestCallBack)<sp/><sp/>TestRunner_startTest,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestListnerEndTestCallBack)<sp/><sp/><sp/><sp/>TestRunner_endTest,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestListnerAddFailureCallBack)<sp/>TestRunner_addFailure,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestListner" kindref="compound">TestListner</ref><sp/>testrunner_<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="struct____TestListnerImplement" kindref="compound">TestListnerImplement</ref>*)&amp;TestRunnerImplement,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestRunner_start(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>TestResult_init(&amp;result_,<sp/>(<ref refid="struct____TestListner" kindref="compound">TestListner</ref>*)&amp;testrunner_);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestRunner_runTest(<ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>root_<sp/>=<sp/>test;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>Test_run(test,<sp/>&amp;result_);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestRunner_end(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[16];</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result_.failureCount)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;\nrun<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_itoa(result_.runCount,<sp/>buf,<sp/>10);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(buf);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;<sp/>failures<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_itoa(result_.failureCount,<sp/>buf,<sp/>10);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(buf);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;\nOK<sp/>(&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_itoa(result_.runCount,<sp/>buf,<sp/>10);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(buf);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdimpl_print(</highlight><highlight class="stringliteral">&quot;<sp/>tests)\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____TestCaller" kind="struct" language="C++" prot="public">
+    <compoundname>__TestCaller</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____TestCaller_1a4622ef08c28089742d0d9a928fa2a7ec" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref> *</type>
+        <definition>TestImplement* __TestCaller::isa</definition>
+        <argsstring></argsstring>
+        <name>isa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="55" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCaller_1a6101278e3d06b7cf74b9b031e89ba372" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* __TestCaller::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="56" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCaller_1aa752864195fda5b6a4ce4fcb0db45b47" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* __TestCaller::setUp) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>setUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="57" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCaller_1a48be259d46bc1c5611ac55f175916734" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* __TestCaller::tearDown) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>tearDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="58" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCaller_1afe41175900f803e59763ac7601aeb113" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int __TestCaller::numberOfFixtuers</definition>
+        <argsstring></argsstring>
+        <name>numberOfFixtuers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="59" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCaller_1a8f87c44321ad890fc44eddcfe42927e6" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestFixture" kindref="compound">TestFixture</ref> *</type>
+        <definition>TestFixture* __TestCaller::fixtuers</definition>
+        <argsstring></argsstring>
+        <name>fixtuers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="60" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="18">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="16">
+        <label>__TestResult</label>
+        <link refid="struct____TestResult"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>__TestFixture</label>
+        <link refid="struct____TestFixture"/>
+      </node>
+      <node id="17">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>__TestImplement</label>
+        <link refid="struct____TestImplement"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>run</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>__TestCaller</label>
+        <link refid="struct____TestCaller"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>fixtuers</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="54" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="54" bodyend="61"/>
+    <listofallmembers>
+      <member refid="struct____TestCaller_1a8f87c44321ad890fc44eddcfe42927e6" prot="public" virt="non-virtual"><scope>__TestCaller</scope><name>fixtuers</name></member>
+      <member refid="struct____TestCaller_1a4622ef08c28089742d0d9a928fa2a7ec" prot="public" virt="non-virtual"><scope>__TestCaller</scope><name>isa</name></member>
+      <member refid="struct____TestCaller_1a6101278e3d06b7cf74b9b031e89ba372" prot="public" virt="non-virtual"><scope>__TestCaller</scope><name>name</name></member>
+      <member refid="struct____TestCaller_1afe41175900f803e59763ac7601aeb113" prot="public" virt="non-virtual"><scope>__TestCaller</scope><name>numberOfFixtuers</name></member>
+      <member refid="struct____TestCaller_1aa752864195fda5b6a4ce4fcb0db45b47" prot="public" virt="non-virtual"><scope>__TestCaller</scope><name>setUp</name></member>
+      <member refid="struct____TestCaller_1a48be259d46bc1c5611ac55f175916734" prot="public" virt="non-virtual"><scope>__TestCaller</scope><name>tearDown</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

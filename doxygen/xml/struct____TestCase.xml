@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____TestCase" kind="struct" language="C++" prot="public">
+    <compoundname>__TestCase</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____TestCase_1aa5d9f6a0e0450c1e473f15ba3213f9f8" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref> *</type>
+        <definition>TestImplement* __TestCase::isa</definition>
+        <argsstring></argsstring>
+        <name>isa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="41" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCase_1ac130a1811db8956b755f4e967121ac1b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* __TestCase::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="42" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCase_1ac1eaf17d31533d80245990416d7f2d4a" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* __TestCase::setUp) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>setUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="43" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCase_1a4f0b91a21aa9860368900c371c8d422b" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* __TestCase::tearDown) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>tearDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="44" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestCase_1af8bdfa3d8ba4972a9f63d2eb74ec0b94" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* __TestCase::runTest) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>runTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="45" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="21">
+        <label>__TestCase</label>
+        <link refid="struct____TestCase"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="23">
+        <label>__TestResult</label>
+        <link refid="struct____TestResult"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>__TestImplement</label>
+        <link refid="struct____TestImplement"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>run</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" line="40" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h" bodystart="40" bodyend="46"/>
+    <listofallmembers>
+      <member refid="struct____TestCase_1aa5d9f6a0e0450c1e473f15ba3213f9f8" prot="public" virt="non-virtual"><scope>__TestCase</scope><name>isa</name></member>
+      <member refid="struct____TestCase_1ac130a1811db8956b755f4e967121ac1b" prot="public" virt="non-virtual"><scope>__TestCase</scope><name>name</name></member>
+      <member refid="struct____TestCase_1af8bdfa3d8ba4972a9f63d2eb74ec0b94" prot="public" virt="non-virtual"><scope>__TestCase</scope><name>runTest</name></member>
+      <member refid="struct____TestCase_1ac1eaf17d31533d80245990416d7f2d4a" prot="public" virt="non-virtual"><scope>__TestCase</scope><name>setUp</name></member>
+      <member refid="struct____TestCase_1a4f0b91a21aa9860368900c371c8d422b" prot="public" virt="non-virtual"><scope>__TestCase</scope><name>tearDown</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

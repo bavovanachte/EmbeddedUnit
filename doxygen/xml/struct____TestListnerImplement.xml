@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____TestListnerImplement" kind="struct" language="C++" prot="public">
+    <compoundname>__TestListnerImplement</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____TestListnerImplement_1ac698211d6fbf85d77068a3bb16d45312" prot="public" static="no" mutable="no">
+        <type>TestListnerStartTestCallBack</type>
+        <definition>TestListnerStartTestCallBack __TestListnerImplement::startTest</definition>
+        <argsstring></argsstring>
+        <name>startTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="45" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestListnerImplement_1a36aafd79336117101b720204ec49c7db" prot="public" static="no" mutable="no">
+        <type>TestListnerEndTestCallBack</type>
+        <definition>TestListnerEndTestCallBack __TestListnerImplement::endTest</definition>
+        <argsstring></argsstring>
+        <name>endTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="46" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestListnerImplement_1a5404005753a0b0a0bacf94151a271b7d" prot="public" static="no" mutable="no">
+        <type>TestListnerAddFailureCallBack</type>
+        <definition>TestListnerAddFailureCallBack __TestListnerImplement::addFailure</definition>
+        <argsstring></argsstring>
+        <name>addFailure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="47" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="44" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="44" bodyend="48"/>
+    <listofallmembers>
+      <member refid="struct____TestListnerImplement_1a5404005753a0b0a0bacf94151a271b7d" prot="public" virt="non-virtual"><scope>__TestListnerImplement</scope><name>addFailure</name></member>
+      <member refid="struct____TestListnerImplement_1a36aafd79336117101b720204ec49c7db" prot="public" virt="non-virtual"><scope>__TestListnerImplement</scope><name>endTest</name></member>
+      <member refid="struct____TestListnerImplement_1ac698211d6fbf85d77068a3bb16d45312" prot="public" virt="non-virtual"><scope>__TestListnerImplement</scope><name>startTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

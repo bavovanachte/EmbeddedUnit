@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="RepeatedTest_8h" kind="file" language="C++">
+    <compoundname>RepeatedTest.h</compoundname>
+    <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
+    <includedby refid="RepeatedTest_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c</includedby>
+    <invincdepgraph>
+      <node id="38">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+      </node>
+      <node id="39">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c</label>
+        <link refid="RepeatedTest_8c"/>
+      </node>
+      <node id="37">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h</label>
+        <link refid="RepeatedTest_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct____RepeatedTest" prot="public">__RepeatedTest</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="RepeatedTest_8h_1a6f2b95c940086b6bf881a7d4a2f70da6" prot="public" static="no">
+        <name>new_RepeatedTest</name>
+        <param><defname>test</defname></param>
+        <param><defname>tmrp</defname></param>
+        <initializer>{\
+		(<ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*)&amp;RepeatedTestImplement,\
+		(<ref refid="struct____Test" kindref="compound">Test</ref>*)test,\
+		tmrp,\
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" line="48" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="RepeatedTest_8h_1a93a4869c386f6dc41a4d7d07116f9387" prot="public" static="no">
+        <type>struct <ref refid="struct____RepeatedTest" kindref="compound">__RepeatedTest</ref></type>
+        <definition>typedef struct __RepeatedTest RepeatedTest</definition>
+        <argsstring></argsstring>
+        <name>RepeatedTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" line="56" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="RepeatedTest_8h_1a8aa3350e581d017d501b9588fd3fc08f" prot="public" static="no">
+        <type>struct <ref refid="struct____RepeatedTest" kindref="compound">__RepeatedTest</ref> *</type>
+        <definition>typedef struct __RepeatedTest* RepeatedTestRef</definition>
+        <argsstring></argsstring>
+        <name>RepeatedTestRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="RepeatedTest_8h_1a18cfa0342ee0e498678eac74245d63d2" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct____TestImplement" kindref="compound">TestImplement</ref></type>
+        <definition>const TestImplement RepeatedTestImplement</definition>
+        <argsstring></argsstring>
+        <name>RepeatedTestImplement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h" line="46" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__REPEATEDTEST_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__REPEATEDTEST_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____RepeatedTest" kindref="compound">__RepeatedTest</ref><sp/><sp/><sp/><ref refid="struct____RepeatedTest" kindref="compound">RepeatedTest</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____RepeatedTest" kindref="compound">__RepeatedTest</ref>*<sp/><sp/><ref refid="struct____RepeatedTest" kindref="compound">RepeatedTestRef</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*downward<sp/>compatible*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="struct____RepeatedTest" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____RepeatedTest" kindref="compound">__RepeatedTest</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*<sp/>isa;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timesRepeat;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref><sp/>RepeatedTestImplement;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new_RepeatedTest(test,tmrp)\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(TestImplement*)&amp;RepeatedTestImplement,\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Test*)test,\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmrp,\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__REPEATEDTEST_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.h"/>
+  </compounddef>
+</doxygen>

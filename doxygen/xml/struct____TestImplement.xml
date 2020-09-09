@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____TestImplement" kind="struct" language="C++" prot="public">
+    <compoundname>__TestImplement</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____TestImplement_1a630108ca24d01bad703f2d1984eea1e2" prot="public" static="no" mutable="no">
+        <type>TestNameFunction</type>
+        <definition>TestNameFunction __TestImplement::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" line="48" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestImplement_1aa2bdd296a9bf2655dde9d02e88c7360c" prot="public" static="no" mutable="no">
+        <type>TestRunFunction</type>
+        <definition>TestRunFunction __TestImplement::run</definition>
+        <argsstring></argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" line="49" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestImplement_1ace1e87cb19c39b2fe2da674119702188" prot="public" static="no" mutable="no">
+        <type>TestCountTestCasesFunction</type>
+        <definition>TestCountTestCasesFunction __TestImplement::countTestCases</definition>
+        <argsstring></argsstring>
+        <name>countTestCases</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" line="50" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="32">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="30">
+        <label>__TestResult</label>
+        <link refid="struct____TestResult"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="32" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>__TestImplement</label>
+        <link refid="struct____TestImplement"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>run</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" line="47" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" bodystart="47" bodyend="51"/>
+    <listofallmembers>
+      <member refid="struct____TestImplement_1ace1e87cb19c39b2fe2da674119702188" prot="public" virt="non-virtual"><scope>__TestImplement</scope><name>countTestCases</name></member>
+      <member refid="struct____TestImplement_1a630108ca24d01bad703f2d1984eea1e2" prot="public" virt="non-virtual"><scope>__TestImplement</scope><name>name</name></member>
+      <member refid="struct____TestImplement_1aa2bdd296a9bf2655dde9d02e88c7360c" prot="public" virt="non-virtual"><scope>__TestImplement</scope><name>run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

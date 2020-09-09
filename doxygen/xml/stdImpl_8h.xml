@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="stdImpl_8h" kind="file" language="C++">
+    <compoundname>stdImpl.h</compoundname>
+    <includedby refid="AssertImpl_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c</includedby>
+    <includedby refid="AssertImpl_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h</includedby>
+    <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
+    <includedby refid="stdImpl_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c</includedby>
+    <includedby refid="TestRunner_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c</includedby>
+    <invincdepgraph>
+      <node id="45">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.c</label>
+        <link refid="AssertImpl_8c"/>
+      </node>
+      <node id="46">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/AssertImpl.h</label>
+        <link refid="AssertImpl_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+      </node>
+      <node id="49">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c</label>
+        <link refid="TestRunner_8c"/>
+      </node>
+      <node id="48">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c</label>
+        <link refid="stdImpl_8c"/>
+      </node>
+      <node id="44">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h</label>
+        <link refid="stdImpl_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="stdImpl_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" prot="public" static="no">
+        <name>NULL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="42" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="stdImpl_8h_1a0b35980e1def2ef2004f68f90a8ced2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* stdimpl_strcpy</definition>
+        <argsstring>(char *s1, const char *s2)</argsstring>
+        <name>stdimpl_strcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="45" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c" bodystart="36" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="stdImpl_8h_1a099ae2943849cb53557eb00034015698" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* stdimpl_strcat</definition>
+        <argsstring>(char *dst, const char *src)</argsstring>
+        <name>stdimpl_strcat</name>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="46" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c" bodystart="49" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="stdImpl_8h_1ad0881d4b853d62b2d0b6c34d37139709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* stdimpl_strncat</definition>
+        <argsstring>(char *dst, const char *src, unsigned int count)</argsstring>
+        <name>stdimpl_strncat</name>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="47" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c" bodystart="67" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="stdImpl_8h_1afce0b86649ef2816ec2b9ac09950d72a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stdimpl_strlen</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>stdimpl_strlen</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="48" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c" bodystart="89" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="stdImpl_8h_1a60fbfe01a317293d330f91258a086299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stdimpl_strcmp</definition>
+        <argsstring>(const char *s1, const char *s2)</argsstring>
+        <name>stdimpl_strcmp</name>
+        <param>
+          <type>const char *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="49" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c" bodystart="100" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="stdImpl_8h_1ad5861cc99751184ad9be744c2a23cdb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stdimpl_memcmp</definition>
+        <argsstring>(const void *s1, const void *s2, int s)</argsstring>
+        <name>stdimpl_memcmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="50" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c" bodystart="110" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="stdImpl_8h_1a528aca3ce3e71a9b7b17c847216d0e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* stdimpl_itoa</definition>
+        <argsstring>(long v, char *string, int r)</argsstring>
+        <name>stdimpl_itoa</name>
+        <param>
+          <type>long</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="51" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c" bodystart="147" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="stdImpl_8h_1adc09a3ebfd561833245786dea0a24fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* stdimpl_utoa</definition>
+        <argsstring>(unsigned long v, char *string, int r)</argsstring>
+        <name>stdimpl_utoa</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h" line="52" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.c" bodystart="155" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__STDIMPL_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__STDIMPL_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NULL<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>stdimpl_strcpy(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s2);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>stdimpl_strcat(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>stdimpl_strncat(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stdimpl_strlen(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stdimpl_strcmp(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s2);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stdimpl_memcmp(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*s2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>stdimpl_itoa(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>v,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>stdimpl_utoa(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>v,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__STDIMPL_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/stdImpl.h"/>
+  </compounddef>
+</doxygen>

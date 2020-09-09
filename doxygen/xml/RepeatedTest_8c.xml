@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="RepeatedTest_8c" kind="file" language="C++">
+    <compoundname>RepeatedTest.c</compoundname>
+    <includes refid="Test_8h" local="yes">Test.h</includes>
+    <includes refid="RepeatedTest_8h" local="yes">RepeatedTest.h</includes>
+    <incdepgraph>
+      <node id="33">
+        <label>Test.h</label>
+        <link refid="Test_8h"/>
+      </node>
+      <node id="32">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c</label>
+        <link refid="RepeatedTest_8c"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>RepeatedTest.h</label>
+        <link refid="RepeatedTest_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="RepeatedTest_8c_1a18cfa0342ee0e498678eac74245d63d2" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct____TestImplement" kindref="compound">TestImplement</ref></type>
+        <definition>const TestImplement RepeatedTestImplement</definition>
+        <argsstring></argsstring>
+        <name>RepeatedTestImplement</name>
+        <initializer>= {
+	(TestNameFunction)			RepeatedTest_name,
+	(TestRunFunction)			RepeatedTest_run,
+	(TestCountTestCasesFunction)RepeatedTest_countTestCases,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" line="56" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="RepeatedTest_8c_1a1e46227f8544dd8e9f488d5f0daa1ab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* RepeatedTest_name</definition>
+        <argsstring>(RepeatedTest *self)</argsstring>
+        <name>RepeatedTest_name</name>
+        <param>
+          <type><ref refid="struct____RepeatedTest" kindref="compound">RepeatedTest</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" line="37" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="RepeatedTest_8c_1a02c4c3bb1efbccfba7093d1b7931e182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RepeatedTest_run</definition>
+        <argsstring>(RepeatedTest *self, TestResult *result)</argsstring>
+        <name>RepeatedTest_run</name>
+        <param>
+          <type><ref refid="struct____RepeatedTest" kindref="compound">RepeatedTest</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct____TestResult" kindref="compound">TestResult</ref> *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" line="42" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" bodystart="42" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="RepeatedTest_8c_1aefdb95a751349cc3ca9452e93cb6e43c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RepeatedTest_countTestCases</definition>
+        <argsstring>(RepeatedTest *self)</argsstring>
+        <name>RepeatedTest_countTestCases</name>
+        <param>
+          <type><ref refid="struct____RepeatedTest" kindref="compound">RepeatedTest</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" line="51" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c" bodystart="51" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Test_8h" kindref="compound">Test.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RepeatedTest_8h" kindref="compound">RepeatedTest.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>RepeatedTest_name(<ref refid="struct____RepeatedTest" kindref="compound">RepeatedTest</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Test_name(self-&gt;test);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RepeatedTest_run(<ref refid="struct____RepeatedTest" kindref="compound">RepeatedTest</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/>result)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____Test" kindref="compound">Test</ref>*<sp/>test<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;test;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;</highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;timesRepeat;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Test_run(test,<sp/>result);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>RepeatedTest_countTestCases(<ref refid="struct____RepeatedTest" kindref="compound">RepeatedTest</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Test_countTestCases(self-&gt;test)<sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;timesRepeat;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref><sp/>RepeatedTestImplement<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestNameFunction)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RepeatedTest_name,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestRunFunction)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RepeatedTest_run,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestCountTestCasesFunction)RepeatedTest_countTestCases,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="embUnit_8h" kind="file" language="C++">
+    <compoundname>embUnit.h</compoundname>
+    <includes refid="Test_8h" local="no">embUnit/Test.h</includes>
+    <includes refid="TestCase_8h" local="no">embUnit/TestCase.h</includes>
+    <includes refid="TestListener_8h" local="no">embUnit/TestListener.h</includes>
+    <includes refid="TestResult_8h" local="no">embUnit/TestResult.h</includes>
+    <includes refid="TestSuite_8h" local="no">embUnit/TestSuite.h</includes>
+    <includes refid="TestRunner_8h" local="no">embUnit/TestRunner.h</includes>
+    <includes refid="TestCaller_8h" local="no">embUnit/TestCaller.h</includes>
+    <includes refid="RepeatedTest_8h" local="no">embUnit/RepeatedTest.h</includes>
+    <includes refid="stdImpl_8h" local="no">embUnit/stdImpl.h</includes>
+    <includes refid="AssertImpl_8h" local="no">embUnit/AssertImpl.h</includes>
+    <includes refid="HelperMacro_8h" local="no">embUnit/HelperMacro.h</includes>
+    <incdepgraph>
+      <node id="17">
+        <label>embUnit/Test.h</label>
+        <link refid="Test_8h"/>
+      </node>
+      <node id="26">
+        <label>embUnit/AssertImpl.h</label>
+        <link refid="AssertImpl_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>embUnit/TestResult.h</label>
+        <link refid="TestResult_8h"/>
+      </node>
+      <node id="16">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
+        <link refid="embUnit_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>embUnit/TestCase.h</label>
+        <link refid="TestCase_8h"/>
+      </node>
+      <node id="19">
+        <label>embUnit/TestListener.h</label>
+        <link refid="TestListener_8h"/>
+      </node>
+      <node id="27">
+        <label>embUnit/HelperMacro.h</label>
+        <link refid="HelperMacro_8h"/>
+      </node>
+      <node id="22">
+        <label>embUnit/TestRunner.h</label>
+        <link refid="TestRunner_8h"/>
+      </node>
+      <node id="25">
+        <label>embUnit/stdImpl.h</label>
+        <link refid="stdImpl_8h"/>
+      </node>
+      <node id="21">
+        <label>embUnit/TestSuite.h</label>
+        <link refid="TestSuite_8h"/>
+      </node>
+      <node id="23">
+        <label>embUnit/TestCaller.h</label>
+        <link refid="TestCaller_8h"/>
+      </node>
+      <node id="24">
+        <label>embUnit/RepeatedTest.h</label>
+        <link refid="RepeatedTest_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>COPYRIGHT AND PERMISSION NOTICE</para><para>Copyright (c) 2003 Embedded Unit Project</para><para>All rights reserved.</para><para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.</para><para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</para><para>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#ifndef<sp/>__EMBUNIT_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__EMBUNIT_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Test_8h" kindref="compound">embUnit/Test.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="TestCase_8h" kindref="compound">embUnit/TestCase.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="TestListener_8h" kindref="compound">embUnit/TestListener.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="TestResult_8h" kindref="compound">embUnit/TestResult.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="TestSuite_8h" kindref="compound">embUnit/TestSuite.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="TestRunner_8h" kindref="compound">embUnit/TestRunner.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="TestCaller_8h" kindref="compound">embUnit/TestCaller.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="RepeatedTest_8h" kindref="compound">embUnit/RepeatedTest.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="stdImpl_8h" kindref="compound">embUnit/stdImpl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AssertImpl_8h" kindref="compound">embUnit/AssertImpl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="HelperMacro_8h" kindref="compound">embUnit/HelperMacro.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__EMBUNIT_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h"/>
+  </compounddef>
+</doxygen>

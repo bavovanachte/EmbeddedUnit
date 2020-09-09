@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct____TestSuite" kind="struct" language="C++" prot="public">
+    <compoundname>__TestSuite</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____TestSuite_1abfc94f34ebe39330e7a1def7d8224ca1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref> *</type>
+        <definition>TestImplement* __TestSuite::isa</definition>
+        <argsstring></argsstring>
+        <name>isa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" line="41" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestSuite_1aa47907c66c885144110aacf1fef1d2dd" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* __TestSuite::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" line="42" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestSuite_1af0a09da770d045d28be14d59c7cf8593" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int __TestSuite::numberOfTests</definition>
+        <argsstring></argsstring>
+        <name>numberOfTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" line="43" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestSuite_1aa5e479c87d83d73642a269d52695c06a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____Test" kindref="compound">Test</ref> **</type>
+        <definition>Test** __TestSuite::tests</definition>
+        <argsstring></argsstring>
+        <name>tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" line="44" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="44">
+        <label>__Test</label>
+        <link refid="struct____Test"/>
+        <childnode refid="45" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="48">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="46">
+        <label>__TestResult</label>
+        <link refid="struct____TestResult"/>
+        <childnode refid="47" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="48" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>__TestImplement</label>
+        <link refid="struct____TestImplement"/>
+        <childnode refid="46" relation="usage">
+          <edgelabel>run</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>__TestSuite</label>
+        <link refid="struct____TestSuite"/>
+        <childnode refid="44" relation="usage">
+          <edgelabel>tests</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" line="40" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.h" bodystart="40" bodyend="45"/>
+    <listofallmembers>
+      <member refid="struct____TestSuite_1abfc94f34ebe39330e7a1def7d8224ca1" prot="public" virt="non-virtual"><scope>__TestSuite</scope><name>isa</name></member>
+      <member refid="struct____TestSuite_1aa47907c66c885144110aacf1fef1d2dd" prot="public" virt="non-virtual"><scope>__TestSuite</scope><name>name</name></member>
+      <member refid="struct____TestSuite_1af0a09da770d045d28be14d59c7cf8593" prot="public" virt="non-virtual"><scope>__TestSuite</scope><name>numberOfTests</name></member>
+      <member refid="struct____TestSuite_1aa5e479c87d83d73642a269d52695c06a" prot="public" virt="non-virtual"><scope>__TestSuite</scope><name>tests</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
