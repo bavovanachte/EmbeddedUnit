@@ -1,12 +1,17 @@
 all:
 	-@mkdir lib
-	-@cd ./embUnit		;$(MAKE)
-	-@cd ./tests		;$(MAKE)
-	-@cd ./samples		;$(MAKE)
-	-@cd ./tools		;$(MAKE)
+	$(MAKE) -C embUnit
+	$(MAKE) -C tests
+	$(MAKE) -C samples
+	$(MAKE) -C tools
+
+lib:
+	-@mkdir lib
+	$(MAKE) -C embUnit
 
 test:
-	-@./tests/embUnitTest
+	$(MAKE) -C tests
+	@./tests/embUnitTest
 
 samples:
 	-@./samples/samples

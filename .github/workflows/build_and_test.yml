@@ -4,12 +4,20 @@ on: push
 
 jobs:
   build-linux:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Build library
-      run: make all
+      run: make lib
     - name: Run tests
-      run: cd tests; make all; ./embUnitTest
+      run: make test
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build library
+      run: make lib
+    - name: Run tests
+      run: make test
+
