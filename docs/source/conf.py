@@ -30,13 +30,18 @@ author = 'Bavo Van Achte, Yusuke Sasaki'
 extensions = [
     'sphinx_rtd_theme',
     'sphinxcontrib.plantuml',
-    'sphinxcontrib.doxylink'
+    'sphinxcontrib.doxylink',
+    'breathe'
 ]
 
 # Doxylink
 doxylink = {
    'doxy-link' : ('build/html/doxygen/project.tag', './doxygen/html/'),
 }
+
+breathe_projects = { "EmbeddedUnit": "../build/html/doxygen/xml/" }
+breathe_default_project = "EmbeddedUnit"
+
 
 
 # Add any paths that contain templates here, relative to this directory.

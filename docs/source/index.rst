@@ -11,6 +11,7 @@ Embedded Unit does not require std C libs. All objects are allocated to const ar
 
    intro
    writing_tests
+   assertions
    advanced
 
 Indices and tables
