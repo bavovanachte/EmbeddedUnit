@@ -6,13 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Install plantuml
+    - name: apt installs
       run: sudo apt-get install -y plantuml doxygen
+    - name: pip installs
+      run: pip install -r docs/requirements.txt
     - name: Build doxygen documentation
       run: make -C docs doxygen
-    - uses: ammaraskar/sphinx-action@master
-      with:
-        docs-folder: "docs/"
+    - name: Build sphinx documentation
+      run: make -C docs html
     - uses: actions/upload-artifact@v2
       with:
         name: DocumentationHTML
