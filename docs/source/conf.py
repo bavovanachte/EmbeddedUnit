@@ -36,7 +36,7 @@ extensions = [
 
 # Doxylink
 doxylink = {
-   'doxy-link' : ('build/html/doxygen/project.tag', './doxygen/html/'),
+   'doxy-link' : ('build/html/doxygen/project.tag', './doxygen/'),
 }
 
 breathe_projects = { "EmbeddedUnit": "../build/html/doxygen/xml/" }
