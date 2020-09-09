@@ -7,7 +7,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install plantuml
-      run: sudo apt-get install -y plantuml
+      run: sudo apt-get install -y plantuml doxygen
+    - name: Build doxygen documentation
+      run: make -C docs doxygen
     - uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs/"
