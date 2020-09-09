@@ -1,4 +1,5 @@
-/*
+/** @file
+ *
  * COPYRIGHT AND PERMISSION NOTICE
  *
  * Copyright (c) 2003 Embedded Unit Project
@@ -29,8 +30,6 @@
  * shall not be used in advertising or otherwise to promote the sale,
  * use or other dealings in this Software without prior written
  * authorization of the copyright holder.
- *
- * $Id$
  */
 #include "stdImpl.h"
 

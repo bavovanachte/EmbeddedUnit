@@ -167,20 +167,3 @@ The standard test runner gives you the results in following format (results are 
 | shutterTest.testBuffer (shuttertest.c 168) exp 0 was 1
 |
 | run 4 failures 1
-
-------------------
-embUnit Assertions
-------------------
-
-============================================    =============
- Assertion                                      Description
-============================================    =============
-TEST_ASSERT_EQUAL_STRING(expected,actual)       Assert that strings actual and expected are equivalent
-TEST_ASSERT_EQUAL_INT(expected,actual)          Assert that integers actual and expected are equivalent
-TEST_ASSERT_NULL(pointer)                       Assert that pointer value == NULL
-TEST_ASSERT_MESSAGE(condition, message)         Assert that condition is TRUE (non-zero)
-TEST_ASSERT(condition)                          Assert that condition is TRUE (non-zero)
-TEST_FAIL(message)                              Register a failed assertion with the specified message. No logical test is performed.
-============================================    =============
-
-

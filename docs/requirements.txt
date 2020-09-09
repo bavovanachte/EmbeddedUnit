@@ -1,2 +1,5 @@
+sphinx
 sphinxcontrib-plantuml
 sphinx-rtd-theme
+sphinxcontrib-doxylink
+breathe
