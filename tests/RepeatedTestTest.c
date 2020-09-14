@@ -52,5 +52,5 @@ void RepeatedTestTest_tests(void)
 		new_TestFixture("testRepeatedZero",testRepeatedZero),
 	};
 	EMB_UNIT_TESTCALLER(test,"RepeatedTestTest",setUp,tearDown,fixtures);
-	TestRunner_runTest((Test*)&test);
+	EMB_UNIT_RUN(test);
 }

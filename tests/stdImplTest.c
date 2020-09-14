@@ -98,5 +98,5 @@ void stdImplTest_tests( void )
 	};
 	EMB_UNIT_TESTCALLER(test,"stdImplTest",setUp,tearDown,fixtures);
 
-	TestRunner_runTest((Test*)&test);
+	EMB_UNIT_RUN(test);
 }

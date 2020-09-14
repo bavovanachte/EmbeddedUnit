@@ -61,5 +61,5 @@ void TestCaseTest_tests( void )
 		new_TestFixture("testFailure",testFailure),
 	};
 	EMB_UNIT_TESTCALLER(test,"TestCaseTest",setUp,tearDown,fixtures);
-	TestRunner_runTest((Test*)&test);
+	EMB_UNIT_RUN(test);
 }

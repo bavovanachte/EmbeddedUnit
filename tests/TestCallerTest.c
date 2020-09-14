@@ -61,5 +61,5 @@ void TestCallerTest_tests( void )
 		new_TestFixture("testZeroFixture",testZeroFixture),
 	};
 	EMB_UNIT_TESTCALLER(test,"TestCallerTest",setUp,tearDown,fixtures);
-	TestRunner_runTest((Test*)&test);
+	EMB_UNIT_RUN(test);
 }

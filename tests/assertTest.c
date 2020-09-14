@@ -467,5 +467,5 @@ void assertTest_tests(void)
 	};
 
 	EMB_UNIT_TESTCALLER(test,"AssertTest",setUp,tearDown,fixtures);
-	TestRunner_runTest((Test*)&test);
+	EMB_UNIT_RUN(test);
 }

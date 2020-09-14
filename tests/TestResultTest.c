@@ -55,6 +55,5 @@ void TestResultTest_tests( void )
 		new_TestFixture("testTestResult_addFailure",testTestResult_addFailure),
 	};
 	EMB_UNIT_TESTCALLER(test,"TestResultTest",setUp,tearDown,fixtures);
-
-	TestRunner_runTest((Test*)&test);
+	EMB_UNIT_RUN(test);
 }

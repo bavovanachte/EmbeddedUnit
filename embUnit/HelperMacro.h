@@ -83,4 +83,13 @@
 #define EMB_UNIT_REPEATEDTEST(repeater,test,tmrp) \
 	static const RepeatedTest	repeater = new_RepeatedTest(test,tmrp)
 
+/** Run a previously defined (set of) test case(s)
+ *
+ * Run a test case, or set of test cases which were previously defined using
+ * EMB_UNIT_TESTCASE(), EMB_UNIT_TESTSUITE(), EMB_UNIT_TESTCALLER(), or EMB_UNIT_REPEATEDTEST()
+ * @param test Name of the test to execute
+ */
+#define EMB_UNIT_RUN(test) TestRunner_runTest((Test*)&test);
+
+
 #endif/*__HELPERMACRO_H__*/

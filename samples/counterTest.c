@@ -85,7 +85,7 @@ EMB_UNIT_REPEATEDTEST(repeat_test, &repeat_tc, 4);
 
 void CounterTest_tests( void )
 {
-	TestRunner_runTest((Test*)&fixture_test);
-	TestRunner_runTest((Test*)&repeat_test);
+	EMB_UNIT_RUN(fixture_test);
+	EMB_UNIT_RUN(repeat_test);
 }
 

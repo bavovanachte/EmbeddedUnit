@@ -107,5 +107,5 @@ void PersonTest_tests( void )
 	};
 	EMB_UNIT_TESTCALLER(test,"PersonTest",setUp,tearDown,fixtures);
 
-	TestRunner_runTest((Test*)&test);
+	EMB_UNIT_RUN(test);
 }
