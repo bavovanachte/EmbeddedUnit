@@ -281,31 +281,31 @@ Test &lt;|-- TestCase
 
  <span class="n">CounterRef</span> <span class="n">counterRef</span><span class="p">;</span>
 
-<span class="hll"> <span class="k">static</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="hll"> <span class="k">static</span> <span class="kt">void</span> <span class="n">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </span> <span class="p">{</span>
      <span class="n">counterRef</span> <span class="o">=</span> <span class="n">Counter_counter</span><span class="p">();</span>
  <span class="p">}</span>
 
- <span class="k">static</span> <span class="kt">void</span> <span class="nf">tearDown</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+ <span class="k">static</span> <span class="kt">void</span> <span class="n">tearDown</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
  <span class="p">{</span>
      <span class="n">Counter_dealloc</span><span class="p">(</span><span class="n">counterRef</span><span class="p">);</span>
  <span class="p">}</span>
 
-<span class="hll"> <span class="k">static</span> <span class="kt">void</span> <span class="nf">testInit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="hll"> <span class="k">static</span> <span class="kt">void</span> <span class="n">testInit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </span> <span class="p">{</span>
      <span class="n">TEST_ASSERT_EQUAL_INT</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Counter_value</span><span class="p">(</span><span class="n">counterRef</span><span class="p">));</span>
  <span class="p">}</span>
 
- <span class="k">static</span> <span class="kt">void</span> <span class="nf">testSetValue</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+ <span class="k">static</span> <span class="kt">void</span> <span class="n">testSetValue</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
  <span class="p">{</span>
      <span class="n">Counter_setValue</span><span class="p">(</span><span class="n">counterRef</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
      <span class="n">TEST_ASSERT_EQUAL_INT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Counter_value</span><span class="p">(</span><span class="n">counterRef</span><span class="p">));</span>
 
-     <span class="n">Counter_setValue</span><span class="p">(</span><span class="n">counterRef</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-     <span class="n">TEST_ASSERT_EQUAL_INT</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">Counter_value</span><span class="p">(</span><span class="n">counterRef</span><span class="p">));</span>
+     <span class="n">Counter_setValue</span><span class="p">(</span><span class="n">counterRef</span><span class="p">,</span><span class="mi">-1</span><span class="p">);</span>
+     <span class="n">TEST_ASSERT_EQUAL_INT</span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span> <span class="n">Counter_value</span><span class="p">(</span><span class="n">counterRef</span><span class="p">));</span>
  <span class="p">}</span>
 
- <span class="n">TestRef</span> <span class="nf">CounterTest_tests</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+ <span class="n">TestRef</span> <span class="n">CounterTest_tests</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
  <span class="p">{</span>
 <span class="hll">   <span class="n">EMB_UNIT_TESTFIXTURES</span><span class="p">(</span><span class="n">fixtures</span><span class="p">)</span> <span class="p">{</span>
 </span>     <span class="n">new_TestFixture</span><span class="p">(</span><span class="s">&quot;testInit&quot;</span><span class="p">,</span><span class="n">testInit</span><span class="p">),</span>

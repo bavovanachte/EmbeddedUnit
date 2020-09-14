@@ -101,6 +101,7 @@
     <member refid="HelperMacro_8h_1ad406aea8e6dd13c9d14b713658f1122e" kind="define"><name>EMB_UNIT_TESTCALLER</name></member>
     <member refid="HelperMacro_8h_1a72e1c5df141bcb892897252d43129d6e" kind="define"><name>EMB_UNIT_TESTFIXTURES</name></member>
     <member refid="HelperMacro_8h_1adf691ecd77b7835c79450f5843b27a9f" kind="define"><name>EMB_UNIT_REPEATEDTEST</name></member>
+    <member refid="HelperMacro_8h_1ae0e1faec895b32a0c60654f1049db91c" kind="define"><name>EMB_UNIT_RUN</name></member>
   </compound>
   <compound refid="RepeatedTest_8c" kind="file"><name>RepeatedTest.c</name>
     <member refid="RepeatedTest_8c_1a18cfa0342ee0e498678eac74245d63d2" kind="variable"><name>RepeatedTestImplement</name></member>
@@ -159,7 +160,7 @@
   </compound>
   <compound refid="TestCaller_8h" kind="file"><name>TestCaller.h</name>
     <member refid="TestCaller_8h_1a23d66df8c9228f3bed6dedea1b795548" kind="define"><name>new_TestFixture</name></member>
-    <member refid="TestCaller_8h_1a5b3e6d23deebbec453b8dc1fe56534b9" kind="define"><name>new_TestCaller</name></member>
+    <member refid="TestCaller_8h_1acbdee6c0a28d7741c0d1daa1d257cdb2" kind="define"><name>new_TestCaller</name></member>
     <member refid="TestCaller_8h_1af6abc6c77e9f3f235020edb46b11f5e2" kind="typedef"><name>TestFixture</name></member>
     <member refid="TestCaller_8h_1aae1b3e55c741b6a3ce96883355964db4" kind="typedef"><name>TestFixtureRef</name></member>
     <member refid="TestCaller_8h_1a59efc6aa5d5bd64c7ca50f5f4d3d3ea8" kind="typedef"><name>TestCaller</name></member>

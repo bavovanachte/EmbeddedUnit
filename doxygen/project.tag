@@ -235,6 +235,34 @@
     <name>HelperMacro.h</name>
     <path>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/</path>
     <filename>HelperMacro_8h</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>EMB_UNIT_TESTCASE</name>
+      <anchorfile>HelperMacro_8h.html</anchorfile>
+      <anchor>abf7226e11ddec99f1b695cee8668daf8</anchor>
+      <arglist>(ca, name, sup, tdw, run)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>EMB_UNIT_TESTCALLER</name>
+      <anchorfile>HelperMacro_8h.html</anchorfile>
+      <anchor>ad406aea8e6dd13c9d14b713658f1122e</anchor>
+      <arglist>(caller, name, sup, tdw, fixtures)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>EMB_UNIT_REPEATEDTEST</name>
+      <anchorfile>HelperMacro_8h.html</anchorfile>
+      <anchor>adf691ecd77b7835c79450f5843b27a9f</anchor>
+      <arglist>(repeater, test, tmrp)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>EMB_UNIT_RUN</name>
+      <anchorfile>HelperMacro_8h.html</anchorfile>
+      <anchor>ae0e1faec895b32a0c60654f1049db91c</anchor>
+      <arglist>(test)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>RepeatedTest.c</name>

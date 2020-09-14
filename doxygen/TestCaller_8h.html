@@ -94,8 +94,8 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a23d66df8c9228f3bed6dedea1b795548"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>new_TestFixture</b>(name,  test)</td></tr>
 <tr class="separator:a23d66df8c9228f3bed6dedea1b795548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b3e6d23deebbec453b8dc1fe56534b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>new_TestCaller</b>(caller,  nm,  sup,  tdw,  NoFixtures,  fixtures)</td></tr>
-<tr class="separator:a5b3e6d23deebbec453b8dc1fe56534b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdee6c0a28d7741c0d1daa1d257cdb2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>new_TestCaller</b>(nm,  sup,  tdw,  NoFixtures,  fixtures)</td></tr>
+<tr class="separator:acbdee6c0a28d7741c0d1daa1d257cdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -128,8 +128,8 @@ const <a class="el" href="struct____TestImplement.html">TestImplement</a>&#160;<
 
 <p class="definition">Definition in file <a class="el" href="TestCaller_8h_source.html">TestCaller.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a5b3e6d23deebbec453b8dc1fe56534b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b3e6d23deebbec453b8dc1fe56534b9">&#9670;&nbsp;</a></span>new_TestCaller</h2>
+<a id="acbdee6c0a28d7741c0d1daa1d257cdb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdee6c0a28d7741c0d1daa1d257cdb2">&#9670;&nbsp;</a></span>new_TestCaller</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,12 +137,6 @@ const <a class="el" href="struct____TestImplement.html">TestImplement</a>&#160;<
         <tr>
           <td class="memname">#define new_TestCaller</td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">caller, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">nm, </td>
         </tr>
@@ -177,8 +171,7 @@ const <a class="el" href="struct____TestImplement.html">TestImplement</a>&#160;<
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">caller-&gt;isa = (<a class="code" href="struct____TestImplement.html">TestImplement</a>*)&amp;TestCallerImplement; \</div><div class="line">caller-&gt;name = nm; \</div><div class="line">caller-&gt;setUp = sup; \</div><div class="line">caller-&gt;tearDown = tdw; \</div><div class="line">caller-&gt;numberOfFixtuers = NoFixtures; \</div><div class="line">caller-&gt;fixtuers = (<a class="code" href="struct____TestFixture.html">TestFixture</a>*)fixtures</div><div class="ttc" id="struct____TestFixture_html"><div class="ttname"><a href="struct____TestFixture.html">__TestFixture</a></div><div class="ttdef"><b>Definition:</b> <a href="TestCaller_8h_source.html#l00040">TestCaller.h:40</a></div></div>
-<div class="ttc" id="struct____TestImplement_html"><div class="ttname"><a href="struct____TestImplement.html">__TestImplement</a></div><div class="ttdef"><b>Definition:</b> <a href="Test_8h_source.html#l00047">Test.h:47</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">{\</div><div class="line">        (<a class="code" href="struct____TestImplement.html">TestImplement</a>*)&amp;TestCallerImplement,\</div><div class="line">        nm,\</div><div class="line">        sup,\</div><div class="line">        tdw,\</div><div class="line">        NoFixtures,\</div><div class="line">        fixtures,\</div><div class="line">    }</div><div class="ttc" id="struct____TestImplement_html"><div class="ttname"><a href="struct____TestImplement.html">__TestImplement</a></div><div class="ttdef"><b>Definition:</b> <a href="Test_8h_source.html#l00047">Test.h:47</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="TestCaller_8h_source.html#l00065">65</a> of file <a class="el" href="TestCaller_8h_source.html">TestCaller.h</a>.</p>
 

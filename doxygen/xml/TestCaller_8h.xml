@@ -41,20 +41,21 @@
         </inbodydescription>
         <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="45" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="45" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="TestCaller_8h_1a5b3e6d23deebbec453b8dc1fe56534b9" prot="public" static="no">
+      <memberdef kind="define" id="TestCaller_8h_1acbdee6c0a28d7741c0d1daa1d257cdb2" prot="public" static="no">
         <name>new_TestCaller</name>
-        <param><defname>caller</defname></param>
         <param><defname>nm</defname></param>
         <param><defname>sup</defname></param>
         <param><defname>tdw</defname></param>
         <param><defname>NoFixtures</defname></param>
         <param><defname>fixtures</defname></param>
-        <initializer>caller-&gt;isa = (<ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*)&amp;TestCallerImplement; \
-caller-&gt;name = nm; \
-caller-&gt;setUp = sup; \
-caller-&gt;tearDown = tdw; \
-caller-&gt;numberOfFixtuers = NoFixtures; \
-caller-&gt;fixtuers = (<ref refid="struct____TestFixture" kindref="compound">TestFixture</ref>*)fixtures</initializer>
+        <initializer>{\
+		(<ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*)&amp;TestCallerImplement,\
+		nm,\
+		sup,\
+		tdw,\
+		NoFixtures,\
+		fixtures,\
+	}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -170,15 +171,17 @@ caller-&gt;fixtuers = (<ref refid="struct____TestFixture" kindref="compound">Tes
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref><sp/>TestCallerImplement;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new_TestCaller(caller,nm,sup,tdw,NoFixtures,fixtures)<sp/>\</highlight></codeline>
-<codeline lineno="66"><highlight class="preprocessor">caller-&gt;isa<sp/>=<sp/>(TestImplement*)&amp;TestCallerImplement;<sp/>\</highlight></codeline>
-<codeline lineno="67"><highlight class="preprocessor">caller-&gt;name<sp/>=<sp/>nm;<sp/>\</highlight></codeline>
-<codeline lineno="68"><highlight class="preprocessor">caller-&gt;setUp<sp/>=<sp/>sup;<sp/>\</highlight></codeline>
-<codeline lineno="69"><highlight class="preprocessor">caller-&gt;tearDown<sp/>=<sp/>tdw;<sp/>\</highlight></codeline>
-<codeline lineno="70"><highlight class="preprocessor">caller-&gt;numberOfFixtuers<sp/>=<sp/>NoFixtures;<sp/>\</highlight></codeline>
-<codeline lineno="71"><highlight class="preprocessor">caller-&gt;fixtuers<sp/>=<sp/>(TestFixture*)fixtures</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__TESTCALLER_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new_TestCaller(nm,sup,tdw,NoFixtures,fixtures)<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(TestImplement*)&amp;TestCallerImplement,\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nm,\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sup,\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tdw,\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NoFixtures,\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fixtures,\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__TESTCALLER_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h"/>
   </compounddef>

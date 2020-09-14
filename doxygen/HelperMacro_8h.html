@@ -81,8 +81,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:abf7226e11ddec99f1b695cee8668daf8"><td class="memItemLeft" align="right" valign="top"><a id="abf7226e11ddec99f1b695cee8668daf8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>EMB_UNIT_TESTCASE</b>(ca,  name,  sup,  tdw,  run)&#160;&#160;&#160;static const <a class="el" href="struct____TestCase.html">TestCase</a>	ca = new_TestCase(name,sup,tdw,run)</td></tr>
+<tr class="memitem:abf7226e11ddec99f1b695cee8668daf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="HelperMacro_8h.html#abf7226e11ddec99f1b695cee8668daf8">EMB_UNIT_TESTCASE</a>(ca,  name,  sup,  tdw,  run)&#160;&#160;&#160;static const <a class="el" href="struct____TestCase.html">TestCase</a>	ca = new_TestCase(name,sup,tdw,run)</td></tr>
 <tr class="separator:abf7226e11ddec99f1b695cee8668daf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79fa5d811049007bf78fd770d3d6ad3c"><td class="memItemLeft" align="right" valign="top"><a id="a79fa5d811049007bf78fd770d3d6ad3c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>EMB_UNIT_TESTSUITE</b>(su,  name,  array)&#160;&#160;&#160;static const <a class="el" href="struct____TestSuite.html">TestSuite</a>	su = new_TestSuite(name,(<a class="el" href="struct____Test.html">Test</a>**)array,sizeof(array)/sizeof(array[0]))</td></tr>
@@ -93,15 +92,15 @@ Macros</h2></td></tr>
 <tr class="memitem:a24a8e7d9b0e0efb9261d1ea7d76bdb03"><td class="memItemLeft" align="right" valign="top"><a id="a24a8e7d9b0e0efb9261d1ea7d76bdb03"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>EMB_UNIT_ADD_TESTREF</b>(testref)&#160;&#160;&#160;(<a class="el" href="struct____Test.html">Test</a>*)	testref</td></tr>
 <tr class="separator:a24a8e7d9b0e0efb9261d1ea7d76bdb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad406aea8e6dd13c9d14b713658f1122e"><td class="memItemLeft" align="right" valign="top"><a id="ad406aea8e6dd13c9d14b713658f1122e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>EMB_UNIT_TESTCALLER</b>(caller,  name,  sup,  tdw,  fixtures)&#160;&#160;&#160;new_TestCaller(caller,name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)</td></tr>
+<tr class="memitem:ad406aea8e6dd13c9d14b713658f1122e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="HelperMacro_8h.html#ad406aea8e6dd13c9d14b713658f1122e">EMB_UNIT_TESTCALLER</a>(caller,  name,  sup,  tdw,  fixtures)&#160;&#160;&#160;static const <a class="el" href="struct____TestCaller.html">TestCaller</a> caller = new_TestCaller(#name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)</td></tr>
 <tr class="separator:ad406aea8e6dd13c9d14b713658f1122e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e1c5df141bcb892897252d43129d6e"><td class="memItemLeft" align="right" valign="top"><a id="a72e1c5df141bcb892897252d43129d6e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>EMB_UNIT_TESTFIXTURES</b>(fixtures)&#160;&#160;&#160;static const <a class="el" href="struct____TestFixture.html">TestFixture</a>	fixtures[] =</td></tr>
 <tr class="separator:a72e1c5df141bcb892897252d43129d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf691ecd77b7835c79450f5843b27a9f"><td class="memItemLeft" align="right" valign="top"><a id="adf691ecd77b7835c79450f5843b27a9f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>EMB_UNIT_REPEATEDTEST</b>(repeater,  test,  tmrp)&#160;&#160;&#160;static const <a class="el" href="struct____RepeatedTest.html">RepeatedTest</a>	repeater = new_RepeatedTest(test,tmrp)</td></tr>
+<tr class="memitem:adf691ecd77b7835c79450f5843b27a9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="HelperMacro_8h.html#adf691ecd77b7835c79450f5843b27a9f">EMB_UNIT_REPEATEDTEST</a>(repeater,  test,  tmrp)&#160;&#160;&#160;static const <a class="el" href="struct____RepeatedTest.html">RepeatedTest</a>	repeater = new_RepeatedTest(test,tmrp)</td></tr>
 <tr class="separator:adf691ecd77b7835c79450f5843b27a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e1faec895b32a0c60654f1049db91c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="HelperMacro_8h.html#ae0e1faec895b32a0c60654f1049db91c">EMB_UNIT_RUN</a>(test)&#160;&#160;&#160;TestRunner_runTest((<a class="el" href="struct____Test.html">Test</a>*)&amp;test);</td></tr>
+<tr class="separator:ae0e1faec895b32a0c60654f1049db91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>COPYRIGHT AND PERMISSION NOTICE</p>
@@ -112,7 +111,199 @@ Macros</h2></td></tr>
 <p>Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. </p>
 
 <p class="definition">Definition in file <a class="el" href="HelperMacro_8h_source.html">HelperMacro.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="adf691ecd77b7835c79450f5843b27a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf691ecd77b7835c79450f5843b27a9f">&#9670;&nbsp;</a></span>EMB_UNIT_REPEATEDTEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMB_UNIT_REPEATEDTEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">repeater, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tmrp&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;static const <a class="el" href="struct____RepeatedTest.html">RepeatedTest</a>	repeater = new_RepeatedTest(test,tmrp)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set up a repeated test</p>
+<p>Create a repeated test that is repeated tmrp times.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">repeater</td><td>Name of the repeated test (should be a C-identifier) </td></tr>
+    <tr><td class="paramname">test</td><td>Test* object to execute on every iteration </td></tr>
+    <tr><td class="paramname">tmrp</td><td>Number of times the test cycle should be executed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="HelperMacro_8h_source.html#l00083">83</a> of file <a class="el" href="HelperMacro_8h_source.html">HelperMacro.h</a>.</p>
+
+</div>
+</div>
+<a id="ae0e1faec895b32a0c60654f1049db91c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e1faec895b32a0c60654f1049db91c">&#9670;&nbsp;</a></span>EMB_UNIT_RUN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMB_UNIT_RUN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test</td><td>)</td>
+          <td>&#160;&#160;&#160;TestRunner_runTest((<a class="el" href="struct____Test.html">Test</a>*)&amp;test);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Run a previously defined (set of) test case(s)</p>
+<p>Run a test case, or set of test cases which were previously defined using <a class="el" href="HelperMacro_8h.html#abf7226e11ddec99f1b695cee8668daf8">EMB_UNIT_TESTCASE()</a>, EMB_UNIT_TESTSUITE(), <a class="el" href="HelperMacro_8h.html#ad406aea8e6dd13c9d14b713658f1122e">EMB_UNIT_TESTCALLER()</a>, or <a class="el" href="HelperMacro_8h.html#adf691ecd77b7835c79450f5843b27a9f">EMB_UNIT_REPEATEDTEST()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">test</td><td>Name of the test to execute </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="HelperMacro_8h_source.html#l00092">92</a> of file <a class="el" href="HelperMacro_8h_source.html">HelperMacro.h</a>.</p>
+
+</div>
+</div>
+<a id="ad406aea8e6dd13c9d14b713658f1122e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad406aea8e6dd13c9d14b713658f1122e">&#9670;&nbsp;</a></span>EMB_UNIT_TESTCALLER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMB_UNIT_TESTCALLER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">caller, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sup, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tdw, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fixtures&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;static const <a class="el" href="struct____TestCaller.html">TestCaller</a> caller = new_TestCaller(#name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set up a testcaller</p>
+<p>Create a testcaller that is executes a list of testcases. Before every testcase, the given setup() function is called. After every testcase, the given teardown() function is called. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">caller</td><td>Name of the testcaller object (should be a C-identifier) </td></tr>
+    <tr><td class="paramname">name</td><td>String identifier of the testcaller </td></tr>
+    <tr><td class="paramname">sup</td><td>Setup function to be called before every testcase </td></tr>
+    <tr><td class="paramname">tdw</td><td>Tear down function to be called after every testcase </td></tr>
+    <tr><td class="paramname">fixtures</td><td>List of TestFixture instances </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="HelperMacro_8h_source.html#l00069">69</a> of file <a class="el" href="HelperMacro_8h_source.html">HelperMacro.h</a>.</p>
+
+</div>
+</div>
+<a id="abf7226e11ddec99f1b695cee8668daf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7226e11ddec99f1b695cee8668daf8">&#9670;&nbsp;</a></span>EMB_UNIT_TESTCASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMB_UNIT_TESTCASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ca, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sup, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tdw, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">run&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;static const <a class="el" href="struct____TestCase.html">TestCase</a>	ca = new_TestCase(name,sup,tdw,run)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set up a single testcase</p>
+<p>Create a single testcase </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ca</td><td>Name of the testcase (should be a C-identifier) </td></tr>
+    <tr><td class="paramname">name</td><td>String indentifier of the testcase </td></tr>
+    <tr><td class="paramname">sup</td><td>Setup function to be called before executing the test case </td></tr>
+    <tr><td class="paramname">tdw</td><td>Tear down function to be called after executing the test case </td></tr>
+    <tr><td class="paramname">run</td><td>Run function to execute </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="HelperMacro_8h_source.html#l00046">46</a> of file <a class="el" href="HelperMacro_8h_source.html">HelperMacro.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
