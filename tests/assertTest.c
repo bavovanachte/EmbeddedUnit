@@ -443,7 +443,7 @@ static void testASSERT(void)
 	verify_success(&tcase_success);
 }
 
-TestRef assertTest_tests( TestCaller *test )
+void assertTest_tests(void)
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testASSERT_EQUAL_STRING",testASSERT_EQUAL_STRING),
@@ -465,7 +465,7 @@ TestRef assertTest_tests( TestCaller *test )
 		new_TestFixture("testASSERT_MESSAGE",testASSERT_MESSAGE),
 		new_TestFixture("testASSERT",testASSERT),
 	};
-	EMB_UNIT_TESTCALLER(test,"AssertTest",setUp,tearDown,fixtures);
 
-	return (TestRef)test;
+	EMB_UNIT_TESTCALLER(test,"AssertTest",setUp,tearDown,fixtures);
+	TestRunner_runTest((Test*)&test);
 }

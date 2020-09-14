@@ -1,15 +1,15 @@
 #include <embUnit/embUnit.h>
 
-TestRef CounterTest_tests( TestCaller *test );
-TestRef PersonTest_tests( TestCaller *test );
+void CounterTest_tests(void);
+void PersonTest_tests(void);
 
 int main (int argc, const char* argv[])
 {
 	static TestCaller test;
-	
+
 	TestRunner_start();
-		TestRunner_runTest(CounterTest_tests(&test));
-		TestRunner_runTest(PersonTest_tests(&test));
+	CounterTest_tests();
+	PersonTest_tests();
 	TestRunner_end();
 	return 0;
 }

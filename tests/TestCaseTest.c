@@ -52,7 +52,7 @@ static void testFailure(void)
 	TEST_ASSERT_EQUAL_INT(1, result.failureCount);
 }
 
-TestRef TestCaseTest_tests( TestCaller *test )
+void TestCaseTest_tests( void )
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testName",testName),
@@ -61,6 +61,5 @@ TestRef TestCaseTest_tests( TestCaller *test )
 		new_TestFixture("testFailure",testFailure),
 	};
 	EMB_UNIT_TESTCALLER(test,"TestCaseTest",setUp,tearDown,fixtures);
-
-	return (TestRef)test;
+	TestRunner_runTest((Test*)&test);
 }

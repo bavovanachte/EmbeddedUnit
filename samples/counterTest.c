@@ -29,10 +29,10 @@ static void testSetValue(void)
 
 static void testInc(void)
 {
-	Counter_inc(counterRef);	
+	Counter_inc(counterRef);
 	TEST_ASSERT_EQUAL_INT(1, Counter_value(counterRef));
 
-	Counter_inc(counterRef);	
+	Counter_inc(counterRef);
 	TEST_ASSERT_EQUAL_INT(2, Counter_value(counterRef));
 }
 
@@ -54,16 +54,38 @@ static void testClr(void)
 	TEST_ASSERT_EQUAL_INT(0, Counter_value(counterRef));
 }
 
-TestRef CounterTest_tests( TestCaller *test )
-{
-	EMB_UNIT_TESTFIXTURES(fixtures) {
-		new_TestFixture("testInit",testInit),
-		new_TestFixture("testSetValue",testSetValue),
-		new_TestFixture("testInc",testInc),
-		new_TestFixture("testDec",testDec),
-		new_TestFixture("testClr",testClr),
-	};
-	EMB_UNIT_TESTCALLER(test,"CounterTest",setUp,tearDown,fixtures);
+EMB_UNIT_TESTFIXTURES(fixtures) {
+	new_TestFixture("testInit",testInit),
+	new_TestFixture("testSetValue",testSetValue),
+	new_TestFixture("testInc",testInc),
+	new_TestFixture("testDec",testDec),
+	new_TestFixture("testClr",testClr),
+};
 
-	return (TestRef)test;
+EMB_UNIT_TESTCALLER(fixture_test,"CounterTest",setUp,tearDown,fixtures);
+
+int repeattest_inputs[][2] = {
+	{1, 2},
+	{2, 3},
+	{6, 7},
+	{8, 9}
+};
+static void repeat_testcase(void)
+{
+	static unsigned int i = 0u;
+	TEST_ASSERT_EQUAL_INT(0, counterRef->value);
+	Counter_setValue(counterRef, repeattest_inputs[i][0]);
+	TEST_ASSERT_EQUAL_INT(repeattest_inputs[i][0], counterRef->value);
+	Counter_inc(counterRef);
+	TEST_ASSERT_EQUAL_INT(repeattest_inputs[i][1], counterRef->value);
 }
+
+EMB_UNIT_TESTCASE(repeat_tc, "Repeated testcase", setUp, tearDown, repeat_testcase);
+EMB_UNIT_REPEATEDTEST(repeat_test, &repeat_tc, 4);
+
+void CounterTest_tests( void )
+{
+	TestRunner_runTest((Test*)&fixture_test);
+	TestRunner_runTest((Test*)&repeat_test);
+}
+

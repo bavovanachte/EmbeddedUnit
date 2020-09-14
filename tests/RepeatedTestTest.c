@@ -44,7 +44,7 @@ static void testRepeatedZero(void)
 	TEST_ASSERT_EQUAL_INT(0, test.isa->countTestCases(&test));
 }
 
-TestRef RepeatedTestTest_tests( TestCaller *test )
+void RepeatedTestTest_tests(void)
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testRepeatedOnce",testRepeatedOnce),
@@ -52,6 +52,5 @@ TestRef RepeatedTestTest_tests( TestCaller *test )
 		new_TestFixture("testRepeatedZero",testRepeatedZero),
 	};
 	EMB_UNIT_TESTCALLER(test,"RepeatedTestTest",setUp,tearDown,fixtures);
-
-	return (TestRef)test;
+	TestRunner_runTest((Test*)&test);
 }

@@ -92,7 +92,7 @@ static void testnosepfullname(void)
 	TEST_ASSERT_EQUAL_STRING("tarou", Person_lastName(personRef));
 }
 
-TestRef PersonTest_tests( TestCaller *test )
+void PersonTest_tests( void )
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("testfullname",testfullname),
@@ -107,5 +107,5 @@ TestRef PersonTest_tests( TestCaller *test )
 	};
 	EMB_UNIT_TESTCALLER(test,"PersonTest",setUp,tearDown,fixtures);
 
-	return (TestRef)test;
+	TestRunner_runTest((Test*)&test);
 }

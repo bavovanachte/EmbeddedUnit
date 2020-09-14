@@ -62,12 +62,14 @@ struct __TestCaller {
 
 extern const TestImplement TestCallerImplement;
 
-#define new_TestCaller(caller,nm,sup,tdw,NoFixtures,fixtures) \
-caller->isa = (TestImplement*)&TestCallerImplement; \
-caller->name = nm; \
-caller->setUp = sup; \
-caller->tearDown = tdw; \
-caller->numberOfFixtuers = NoFixtures; \
-caller->fixtuers = (TestFixture*)fixtures
+#define new_TestCaller(nm,sup,tdw,NoFixtures,fixtures) \
+	{\
+		(TestImplement*)&TestCallerImplement,\
+		nm,\
+		sup,\
+		tdw,\
+		NoFixtures,\
+		fixtures,\
+	}
 
 #endif/*__TESTCALLER_H__*/

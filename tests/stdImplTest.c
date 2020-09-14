@@ -86,7 +86,7 @@ static void testitoa(void)
 	TEST_ASSERT(p == buf);
 }
 
-TestRef stdImplTest_tests( TestCaller *test )
+void stdImplTest_tests( void )
 {
 	EMB_UNIT_TESTFIXTURES(fixtures) {
 		new_TestFixture("teststrcpy",teststrcpy),
@@ -98,5 +98,5 @@ TestRef stdImplTest_tests( TestCaller *test )
 	};
 	EMB_UNIT_TESTCALLER(test,"stdImplTest",setUp,tearDown,fixtures);
 
-	return (TestRef)test;
+	TestRunner_runTest((Test*)&test);
 }
