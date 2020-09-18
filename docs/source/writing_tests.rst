@@ -21,13 +21,13 @@ The following class diagram shows the architecture of EmbeddedUnit.
 	   + Test* test;
 	   + int timesRepeat;
    }
-   class TestCaller {
+   class TestFixture {
       + <b>TestImplement* isa</b>
 	   + char *name
 	   + void(*setUp)(void)
 	   + void(*tearDown)(void)
 	   + int numberOfFixtures
-	   + TestFixture [] fixtures
+	   + TestFunction [] functions
    }
    class TestCase {
       + <b>TestImplement* isa</b>
@@ -42,7 +42,7 @@ The following class diagram shows the architecture of EmbeddedUnit.
    Test - TestResult: Collects results
    Test <|-- TestSuite
    Test <|-- RepeatedTest
-   Test <|-- TestCaller
+   Test <|-- TestFixture
    Test <|-- TestCase
    @enduml
 
@@ -118,11 +118,11 @@ Below is a program listing for running the testcase via standard test runner. Th
    :linenos:
 
     #include <embUnit/embUnit.h>
-    TestRef CounterTest_tests( TestCaller *test );
+    TestRef CounterTest_tests( TestFixture *test );
 
     int main (int argc, const char* argv[])
     {
-        static TestCaller test;
+        static TestFixture test;
 
         TestRunner_start();
         TestRunner_runTest(CounterTest_tests(&test));

@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
 
   for ( i = 0; i < strvec_size(groups); ++i ) {
     const char* name = strvec_get(groups,i);
-    sprintf(line,"extern TestRef %s_tests( TestCaller *test );\n", name); /* Changed to overcome memory violation in OpenTV environment */
+    sprintf(line,"extern TestRef %s_tests( TestFixture *test );\n", name); /* Changed to overcome memory violation in OpenTV environment */
     strvec_insert_before(target, decl_pos++, line);
   }
 

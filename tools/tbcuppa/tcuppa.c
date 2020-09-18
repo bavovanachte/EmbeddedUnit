@@ -76,7 +76,7 @@ int main(int argc, char* argv[]) {
 
 
 /*  fprintf(file, "TestRef %s_tests(void)\n" */ /* Changed to over come memory violations in OpenTv environment */
-  fprintf(file, "TestRef %s_tests( TestCaller *test )\n"
+  fprintf(file, "TestRef %s_tests( TestFixture *test )\n"
   				"{\n"
  			 	"	EMB_UNIT_TESTFUNCTIONS(fixtures) {\n"
                 ,group

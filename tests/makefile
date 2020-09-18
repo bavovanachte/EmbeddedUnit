@@ -4,7 +4,7 @@ LDFLAGS =
 LIBS = ../lib
 RM = rm
 TARGET = embUnitTest
-OBJS = AllTests.o RepeatedTestTest.o assertTest.o stdImplTest.o TestCallerTest.o TestCaseTest.o TestResultTest.o MockTestCase.o
+OBJS = AllTests.o RepeatedTestTest.o assertTest.o stdImplTest.o TestFixtureTest.o TestCaseTest.o TestResultTest.o MockTestCase.o
 
 all: $(TARGET)
 

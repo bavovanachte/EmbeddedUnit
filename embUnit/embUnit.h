@@ -40,7 +40,7 @@
 #include <embUnit/TestResult.h>
 #include <embUnit/TestSuite.h>
 #include <embUnit/TestRunner.h>
-#include <embUnit/TestCaller.h>
+#include <embUnit/TestFixture.h>
 #include <embUnit/RepeatedTest.h>
 #include <embUnit/stdImpl.h>
 #include <embUnit/AssertImpl.h>

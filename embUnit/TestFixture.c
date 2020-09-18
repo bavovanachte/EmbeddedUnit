@@ -33,7 +33,7 @@
  */
 #include "Test.h"
 #include "TestCase.h"
-#include "TestCaller.h"
+#include "TestFixture.h"
 
 TestCase emptyTestCase = {(TestImplement*)&TestCaseImplement,0,0,0,0};
 
