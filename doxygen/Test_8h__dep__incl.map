@@ -1,8 +1,8 @@
 <map id="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h" name="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/Test.h">
 <area shape="rect" id="node2" href="$embUnit_8h.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/embUnit.h" alt="" coords="5,95,201,151"/>
 <area shape="rect" id="node3" href="$RepeatedTest_8c.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/RepeatedTest.c" alt="" coords="225,95,421,151"/>
-<area shape="rect" id="node4" href="$TestCaller_8c.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/TestCaller.c" alt="" coords="445,95,641,151"/>
-<area shape="rect" id="node5" href="$TestCase_8c.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/TestCase.c" alt="" coords="665,95,861,151"/>
+<area shape="rect" id="node4" href="$TestCase_8c.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/TestCase.c" alt="" coords="445,95,641,151"/>
+<area shape="rect" id="node5" href="$TestFixture_8c.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/TestFixture.c" alt="" coords="665,95,861,151"/>
 <area shape="rect" id="node6" href="$TestResult_8c.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/TestResult.c" alt="" coords="885,95,1081,151"/>
 <area shape="rect" id="node7" href="$TestRunner_8c.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/TestRunner.c" alt="" coords="1105,95,1301,151"/>
 <area shape="rect" id="node8" href="$TestSuite_8c.html" title="/home/runner/work/Embedded\lUnit/EmbeddedUnit/embUnit\l/TestSuite.c" alt="" coords="1325,95,1521,151"/>

@@ -1,31 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
-  <compounddef id="TestCaller_8h" kind="file" language="C++">
-    <compoundname>TestCaller.h</compoundname>
+  <compounddef id="TestFixture_8h" kind="file" language="C++">
+    <compoundname>TestFixture.h</compoundname>
     <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
-    <includedby refid="TestCaller_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</includedby>
+    <includedby refid="TestFixture_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.c</includedby>
     <invincdepgraph>
-      <node id="66">
+      <node id="76">
         <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
         <link refid="embUnit_8h"/>
       </node>
-      <node id="67">
-        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</label>
-        <link refid="TestCaller_8c"/>
+      <node id="77">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.c</label>
+        <link refid="TestFixture_8c"/>
       </node>
-      <node id="65">
-        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h</label>
-        <link refid="TestCaller_8h"/>
-        <childnode refid="66" relation="include">
+      <node id="75">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h</label>
+        <link refid="TestFixture_8h"/>
+        <childnode refid="76" relation="include">
         </childnode>
-        <childnode refid="67" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="struct____TestFunction" prot="public">__TestFunction</innerclass>
     <innerclass refid="struct____TestFixture" prot="public">__TestFixture</innerclass>
       <sectiondef kind="define">
-      <memberdef kind="define" id="TestCaller_8h_1a4f780604eff46eb88610009f058a3c53" prot="public" static="no">
+      <memberdef kind="define" id="TestFixture_8h_1a4f780604eff46eb88610009f058a3c53" prot="public" static="no">
         <name>new_TestFunction</name>
         <param><defname>name</defname></param>
         <param><defname>test</defname></param>
@@ -39,9 +39,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="45" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="45" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="45" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="TestCaller_8h_1acaf3878cf877bbc1a683e757353089e1" prot="public" static="no">
+      <memberdef kind="define" id="TestFixture_8h_1acaf3878cf877bbc1a683e757353089e1" prot="public" static="no">
         <name>new_TestFixture</name>
         <param><defname>nm</defname></param>
         <param><defname>sup</defname></param>
@@ -62,11 +62,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="65" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="65" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="65" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="TestCaller_8h_1a08f0ec20f40262f61955702e997cfbc2" prot="public" static="no">
+      <memberdef kind="typedef" id="TestFixture_8h_1a08f0ec20f40262f61955702e997cfbc2" prot="public" static="no">
         <type>struct <ref refid="struct____TestFunction" kindref="compound">__TestFunction</ref></type>
         <definition>typedef struct __TestFunction TestFunction</definition>
         <argsstring></argsstring>
@@ -77,9 +77,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="66" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="66" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="37" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="TestCaller_8h_1a9474006d752ca1a0dd6b5e8f31f382db" prot="public" static="no">
+      <memberdef kind="typedef" id="TestFixture_8h_1a9474006d752ca1a0dd6b5e8f31f382db" prot="public" static="no">
         <type>struct <ref refid="struct____TestFunction" kindref="compound">__TestFunction</ref> *</type>
         <definition>typedef struct __TestFunction* TestFunctionRef</definition>
         <argsstring></argsstring>
@@ -90,9 +90,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="TestCaller_8h_1af6abc6c77e9f3f235020edb46b11f5e2" prot="public" static="no">
+      <memberdef kind="typedef" id="TestFixture_8h_1af6abc6c77e9f3f235020edb46b11f5e2" prot="public" static="no">
         <type>struct <ref refid="struct____TestFixture" kindref="compound">__TestFixture</ref></type>
         <definition>typedef struct __TestFixture TestFixture</definition>
         <argsstring></argsstring>
@@ -103,9 +103,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="51" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="TestCaller_8h_1aae1b3e55c741b6a3ce96883355964db4" prot="public" static="no">
+      <memberdef kind="typedef" id="TestFixture_8h_1aae1b3e55c741b6a3ce96883355964db4" prot="public" static="no">
         <type>struct <ref refid="struct____TestFixture" kindref="compound">__TestFixture</ref> *</type>
         <definition>typedef struct __TestFixture* TestFixtureRef</definition>
         <argsstring></argsstring>
@@ -116,11 +116,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="52" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="52" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="52" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="TestCaller_8h_1ae2264cb9531b5d0a726690e2257db736" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="TestFixture_8h_1ae2264cb9531b5d0a726690e2257db736" prot="public" static="no" mutable="no">
         <type>const <ref refid="struct____TestImplement" kindref="compound">TestImplement</ref></type>
         <definition>const TestImplement TestFixtureImplement</definition>
         <argsstring></argsstring>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="63" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c" bodystart="66" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="63" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.c" bodystart="66" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -183,6 +183,6 @@
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">/*__TESTCALLER_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h"/>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h"/>
   </compounddef>
 </doxygen>

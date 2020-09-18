@@ -3,30 +3,30 @@
   <compounddef id="TestCase_8h" kind="file" language="C++">
     <compoundname>TestCase.h</compoundname>
     <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
-    <includedby refid="TestCaller_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</includedby>
     <includedby refid="TestCase_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</includedby>
+    <includedby refid="TestFixture_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.c</includedby>
     <invincdepgraph>
-      <node id="75">
+      <node id="66">
         <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
         <link refid="embUnit_8h"/>
       </node>
-      <node id="77">
+      <node id="67">
         <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</label>
         <link refid="TestCase_8c"/>
       </node>
-      <node id="74">
+      <node id="65">
         <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.h</label>
         <link refid="TestCase_8h"/>
-        <childnode refid="75" relation="include">
+        <childnode refid="66" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
-        <childnode refid="77" relation="include">
+        <childnode refid="68" relation="include">
         </childnode>
       </node>
-      <node id="76">
-        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</label>
-        <link refid="TestCaller_8c"/>
+      <node id="68">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.c</label>
+        <link refid="TestFixture_8c"/>
       </node>
     </invincdepgraph>
     <innerclass refid="struct____TestCase" prot="public">__TestCase</innerclass>

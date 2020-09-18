@@ -225,7 +225,7 @@
     <includes id="TestResult_8h" name="TestResult.h" local="no" imported="no">embUnit/TestResult.h</includes>
     <includes id="TestSuite_8h" name="TestSuite.h" local="no" imported="no">embUnit/TestSuite.h</includes>
     <includes id="TestRunner_8h" name="TestRunner.h" local="no" imported="no">embUnit/TestRunner.h</includes>
-    <includes id="TestCaller_8h" name="TestCaller.h" local="no" imported="no">embUnit/TestCaller.h</includes>
+    <includes id="TestFixture_8h" name="TestFixture.h" local="no" imported="no">embUnit/TestFixture.h</includes>
     <includes id="RepeatedTest_8h" name="RepeatedTest.h" local="no" imported="no">embUnit/RepeatedTest.h</includes>
     <includes id="stdImpl_8h" name="stdImpl.h" local="no" imported="no">embUnit/stdImpl.h</includes>
     <includes id="AssertImpl_8h" name="AssertImpl.h" local="no" imported="no">embUnit/AssertImpl.h</includes>
@@ -296,21 +296,6 @@
     <class kind="struct">__Test</class>
   </compound>
   <compound kind="file">
-    <name>TestCaller.c</name>
-    <path>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/</path>
-    <filename>TestCaller_8c</filename>
-    <includes id="Test_8h" name="Test.h" local="yes" imported="no">Test.h</includes>
-    <includes id="TestCase_8h" name="TestCase.h" local="yes" imported="no">TestCase.h</includes>
-    <includes id="TestCaller_8h" name="TestCaller.h" local="yes" imported="no">TestCaller.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>TestCaller.h</name>
-    <path>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/</path>
-    <filename>TestCaller_8h</filename>
-    <class kind="struct">__TestFunction</class>
-    <class kind="struct">__TestFixture</class>
-  </compound>
-  <compound kind="file">
     <name>TestCase.c</name>
     <path>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/</path>
     <filename>TestCase_8c</filename>
@@ -323,6 +308,21 @@
     <path>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/</path>
     <filename>TestCase_8h</filename>
     <class kind="struct">__TestCase</class>
+  </compound>
+  <compound kind="file">
+    <name>TestFixture.c</name>
+    <path>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/</path>
+    <filename>TestFixture_8c</filename>
+    <includes id="Test_8h" name="Test.h" local="yes" imported="no">Test.h</includes>
+    <includes id="TestCase_8h" name="TestCase.h" local="yes" imported="no">TestCase.h</includes>
+    <includes id="TestFixture_8h" name="TestFixture.h" local="yes" imported="no">TestFixture.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>TestFixture.h</name>
+    <path>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/</path>
+    <filename>TestFixture_8h</filename>
+    <class kind="struct">__TestFunction</class>
+    <class kind="struct">__TestFixture</class>
   </compound>
   <compound kind="file">
     <name>TestListener.h</name>

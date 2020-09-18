@@ -4,8 +4,8 @@
     <compoundname>Test.h</compoundname>
     <includedby refid="embUnit_8h" local="no">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</includedby>
     <includedby refid="RepeatedTest_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c</includedby>
-    <includedby refid="TestCaller_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</includedby>
     <includedby refid="TestCase_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</includedby>
+    <includedby refid="TestFixture_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.c</includedby>
     <includedby refid="TestResult_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestResult.c</includedby>
     <includedby refid="TestRunner_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestRunner.c</includedby>
     <includedby refid="TestSuite_8c" local="yes">/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.c</includedby>
@@ -36,7 +36,7 @@
         <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/embUnit.h</label>
         <link refid="embUnit_8h"/>
       </node>
-      <node id="55">
+      <node id="54">
         <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCase.c</label>
         <link refid="TestCase_8c"/>
       </node>
@@ -48,9 +48,9 @@
         <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestSuite.c</label>
         <link refid="TestSuite_8c"/>
       </node>
-      <node id="54">
-        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c</label>
-        <link refid="TestCaller_8c"/>
+      <node id="55">
+        <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.c</label>
+        <link refid="TestFixture_8c"/>
       </node>
       <node id="53">
         <label>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/RepeatedTest.c</label>

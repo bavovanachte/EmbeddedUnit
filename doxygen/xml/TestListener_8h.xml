@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="45" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" line="60" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestListener.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="TestListener_8h_1a06c8639f44a6ca71d9c224b1599bf376" prot="public" static="no">
         <type>struct <ref refid="struct____TestListnerImplement" kindref="compound">__TestListnerImplement</ref> *</type>

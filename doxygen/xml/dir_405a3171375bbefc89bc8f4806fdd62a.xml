@@ -12,10 +12,10 @@
     <innerfile refid="stdImpl_8c">stdImpl.c</innerfile>
     <innerfile refid="stdImpl_8h">stdImpl.h</innerfile>
     <innerfile refid="Test_8h">Test.h</innerfile>
-    <innerfile refid="TestCaller_8c">TestCaller.c</innerfile>
-    <innerfile refid="TestCaller_8h">TestCaller.h</innerfile>
     <innerfile refid="TestCase_8c">TestCase.c</innerfile>
     <innerfile refid="TestCase_8h">TestCase.h</innerfile>
+    <innerfile refid="TestFixture_8c">TestFixture.c</innerfile>
+    <innerfile refid="TestFixture_8h">TestFixture.h</innerfile>
     <innerfile refid="TestListener_8h">TestListener.h</innerfile>
     <innerfile refid="TestResult_8c">TestResult.c</innerfile>
     <innerfile refid="TestResult_8h">TestResult.h</innerfile>

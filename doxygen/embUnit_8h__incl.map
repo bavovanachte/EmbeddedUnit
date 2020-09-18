@@ -5,9 +5,9 @@
 <area shape="rect" id="node5" href="$TestResult_8h.html" title="embUnit/TestResult.h" alt="" coords="490,109,641,136"/>
 <area shape="rect" id="node6" href="$TestSuite_8h.html" title="embUnit/TestSuite.h" alt="" coords="665,109,807,136"/>
 <area shape="rect" id="node7" href="$TestRunner_8h.html" title="embUnit/TestRunner.h" alt="" coords="832,109,987,136"/>
-<area shape="rect" id="node8" href="$TestCaller_8h.html" title="embUnit/TestCaller.h" alt="" coords="1011,109,1157,136"/>
-<area shape="rect" id="node9" href="$RepeatedTest_8h.html" title="embUnit/RepeatedTest.h" alt="" coords="1181,109,1349,136"/>
-<area shape="rect" id="node10" href="$stdImpl_8h.html" title="embUnit/stdImpl.h" alt="" coords="1378,184,1507,211"/>
-<area shape="rect" id="node11" href="$AssertImpl_8h.html" title="embUnit/AssertImpl.h" alt="" coords="1424,109,1573,136"/>
-<area shape="rect" id="node12" href="$HelperMacro_8h.html" title="embUnit/HelperMacro.h" alt="" coords="1597,109,1757,136"/>
+<area shape="rect" id="node8" href="$TestFixture_8h.html" title="embUnit/TestFixture.h" alt="" coords="1011,109,1163,136"/>
+<area shape="rect" id="node9" href="$RepeatedTest_8h.html" title="embUnit/RepeatedTest.h" alt="" coords="1187,109,1355,136"/>
+<area shape="rect" id="node10" href="$stdImpl_8h.html" title="embUnit/stdImpl.h" alt="" coords="1383,184,1513,211"/>
+<area shape="rect" id="node11" href="$AssertImpl_8h.html" title="embUnit/AssertImpl.h" alt="" coords="1429,109,1579,136"/>
+<area shape="rect" id="node12" href="$HelperMacro_8h.html" title="embUnit/HelperMacro.h" alt="" coords="1603,109,1763,136"/>
 </map>

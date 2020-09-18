@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="55" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="55" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="55" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct____TestFixture_1ae2004658162da53541475c06e021b242" prot="public" static="no" mutable="no">
         <type>char *</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="56" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="56" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="56" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct____TestFixture_1a59ca55a6634168b8401b12bce631b522" prot="public" static="no" mutable="no">
         <type>void(*</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="57" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="57" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="57" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct____TestFixture_1a7f2c305bfb5d73b1393c9878a20a505d" prot="public" static="no" mutable="no">
         <type>void(*</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="58" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="58" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="58" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct____TestFixture_1a683c0803e3a3b7df887398e8d548bcc6" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="59" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="59" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="59" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct____TestFixture_1acfed4d8c35593d7d3f442ea00dab83a1" prot="public" static="no" mutable="no">
         <type><ref refid="struct____TestFunction" kindref="compound">TestFunction</ref> *</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="60" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="60" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="60" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -127,7 +127,7 @@
         <link refid="struct____TestFunction"/>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="54" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="54" bodyend="61"/>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" line="54" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestFixture.h" bodystart="54" bodyend="61"/>
     <listofallmembers>
       <member refid="struct____TestFixture_1acfed4d8c35593d7d3f442ea00dab83a1" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>functions</name></member>
       <member refid="struct____TestFixture_1a20e005859dbad22a1c5bf380a35f51eb" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>isa</name></member>

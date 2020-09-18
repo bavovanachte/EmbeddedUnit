@@ -151,22 +151,6 @@
     <member refid="Test_8h_1a4457c6d6a196e376571dfcdae5912af3" kind="typedef"><name>Test</name></member>
     <member refid="Test_8h_1a46192f7a3cfa8840d45286ebf5978d20" kind="typedef"><name>TestRef</name></member>
   </compound>
-  <compound refid="TestCaller_8c" kind="file"><name>TestCaller.c</name>
-    <member refid="TestCaller_8c_1a5ef65d601cc40b6cde29bdbb210afc9d" kind="variable"><name>emptyTestCase</name></member>
-    <member refid="TestCaller_8c_1ae2264cb9531b5d0a726690e2257db736" kind="variable"><name>TestFixtureImplement</name></member>
-    <member refid="TestCaller_8c_1ad79b291d8c4110fc68178546c9bd02f2" kind="function"><name>TestFixture_name</name></member>
-    <member refid="TestCaller_8c_1a9a6146ba4dc4b469f0a5710cf5c905cf" kind="function"><name>TestFixture_run</name></member>
-    <member refid="TestCaller_8c_1ad60ea38f824ddb19d1006a9afc49445b" kind="function"><name>TestFixture_countTestCases</name></member>
-  </compound>
-  <compound refid="TestCaller_8h" kind="file"><name>TestCaller.h</name>
-    <member refid="TestCaller_8h_1a4f780604eff46eb88610009f058a3c53" kind="define"><name>new_TestFunction</name></member>
-    <member refid="TestCaller_8h_1acaf3878cf877bbc1a683e757353089e1" kind="define"><name>new_TestFixture</name></member>
-    <member refid="TestCaller_8h_1a08f0ec20f40262f61955702e997cfbc2" kind="typedef"><name>TestFunction</name></member>
-    <member refid="TestCaller_8h_1a9474006d752ca1a0dd6b5e8f31f382db" kind="typedef"><name>TestFunctionRef</name></member>
-    <member refid="TestCaller_8h_1af6abc6c77e9f3f235020edb46b11f5e2" kind="typedef"><name>TestFixture</name></member>
-    <member refid="TestCaller_8h_1aae1b3e55c741b6a3ce96883355964db4" kind="typedef"><name>TestFixtureRef</name></member>
-    <member refid="TestCaller_8h_1ae2264cb9531b5d0a726690e2257db736" kind="variable"><name>TestFixtureImplement</name></member>
-  </compound>
   <compound refid="TestCase_8c" kind="file"><name>TestCase.c</name>
     <member refid="TestCase_8c_1acf81b99797e96c7d602ffc4c3cb012b0" kind="variable"><name>result_</name></member>
     <member refid="TestCase_8c_1afbfb8f49d431114f9a6096b8eff2c2fb" kind="variable"><name>self_</name></member>
@@ -181,6 +165,22 @@
     <member refid="TestCase_8h_1ab9d849163b3cd471e5bf5c30dccb0ef4" kind="typedef"><name>TestCase</name></member>
     <member refid="TestCase_8h_1af0269ebe7046e533268070634e735b61" kind="typedef"><name>TestCaseRef</name></member>
     <member refid="TestCase_8h_1a34148ed294a80d779b8ef4ba56b78e81" kind="variable"><name>TestCaseImplement</name></member>
+  </compound>
+  <compound refid="TestFixture_8c" kind="file"><name>TestFixture.c</name>
+    <member refid="TestFixture_8c_1a5ef65d601cc40b6cde29bdbb210afc9d" kind="variable"><name>emptyTestCase</name></member>
+    <member refid="TestFixture_8c_1ae2264cb9531b5d0a726690e2257db736" kind="variable"><name>TestFixtureImplement</name></member>
+    <member refid="TestFixture_8c_1ad79b291d8c4110fc68178546c9bd02f2" kind="function"><name>TestFixture_name</name></member>
+    <member refid="TestFixture_8c_1a9a6146ba4dc4b469f0a5710cf5c905cf" kind="function"><name>TestFixture_run</name></member>
+    <member refid="TestFixture_8c_1ad60ea38f824ddb19d1006a9afc49445b" kind="function"><name>TestFixture_countTestCases</name></member>
+  </compound>
+  <compound refid="TestFixture_8h" kind="file"><name>TestFixture.h</name>
+    <member refid="TestFixture_8h_1a4f780604eff46eb88610009f058a3c53" kind="define"><name>new_TestFunction</name></member>
+    <member refid="TestFixture_8h_1acaf3878cf877bbc1a683e757353089e1" kind="define"><name>new_TestFixture</name></member>
+    <member refid="TestFixture_8h_1a08f0ec20f40262f61955702e997cfbc2" kind="typedef"><name>TestFunction</name></member>
+    <member refid="TestFixture_8h_1a9474006d752ca1a0dd6b5e8f31f382db" kind="typedef"><name>TestFunctionRef</name></member>
+    <member refid="TestFixture_8h_1af6abc6c77e9f3f235020edb46b11f5e2" kind="typedef"><name>TestFixture</name></member>
+    <member refid="TestFixture_8h_1aae1b3e55c741b6a3ce96883355964db4" kind="typedef"><name>TestFixtureRef</name></member>
+    <member refid="TestFixture_8h_1ae2264cb9531b5d0a726690e2257db736" kind="variable"><name>TestFixtureImplement</name></member>
   </compound>
   <compound refid="TestListener_8h" kind="file"><name>TestListener.h</name>
     <member refid="TestListener_8h_1a643097e3adcf1f53b8eaa162b657618b" kind="define"><name>TestListner_startTest</name></member>

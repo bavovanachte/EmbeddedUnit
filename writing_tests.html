@@ -163,7 +163,7 @@
 <h1>Writing embUnit Tests<a class="headerlink" href="#writing-embunit-tests" title="Permalink to this headline">¶</a></h1>
 <p>The following class diagram shows the architecture of EmbeddedUnit.</p>
 <p class="plantuml">
-<img src="_images/plantuml-3fbbf5fcf788c4397ec682147237cd09b88d55a8.png" alt="&#64;startuml
+<img src="_images/plantuml-c0d9cd5538073f0a44b8d48c661b5bad366540f1.png" alt="&#64;startuml
 
 abstract Test {
    # &lt;b&gt;TestImplement* isa&lt;/b&gt;
@@ -179,13 +179,13 @@ class RepeatedTest {
         + Test* test;
         + int timesRepeat;
 }
-class TestCaller {
+class TestFixture {
    + &lt;b&gt;TestImplement* isa&lt;/b&gt;
         + char *name
         + void(*setUp)(void)
         + void(*tearDown)(void)
         + int numberOfFixtures
-        + TestFixture [] fixtures
+        + TestFunction [] functions
 }
 class TestCase {
    + &lt;b&gt;TestImplement* isa&lt;/b&gt;
@@ -200,7 +200,7 @@ TestRunner -- Test: +Runs
 Test - TestResult: Collects results
 Test &lt;|-- TestSuite
 Test &lt;|-- RepeatedTest
-Test &lt;|-- TestCaller
+Test &lt;|-- TestFixture
 Test &lt;|-- TestCase
 &#64;enduml"/>
 </p>
@@ -333,11 +333,11 @@ Test &lt;|-- TestCase
 10
 11
 12</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="cp">#include</span> <span class="cpf">&lt;embUnit/embUnit.h&gt;</span><span class="cp"></span>
- <span class="n">TestRef</span> <span class="nf">CounterTest_tests</span><span class="p">(</span> <span class="n">TestCaller</span> <span class="o">*</span><span class="n">test</span> <span class="p">);</span>
+ <span class="n">TestRef</span> <span class="nf">CounterTest_tests</span><span class="p">(</span> <span class="n">TestFixture</span> <span class="o">*</span><span class="n">test</span> <span class="p">);</span>
 
  <span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
  <span class="p">{</span>
-     <span class="k">static</span> <span class="n">TestCaller</span> <span class="n">test</span><span class="p">;</span>
+     <span class="k">static</span> <span class="n">TestFixture</span> <span class="n">test</span><span class="p">;</span>
 
      <span class="n">TestRunner_start</span><span class="p">();</span>
      <span class="n">TestRunner_runTest</span><span class="p">(</span><span class="n">CounterTest_tests</span><span class="p">(</span><span class="o">&amp;</span><span class="n">test</span><span class="p">));</span>
