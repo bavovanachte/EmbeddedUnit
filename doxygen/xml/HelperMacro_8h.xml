@@ -106,30 +106,30 @@
         </inbodydescription>
         <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="55" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="55" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="HelperMacro_8h_1ad406aea8e6dd13c9d14b713658f1122e" prot="public" static="no">
-        <name>EMB_UNIT_TESTCALLER</name>
-        <param><defname>caller</defname></param>
+      <memberdef kind="define" id="HelperMacro_8h_1a32d06417496be1db8f11e4a108c8d9e5" prot="public" static="no">
+        <name>EMB_UNIT_TESTFIXTURE</name>
+        <param><defname>fixture</defname></param>
         <param><defname>name</defname></param>
         <param><defname>sup</defname></param>
         <param><defname>tdw</defname></param>
-        <param><defname>fixtures</defname></param>
-        <initializer>static const <ref refid="struct____TestCaller" kindref="compound">TestCaller</ref> caller = new_TestCaller(#name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)</initializer>
+        <param><defname>functions</defname></param>
+        <initializer>static const <ref refid="struct____TestFixture" kindref="compound">TestFixture</ref> fixture = new_TestFixture(#name,sup,tdw,sizeof(functions)/sizeof(functions[0]),functions)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Set up a testcaller</para><para>Create a testcaller that is executes a list of testcases. Before every testcase, the given setup() function is called. After every testcase, the given teardown() function is called. <parameterlist kind="param"><parameteritem>
+<para>Set up a testfixture</para><para>Create a testfixture that executes a list of testcases. Before every testcase, the given setup() function is called. After every testcase, the given teardown() function is called. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>caller</parametername>
+<parametername>fixture</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Name of the testcaller object (should be a C-identifier) </para></parameterdescription>
+<para>Name of the testfixture object (should be a C-identifier) </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>name</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>String identifier of the testcaller </para></parameterdescription>
+<para>String identifier of the testfixture </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -147,10 +147,10 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>fixtures</parametername>
+<parametername>functions</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>List of TestFixture instances </para></parameterdescription>
+<para>List of TestFunction instances </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -158,10 +158,10 @@
         </inbodydescription>
         <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" line="69" column="9" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/HelperMacro.h" bodystart="69" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="HelperMacro_8h_1a72e1c5df141bcb892897252d43129d6e" prot="public" static="no">
-        <name>EMB_UNIT_TESTFIXTURES</name>
-        <param><defname>fixtures</defname></param>
-        <initializer>static const <ref refid="struct____TestFixture" kindref="compound">TestFixture</ref>	fixtures[] =</initializer>
+      <memberdef kind="define" id="HelperMacro_8h_1ab694b5d3fc9fbfd69594caf3c2dd7ed4" prot="public" static="no">
+        <name>EMB_UNIT_TESTFUNCTIONS</name>
+        <param><defname>functions</defname></param>
+        <initializer>static const <ref refid="struct____TestFunction" kindref="compound">TestFunction</ref>	functions[] =</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -213,7 +213,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Run a previously defined (set of) test case(s)</para><para>Run a test case, or set of test cases which were previously defined using <ref refid="HelperMacro_8h_1abf7226e11ddec99f1b695cee8668daf8" kindref="member">EMB_UNIT_TESTCASE()</ref>, EMB_UNIT_TESTSUITE(), <ref refid="HelperMacro_8h_1ad406aea8e6dd13c9d14b713658f1122e" kindref="member">EMB_UNIT_TESTCALLER()</ref>, or <ref refid="HelperMacro_8h_1adf691ecd77b7835c79450f5843b27a9f" kindref="member">EMB_UNIT_REPEATEDTEST()</ref> <parameterlist kind="param"><parameteritem>
+<para>Run a previously defined (set of) test case(s)</para><para>Run a test case, or set of test cases which were previously defined using <ref refid="HelperMacro_8h_1abf7226e11ddec99f1b695cee8668daf8" kindref="member">EMB_UNIT_TESTCASE()</ref>, EMB_UNIT_TESTSUITE(), EMB_UNIT_TESTCALLER(), or <ref refid="HelperMacro_8h_1adf691ecd77b7835c79450f5843b27a9f" kindref="member">EMB_UNIT_REPEATEDTEST()</ref> <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>test</parametername>
 </parameternamelist>
@@ -248,11 +248,11 @@
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_ADD_TESTREF(testref)<sp/>\</highlight></codeline>
 <codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Test*)<sp/>testref</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="HelperMacro_8h_1ad406aea8e6dd13c9d14b713658f1122e" refkind="member"><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTCALLER(caller,name,sup,tdw,fixtures)<sp/>\</highlight></codeline>
-<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>TestCaller<sp/>caller<sp/>=<sp/>new_TestCaller(#name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="HelperMacro_8h_1a32d06417496be1db8f11e4a108c8d9e5" refkind="member"><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTFIXTURE(fixture,name,sup,tdw,functions)<sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>TestFixture<sp/>fixture<sp/>=<sp/>new_TestFixture(#name,sup,tdw,sizeof(functions)/sizeof(functions[0]),functions)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTFIXTURES(fixtures)<sp/>\</highlight></codeline>
-<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>TestFixture<sp/><sp/><sp/><sp/>fixtures[]<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMB_UNIT_TESTFUNCTIONS(functions)<sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>TestFunction<sp/><sp/><sp/>functions[]<sp/>=</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="83" refid="HelperMacro_8h_1adf691ecd77b7835c79450f5843b27a9f" refkind="member"><highlight class="preprocessor">#define<sp/>EMB_UNIT_REPEATEDTEST(repeater,test,tmrp)<sp/>\</highlight></codeline>
 <codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>RepeatedTest<sp/><sp/><sp/>repeater<sp/>=<sp/>new_RepeatedTest(test,tmrp)</highlight><highlight class="normal"></highlight></codeline>

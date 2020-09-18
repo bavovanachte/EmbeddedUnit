@@ -8,14 +8,6 @@
   <compound refid="struct____Test" kind="struct"><name>__Test</name>
     <member refid="struct____Test_1a63ebd7755f0e6144e761d9d642f0d3c8" kind="variable"><name>isa</name></member>
   </compound>
-  <compound refid="struct____TestCaller" kind="struct"><name>__TestCaller</name>
-    <member refid="struct____TestCaller_1a4622ef08c28089742d0d9a928fa2a7ec" kind="variable"><name>isa</name></member>
-    <member refid="struct____TestCaller_1a6101278e3d06b7cf74b9b031e89ba372" kind="variable"><name>name</name></member>
-    <member refid="struct____TestCaller_1aa752864195fda5b6a4ce4fcb0db45b47" kind="variable"><name>setUp</name></member>
-    <member refid="struct____TestCaller_1a48be259d46bc1c5611ac55f175916734" kind="variable"><name>tearDown</name></member>
-    <member refid="struct____TestCaller_1afe41175900f803e59763ac7601aeb113" kind="variable"><name>numberOfFixtuers</name></member>
-    <member refid="struct____TestCaller_1a8f87c44321ad890fc44eddcfe42927e6" kind="variable"><name>fixtuers</name></member>
-  </compound>
   <compound refid="struct____TestCase" kind="struct"><name>__TestCase</name>
     <member refid="struct____TestCase_1aa5d9f6a0e0450c1e473f15ba3213f9f8" kind="variable"><name>isa</name></member>
     <member refid="struct____TestCase_1ac130a1811db8956b755f4e967121ac1b" kind="variable"><name>name</name></member>
@@ -24,8 +16,16 @@
     <member refid="struct____TestCase_1af8bdfa3d8ba4972a9f63d2eb74ec0b94" kind="variable"><name>runTest</name></member>
   </compound>
   <compound refid="struct____TestFixture" kind="struct"><name>__TestFixture</name>
+    <member refid="struct____TestFixture_1a20e005859dbad22a1c5bf380a35f51eb" kind="variable"><name>isa</name></member>
     <member refid="struct____TestFixture_1ae2004658162da53541475c06e021b242" kind="variable"><name>name</name></member>
-    <member refid="struct____TestFixture_1ad9143ad0e7411531f81ea0c9539f2838" kind="variable"><name>test</name></member>
+    <member refid="struct____TestFixture_1a59ca55a6634168b8401b12bce631b522" kind="variable"><name>setUp</name></member>
+    <member refid="struct____TestFixture_1a7f2c305bfb5d73b1393c9878a20a505d" kind="variable"><name>tearDown</name></member>
+    <member refid="struct____TestFixture_1a683c0803e3a3b7df887398e8d548bcc6" kind="variable"><name>numberOfFixtuers</name></member>
+    <member refid="struct____TestFixture_1acfed4d8c35593d7d3f442ea00dab83a1" kind="variable"><name>functions</name></member>
+  </compound>
+  <compound refid="struct____TestFunction" kind="struct"><name>__TestFunction</name>
+    <member refid="struct____TestFunction_1a73087e326d28979d00be426efecb1785" kind="variable"><name>name</name></member>
+    <member refid="struct____TestFunction_1ab0ec42c96c7021891f11445c9a46564c" kind="variable"><name>test</name></member>
   </compound>
   <compound refid="struct____TestImplement" kind="struct"><name>__TestImplement</name>
     <member refid="struct____TestImplement_1a630108ca24d01bad703f2d1984eea1e2" kind="variable"><name>name</name></member>
@@ -98,8 +98,8 @@
     <member refid="HelperMacro_8h_1a79fa5d811049007bf78fd770d3d6ad3c" kind="define"><name>EMB_UNIT_TESTSUITE</name></member>
     <member refid="HelperMacro_8h_1a21fcc49ab0a0cc48889e8fd09c241876" kind="define"><name>EMB_UNIT_TESTREFS</name></member>
     <member refid="HelperMacro_8h_1a24a8e7d9b0e0efb9261d1ea7d76bdb03" kind="define"><name>EMB_UNIT_ADD_TESTREF</name></member>
-    <member refid="HelperMacro_8h_1ad406aea8e6dd13c9d14b713658f1122e" kind="define"><name>EMB_UNIT_TESTCALLER</name></member>
-    <member refid="HelperMacro_8h_1a72e1c5df141bcb892897252d43129d6e" kind="define"><name>EMB_UNIT_TESTFIXTURES</name></member>
+    <member refid="HelperMacro_8h_1a32d06417496be1db8f11e4a108c8d9e5" kind="define"><name>EMB_UNIT_TESTFIXTURE</name></member>
+    <member refid="HelperMacro_8h_1ab694b5d3fc9fbfd69594caf3c2dd7ed4" kind="define"><name>EMB_UNIT_TESTFUNCTIONS</name></member>
     <member refid="HelperMacro_8h_1adf691ecd77b7835c79450f5843b27a9f" kind="define"><name>EMB_UNIT_REPEATEDTEST</name></member>
     <member refid="HelperMacro_8h_1ae0e1faec895b32a0c60654f1049db91c" kind="define"><name>EMB_UNIT_RUN</name></member>
   </compound>
@@ -153,19 +153,19 @@
   </compound>
   <compound refid="TestCaller_8c" kind="file"><name>TestCaller.c</name>
     <member refid="TestCaller_8c_1a5ef65d601cc40b6cde29bdbb210afc9d" kind="variable"><name>emptyTestCase</name></member>
-    <member refid="TestCaller_8c_1abe0ba7bb5b17d8fc246280f2525bac3d" kind="variable"><name>TestCallerImplement</name></member>
-    <member refid="TestCaller_8c_1a894b82bbe8328557e0d8e7ceb78cecc4" kind="function"><name>TestCaller_name</name></member>
-    <member refid="TestCaller_8c_1a87b46e0a0e6b812cc235d25556a82a48" kind="function"><name>TestCaller_run</name></member>
-    <member refid="TestCaller_8c_1afa03e2d1e5f0219e4bf0798505e18bc7" kind="function"><name>TestCaller_countTestCases</name></member>
+    <member refid="TestCaller_8c_1ae2264cb9531b5d0a726690e2257db736" kind="variable"><name>TestFixtureImplement</name></member>
+    <member refid="TestCaller_8c_1ad79b291d8c4110fc68178546c9bd02f2" kind="function"><name>TestFixture_name</name></member>
+    <member refid="TestCaller_8c_1a9a6146ba4dc4b469f0a5710cf5c905cf" kind="function"><name>TestFixture_run</name></member>
+    <member refid="TestCaller_8c_1ad60ea38f824ddb19d1006a9afc49445b" kind="function"><name>TestFixture_countTestCases</name></member>
   </compound>
   <compound refid="TestCaller_8h" kind="file"><name>TestCaller.h</name>
-    <member refid="TestCaller_8h_1a23d66df8c9228f3bed6dedea1b795548" kind="define"><name>new_TestFixture</name></member>
-    <member refid="TestCaller_8h_1acbdee6c0a28d7741c0d1daa1d257cdb2" kind="define"><name>new_TestCaller</name></member>
+    <member refid="TestCaller_8h_1a4f780604eff46eb88610009f058a3c53" kind="define"><name>new_TestFunction</name></member>
+    <member refid="TestCaller_8h_1acaf3878cf877bbc1a683e757353089e1" kind="define"><name>new_TestFixture</name></member>
+    <member refid="TestCaller_8h_1a08f0ec20f40262f61955702e997cfbc2" kind="typedef"><name>TestFunction</name></member>
+    <member refid="TestCaller_8h_1a9474006d752ca1a0dd6b5e8f31f382db" kind="typedef"><name>TestFunctionRef</name></member>
     <member refid="TestCaller_8h_1af6abc6c77e9f3f235020edb46b11f5e2" kind="typedef"><name>TestFixture</name></member>
     <member refid="TestCaller_8h_1aae1b3e55c741b6a3ce96883355964db4" kind="typedef"><name>TestFixtureRef</name></member>
-    <member refid="TestCaller_8h_1a59efc6aa5d5bd64c7ca50f5f4d3d3ea8" kind="typedef"><name>TestCaller</name></member>
-    <member refid="TestCaller_8h_1a8d2183509deb9090581cea93b29a1498" kind="typedef"><name>TestCallerRef</name></member>
-    <member refid="TestCaller_8h_1abe0ba7bb5b17d8fc246280f2525bac3d" kind="variable"><name>TestCallerImplement</name></member>
+    <member refid="TestCaller_8h_1ae2264cb9531b5d0a726690e2257db736" kind="variable"><name>TestFixtureImplement</name></member>
   </compound>
   <compound refid="TestCase_8c" kind="file"><name>TestCase.c</name>
     <member refid="TestCase_8c_1acf81b99797e96c7d602ffc4c3cb012b0" kind="variable"><name>result_</name></member>

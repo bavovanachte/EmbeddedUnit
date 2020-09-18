@@ -244,10 +244,10 @@
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>EMB_UNIT_TESTCALLER</name>
+      <name>EMB_UNIT_TESTFIXTURE</name>
       <anchorfile>HelperMacro_8h.html</anchorfile>
-      <anchor>ad406aea8e6dd13c9d14b713658f1122e</anchor>
-      <arglist>(caller, name, sup, tdw, fixtures)</arglist>
+      <anchor>a32d06417496be1db8f11e4a108c8d9e5</anchor>
+      <arglist>(fixture, name, sup, tdw, functions)</arglist>
     </member>
     <member kind="define">
       <type>#define</type>
@@ -307,8 +307,8 @@
     <name>TestCaller.h</name>
     <path>/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/</path>
     <filename>TestCaller_8h</filename>
+    <class kind="struct">__TestFunction</class>
     <class kind="struct">__TestFixture</class>
-    <class kind="struct">__TestCaller</class>
   </compound>
   <compound kind="file">
     <name>TestCase.c</name>
@@ -383,16 +383,16 @@
     <filename>struct____Test.html</filename>
   </compound>
   <compound kind="struct">
-    <name>__TestCaller</name>
-    <filename>struct____TestCaller.html</filename>
-  </compound>
-  <compound kind="struct">
     <name>__TestCase</name>
     <filename>struct____TestCase.html</filename>
   </compound>
   <compound kind="struct">
     <name>__TestFixture</name>
     <filename>struct____TestFixture.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>__TestFunction</name>
+    <filename>struct____TestFunction.html</filename>
   </compound>
   <compound kind="struct">
     <name>__TestImplement</name>

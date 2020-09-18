@@ -44,15 +44,15 @@
         </inbodydescription>
         <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c" line="38" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="TestCaller_8c_1abe0ba7bb5b17d8fc246280f2525bac3d" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="TestCaller_8c_1ae2264cb9531b5d0a726690e2257db736" prot="public" static="no" mutable="no">
         <type>const <ref refid="struct____TestImplement" kindref="compound">TestImplement</ref></type>
-        <definition>const TestImplement TestCallerImplement</definition>
+        <definition>const TestImplement TestFixtureImplement</definition>
         <argsstring></argsstring>
-        <name>TestCallerImplement</name>
+        <name>TestFixtureImplement</name>
         <initializer>= {
-	(TestNameFunction)			TestCaller_name,
-	(TestRunFunction)			TestCaller_run,
-	(TestCountTestCasesFunction)TestCaller_countTestCases,
+	(TestNameFunction)			TestFixture_name,
+	(TestRunFunction)			TestFixture_run,
+	(TestCountTestCasesFunction)TestFixture_countTestCases,
 }</initializer>
         <briefdescription>
         </briefdescription>
@@ -64,13 +64,13 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="TestCaller_8c_1a894b82bbe8328557e0d8e7ceb78cecc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="TestCaller_8c_1ad79b291d8c4110fc68178546c9bd02f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
-        <definition>char* TestCaller_name</definition>
-        <argsstring>(TestCaller *self)</argsstring>
-        <name>TestCaller_name</name>
+        <definition>char* TestFixture_name</definition>
+        <argsstring>(TestFixture *self)</argsstring>
+        <name>TestFixture_name</name>
         <param>
-          <type><ref refid="struct____TestCaller" kindref="compound">TestCaller</ref> *</type>
+          <type><ref refid="struct____TestFixture" kindref="compound">TestFixture</ref> *</type>
           <declname>self</declname>
         </param>
         <briefdescription>
@@ -81,13 +81,13 @@
         </inbodydescription>
         <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c" line="40" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c" bodystart="40" bodyend="43"/>
       </memberdef>
-      <memberdef kind="function" id="TestCaller_8c_1a87b46e0a0e6b812cc235d25556a82a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="TestCaller_8c_1a9a6146ba4dc4b469f0a5710cf5c905cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void TestCaller_run</definition>
-        <argsstring>(TestCaller *self, TestResult *result)</argsstring>
-        <name>TestCaller_run</name>
+        <definition>void TestFixture_run</definition>
+        <argsstring>(TestFixture *self, TestResult *result)</argsstring>
+        <name>TestFixture_run</name>
         <param>
-          <type><ref refid="struct____TestCaller" kindref="compound">TestCaller</ref> *</type>
+          <type><ref refid="struct____TestFixture" kindref="compound">TestFixture</ref> *</type>
           <declname>self</declname>
         </param>
         <param>
@@ -102,13 +102,13 @@
         </inbodydescription>
         <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c" line="45" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c" bodystart="45" bodyend="59"/>
       </memberdef>
-      <memberdef kind="function" id="TestCaller_8c_1afa03e2d1e5f0219e4bf0798505e18bc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="TestCaller_8c_1ad60ea38f824ddb19d1006a9afc49445b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int TestCaller_countTestCases</definition>
-        <argsstring>(TestCaller *self)</argsstring>
-        <name>TestCaller_countTestCases</name>
+        <definition>int TestFixture_countTestCases</definition>
+        <argsstring>(TestFixture *self)</argsstring>
+        <name>TestFixture_countTestCases</name>
         <param>
-          <type><ref refid="struct____TestCaller" kindref="compound">TestCaller</ref> *</type>
+          <type><ref refid="struct____TestFixture" kindref="compound">TestFixture</ref> *</type>
           <declname>self</declname>
         </param>
         <briefdescription>
@@ -132,12 +132,12 @@
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><ref refid="struct____TestCase" kindref="compound">TestCase</ref><sp/>emptyTestCase<sp/>=<sp/>{(<ref refid="struct____TestImplement" kindref="compound">TestImplement</ref>*)&amp;TestCaseImplement,0,0,0,0};</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>TestCaller_name(<ref refid="struct____TestCaller" kindref="compound">TestCaller</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>TestFixture_name(<ref refid="struct____TestFixture" kindref="compound">TestFixture</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;name;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestCaller_run(<ref refid="struct____TestCaller" kindref="compound">TestCaller</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/>result)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TestFixture_run(<ref refid="struct____TestFixture" kindref="compound">TestFixture</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct____TestResult" kindref="compound">TestResult</ref>*<sp/>result)</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct____TestCase" kindref="compound">TestCase</ref><sp/>*cs<sp/>=<sp/>&amp;emptyTestCase;<sp/></highlight><highlight class="comment">/*<sp/>Change<sp/>to<sp/>overcome<sp/>&quot;undefined<sp/>reference<sp/>to<sp/>`memcpy&apos;&quot;<sp/>on<sp/>line<sp/>48<sp/>in<sp/>OpenTv<sp/>environment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
@@ -146,22 +146,22 @@
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>cs-&gt;tearDown<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;tearDown;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;</highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;numberOfFixtuers;<sp/>i++)</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cs-&gt;name<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;fixtuers[i].name;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cs-&gt;runTest<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;fixtuers[i].test;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cs-&gt;name<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;functions[i].name;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cs-&gt;runTest<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;functions[i].test;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*run<sp/>test*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Test_run(cs,result);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="59"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TestCaller_countTestCases(<ref refid="struct____TestCaller" kindref="compound">TestCaller</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TestFixture_countTestCases(<ref refid="struct____TestFixture" kindref="compound">TestFixture</ref>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="62"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;numberOfFixtuers;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref><sp/>TestCallerImplement<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestNameFunction)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TestCaller_name,</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestRunFunction)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TestCaller_run,</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestCountTestCasesFunction)TestCaller_countTestCases,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref><sp/>TestFixtureImplement<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestNameFunction)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TestFixture_name,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestRunFunction)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TestFixture_run,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>(TestCountTestCasesFunction)TestFixture_countTestCases,</highlight></codeline>
 <codeline lineno="70"><highlight class="normal">};</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.c"/>

@@ -98,12 +98,12 @@ Below is a program listing for unit tests of module counter.c. The full example 
 
     TestRef CounterTest_tests(void)
     {
-      EMB_UNIT_TESTFIXTURES(fixtures) {
-        new_TestFixture("testInit",testInit),
-        new_TestFixture("testSetValue",testSetValue),
+      EMB_UNIT_TESTFUNCTIONS(fixtures) {
+        new_TestFunction("testInit",testInit),
+        new_TestFunction("testSetValue",testSetValue),
     	};
 
-      EMB_UNIT_TESTCALLER(CounterTest,"CounterTest",setUp,tearDown,fixtures);
+      EMB_UNIT_TESTFIXTURE(CounterTest,"CounterTest",setUp,tearDown,fixtures);
       return (TestRef)&CounterTest;
     }
 

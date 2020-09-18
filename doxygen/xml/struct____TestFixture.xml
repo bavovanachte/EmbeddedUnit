@@ -3,6 +3,19 @@
   <compounddef id="struct____TestFixture" kind="struct" language="C++" prot="public">
     <compoundname>__TestFixture</compoundname>
       <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____TestFixture_1a20e005859dbad22a1c5bf380a35f51eb" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestImplement" kindref="compound">TestImplement</ref> *</type>
+        <definition>TestImplement* __TestFixture::isa</definition>
+        <argsstring></argsstring>
+        <name>isa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="55" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="struct____TestFixture_1ae2004658162da53541475c06e021b242" prot="public" static="no" mutable="no">
         <type>char *</type>
         <definition>char* __TestFixture::name</definition>
@@ -14,30 +27,114 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="41" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="56" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="56" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct____TestFixture_1ad9143ad0e7411531f81ea0c9539f2838" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct____TestFixture_1a59ca55a6634168b8401b12bce631b522" prot="public" static="no" mutable="no">
         <type>void(*</type>
-        <definition>void(* __TestFixture::test) (void)</definition>
+        <definition>void(* __TestFixture::setUp) (void)</definition>
         <argsstring>)(void)</argsstring>
-        <name>test</name>
+        <name>setUp</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="42" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="57" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestFixture_1a7f2c305bfb5d73b1393c9878a20a505d" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* __TestFixture::tearDown) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>tearDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="58" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestFixture_1a683c0803e3a3b7df887398e8d548bcc6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int __TestFixture::numberOfFixtuers</definition>
+        <argsstring></argsstring>
+        <name>numberOfFixtuers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="59" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____TestFixture_1acfed4d8c35593d7d3f442ea00dab83a1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct____TestFunction" kindref="compound">TestFunction</ref> *</type>
+        <definition>TestFunction* __TestFixture::functions</definition>
+        <argsstring></argsstring>
+        <name>functions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="60" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="40" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="40" bodyend="43"/>
+    <collaborationgraph>
+      <node id="24">
+        <label>__TestListnerImplement</label>
+        <link refid="struct____TestListnerImplement"/>
+      </node>
+      <node id="22">
+        <label>__TestResult</label>
+        <link refid="struct____TestResult"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>__TestFixture</label>
+        <link refid="struct____TestFixture"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>functions</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>__TestListner</label>
+        <link refid="struct____TestListner"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>isa</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>__TestImplement</label>
+        <link refid="struct____TestImplement"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>run</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>__TestFunction</label>
+        <link refid="struct____TestFunction"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" line="54" column="1" bodyfile="/home/runner/work/EmbeddedUnit/EmbeddedUnit/embUnit/TestCaller.h" bodystart="54" bodyend="61"/>
     <listofallmembers>
+      <member refid="struct____TestFixture_1acfed4d8c35593d7d3f442ea00dab83a1" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>functions</name></member>
+      <member refid="struct____TestFixture_1a20e005859dbad22a1c5bf380a35f51eb" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>isa</name></member>
       <member refid="struct____TestFixture_1ae2004658162da53541475c06e021b242" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>name</name></member>
-      <member refid="struct____TestFixture_1ad9143ad0e7411531f81ea0c9539f2838" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>test</name></member>
+      <member refid="struct____TestFixture_1a683c0803e3a3b7df887398e8d548bcc6" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>numberOfFixtuers</name></member>
+      <member refid="struct____TestFixture_1a59ca55a6634168b8401b12bce631b522" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>setUp</name></member>
+      <member refid="struct____TestFixture_1a7f2c305bfb5d73b1393c9878a20a505d" prot="public" virt="non-virtual"><scope>__TestFixture</scope><name>tearDown</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

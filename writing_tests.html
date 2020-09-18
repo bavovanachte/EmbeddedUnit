@@ -307,12 +307,12 @@ Test &lt;|-- TestCase
 
  <span class="n">TestRef</span> <span class="n">CounterTest_tests</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
  <span class="p">{</span>
-<span class="hll">   <span class="n">EMB_UNIT_TESTFIXTURES</span><span class="p">(</span><span class="n">fixtures</span><span class="p">)</span> <span class="p">{</span>
-</span>     <span class="n">new_TestFixture</span><span class="p">(</span><span class="s">&quot;testInit&quot;</span><span class="p">,</span><span class="n">testInit</span><span class="p">),</span>
-     <span class="n">new_TestFixture</span><span class="p">(</span><span class="s">&quot;testSetValue&quot;</span><span class="p">,</span><span class="n">testSetValue</span><span class="p">),</span>
+<span class="hll">   <span class="n">EMB_UNIT_TESTFUNCTIONS</span><span class="p">(</span><span class="n">fixtures</span><span class="p">)</span> <span class="p">{</span>
+</span>     <span class="n">new_TestFunction</span><span class="p">(</span><span class="s">&quot;testInit&quot;</span><span class="p">,</span><span class="n">testInit</span><span class="p">),</span>
+     <span class="n">new_TestFunction</span><span class="p">(</span><span class="s">&quot;testSetValue&quot;</span><span class="p">,</span><span class="n">testSetValue</span><span class="p">),</span>
      <span class="p">};</span>
 <span class="hll">
-</span>   <span class="n">EMB_UNIT_TESTCALLER</span><span class="p">(</span><span class="n">CounterTest</span><span class="p">,</span><span class="s">&quot;CounterTest&quot;</span><span class="p">,</span><span class="n">setUp</span><span class="p">,</span><span class="n">tearDown</span><span class="p">,</span><span class="n">fixtures</span><span class="p">);</span>
+</span>   <span class="n">EMB_UNIT_TESTFIXTURE</span><span class="p">(</span><span class="n">CounterTest</span><span class="p">,</span><span class="s">&quot;CounterTest&quot;</span><span class="p">,</span><span class="n">setUp</span><span class="p">,</span><span class="n">tearDown</span><span class="p">,</span><span class="n">fixtures</span><span class="p">);</span>
 <span class="hll">   <span class="k">return</span> <span class="p">(</span><span class="n">TestRef</span><span class="p">)</span><span class="o">&amp;</span><span class="n">CounterTest</span><span class="p">;</span>
 </span> <span class="p">}</span>
 </pre></div>
