@@ -54,17 +54,17 @@ static void testClr(void)
 	TEST_ASSERT_EQUAL_INT(0, Counter_value(counterRef));
 }
 
-EMB_UNIT_TESTFIXTURES(fixtures) {
-	new_TestFixture("testInit",testInit),
-	new_TestFixture("testSetValue",testSetValue),
-	new_TestFixture("testInc",testInc),
-	new_TestFixture("testDec",testDec),
-	new_TestFixture("testClr",testClr),
+EMB_UNIT_TESTFUNCTIONS(fixtures) {
+	new_TestFunction("testInit",testInit),
+	new_TestFunction("testSetValue",testSetValue),
+	new_TestFunction("testInc",testInc),
+	new_TestFunction("testDec",testDec),
+	new_TestFunction("testClr",testClr),
 };
 
-EMB_UNIT_TESTCALLER(fixture_test,"CounterTest",setUp,tearDown,fixtures);
+EMB_UNIT_TESTFIXTURE(fixture_test,"CounterTest",setUp,tearDown,fixtures);
 
-int repeattest_inputs[][2] = {
+static int repeattest_inputs[][2] = {
 	{1, 2},
 	{2, 3},
 	{6, 7},
@@ -78,14 +78,19 @@ static void repeat_testcase(void)
 	TEST_ASSERT_EQUAL_INT(repeattest_inputs[i][0], counterRef->value);
 	Counter_inc(counterRef);
 	TEST_ASSERT_EQUAL_INT(repeattest_inputs[i][1], counterRef->value);
+	i++;
 }
 
 EMB_UNIT_TESTCASE(repeat_tc, "Repeated testcase", setUp, tearDown, repeat_testcase);
 EMB_UNIT_REPEATEDTEST(repeat_test, &repeat_tc, 4);
 
-void CounterTest_tests( void )
+void testSuiteSample_test( void )
 {
-	EMB_UNIT_RUN(fixture_test);
-	EMB_UNIT_RUN(repeat_test);
+	EMB_UNIT_TESTREFS(testlist) {
+		EMB_UNIT_ADD_TESTREF(&fixture_test),
+		EMB_UNIT_ADD_TESTREF(&repeat_test)
+	};
+	EMB_UNIT_TESTSUITE(testsuite, "Test Suite", testlist);
+	EMB_UNIT_RUN(testsuite);
 }
 

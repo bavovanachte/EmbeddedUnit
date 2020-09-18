@@ -48,12 +48,12 @@ static void testTestResult_addFailure(void)
 
 void TestResultTest_tests( void )
 {
-	EMB_UNIT_TESTFIXTURES(fixtures) {
-		new_TestFixture("testTestResult_result",testTestResult_result),
-		new_TestFixture("testTestResult_startTest",testTestResult_startTest),
-		new_TestFixture("testTestResult_endTest",testTestResult_endTest),
-		new_TestFixture("testTestResult_addFailure",testTestResult_addFailure),
+	EMB_UNIT_TESTFUNCTIONS(fixtures) {
+		new_TestFunction("testTestResult_result",testTestResult_result),
+		new_TestFunction("testTestResult_startTest",testTestResult_startTest),
+		new_TestFunction("testTestResult_endTest",testTestResult_endTest),
+		new_TestFunction("testTestResult_addFailure",testTestResult_addFailure),
 	};
-	EMB_UNIT_TESTCALLER(test,"TestResultTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTFIXTURE(test,"TestResultTest",setUp,tearDown,fixtures);
 	EMB_UNIT_RUN(test);
 }

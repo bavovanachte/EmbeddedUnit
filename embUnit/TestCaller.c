@@ -37,12 +37,12 @@
 
 TestCase emptyTestCase = {(TestImplement*)&TestCaseImplement,0,0,0,0};
 
-char* TestCaller_name(TestCaller* self)
+char* TestFixture_name(TestFixture* self)
 {
 	return self->name;
 }
 
-void TestCaller_run(TestCaller* self,TestResult* result)
+void TestFixture_run(TestFixture* self,TestResult* result)
 {
 	TestCase *cs = &emptyTestCase; /* Change to overcome "undefined reference to `memcpy'" on line 48 in OpenTv environment */
 	int i;
@@ -51,20 +51,20 @@ void TestCaller_run(TestCaller* self,TestResult* result)
 	cs->tearDown	= self->tearDown;
 	for (i=0; i<self->numberOfFixtuers; i++)
 	{
-		cs->name	= self->fixtuers[i].name;
-		cs->runTest	= self->fixtuers[i].test;
+		cs->name	= self->functions[i].name;
+		cs->runTest	= self->functions[i].test;
 		/*run test*/
 		Test_run(cs,result);
 	}
 }
 
-int TestCaller_countTestCases(TestCaller* self)
+int TestFixture_countTestCases(TestFixture* self)
 {
 	return self->numberOfFixtuers;
 }
 
-const TestImplement TestCallerImplement = {
-	(TestNameFunction)			TestCaller_name,
-	(TestRunFunction)			TestCaller_run,
-	(TestCountTestCasesFunction)TestCaller_countTestCases,
+const TestImplement TestFixtureImplement = {
+	(TestNameFunction)			TestFixture_name,
+	(TestRunFunction)			TestFixture_run,
+	(TestCountTestCasesFunction)TestFixture_countTestCases,
 };

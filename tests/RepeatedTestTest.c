@@ -46,11 +46,11 @@ static void testRepeatedZero(void)
 
 void RepeatedTestTest_tests(void)
 {
-	EMB_UNIT_TESTFIXTURES(fixtures) {
-		new_TestFixture("testRepeatedOnce",testRepeatedOnce),
-		new_TestFixture("testRepeatedMoreThanOnce",testRepeatedMoreThanOnce),
-		new_TestFixture("testRepeatedZero",testRepeatedZero),
+	EMB_UNIT_TESTFUNCTIONS(testfunction) {
+		new_TestFunction("testRepeatedOnce",testRepeatedOnce),
+		new_TestFunction("testRepeatedMoreThanOnce",testRepeatedMoreThanOnce),
+		new_TestFunction("testRepeatedZero",testRepeatedZero),
 	};
-	EMB_UNIT_TESTCALLER(test,"RepeatedTestTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTFIXTURE(test,"RepeatedTestTest",setUp,tearDown,testfunction);
 	EMB_UNIT_RUN(test);
 }

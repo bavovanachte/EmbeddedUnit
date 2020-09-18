@@ -1,14 +1,16 @@
 #include <embUnit/embUnit.h>
 
-void CounterTest_tests(void);
+void testSuiteSample_test(void);
+void repeatTestSample_test(void);
+void testFixtureSample_test(void);
 void PersonTest_tests(void);
 
 int main (int argc, const char* argv[])
 {
-	static TestCaller test;
-
 	TestRunner_start();
-	CounterTest_tests();
+	testSuiteSample_test();
+	testFixtureSample_test();
+	repeatTestSample_test();
 	PersonTest_tests();
 	TestRunner_end();
 	return 0;

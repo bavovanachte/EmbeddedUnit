@@ -34,37 +34,37 @@
 #ifndef	__TESTCALLER_H__
 #define	__TESTCALLER_H__
 
-typedef struct __TestFixture	TestFixture;
-typedef struct __TestFixture*	TestFixtureRef;/*downward compatible*/
+typedef struct __TestFunction	TestFunction;
+typedef struct __TestFunction*	TestFunctionRef;/*downward compatible*/
 
-struct __TestFixture {
+struct __TestFunction {
 	char *name;
 	void(*test)(void);
 };
 
-#define new_TestFixture(name,test)\
+#define new_TestFunction(name,test)\
 	{\
 		name,\
 		test,\
 	}
 
-typedef struct __TestCaller		TestCaller;
-typedef struct __TestCaller*	TestCallerRef;/*downward compatible*/
+typedef struct __TestFixture	TestFixture;
+typedef struct __TestFixture*	TestFixtureRef;/*downward compatible*/
 
-struct __TestCaller {
+struct __TestFixture {
 	TestImplement* isa;
 	char *name;
 	void(*setUp)(void);
 	void(*tearDown)(void);
 	int numberOfFixtuers;
-	TestFixture	*fixtuers;
+	TestFunction* functions;
 };
 
-extern const TestImplement TestCallerImplement;
+extern const TestImplement TestFixtureImplement;
 
-#define new_TestCaller(nm,sup,tdw,NoFixtures,fixtures) \
+#define new_TestFixture(nm,sup,tdw,NoFixtures,fixtures) \
 	{\
-		(TestImplement*)&TestCallerImplement,\
+		(TestImplement*)&TestFixtureImplement,\
 		nm,\
 		sup,\
 		tdw,\

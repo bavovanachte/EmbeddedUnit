@@ -55,22 +55,22 @@
 #define EMB_UNIT_ADD_TESTREF(testref) \
 				(Test*)	testref
 
-/** Set up a testcaller
+/** Set up a testfixture
  *
- * Create a testcaller that is executes a list of testcases. Before every testcase,
+ * Create a testfixture that executes a list of testcases. Before every testcase,
  * the given setup() function is called. After every testcase, the given teardown()
  * function is called.
- * @param caller Name of the testcaller object (should be a C-identifier)
- * @param name String identifier of the testcaller
+ * @param fixture Name of the testfixture object (should be a C-identifier)
+ * @param name String identifier of the testfixture
  * @param sup Setup function to be called before every testcase
  * @param tdw Tear down function to be called after every testcase
- * @param fixtures List of TestFixture instances
+ * @param functions List of TestFunction instances
  */
-#define EMB_UNIT_TESTCALLER(caller,name,sup,tdw,fixtures) \
-	static const TestCaller caller = new_TestCaller(#name,sup,tdw,sizeof(fixtures)/sizeof(fixtures[0]),fixtures)
+#define EMB_UNIT_TESTFIXTURE(fixture,name,sup,tdw,functions) \
+	static const TestFixture fixture = new_TestFixture(#name,sup,tdw,sizeof(functions)/sizeof(functions[0]),functions)
 
-#define EMB_UNIT_TESTFIXTURES(fixtures) \
-	static const TestFixture	fixtures[] =
+#define EMB_UNIT_TESTFUNCTIONS(functions) \
+	static const TestFunction	functions[] =
 
 /** Set up a repeated test
  *

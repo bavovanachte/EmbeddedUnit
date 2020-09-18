@@ -94,18 +94,18 @@ static void testnosepfullname(void)
 
 void PersonTest_tests( void )
 {
-	EMB_UNIT_TESTFIXTURES(fixtures) {
-		new_TestFixture("testfullname",testfullname),
-		new_TestFixture("testfirstname",testfirstname),
-		new_TestFixture("testlastname",testlastname),
-		new_TestFixture("testsetfullname",testsetfullname),
-		new_TestFixture("testsetfirstname",testsetfirstname),
-		new_TestFixture("testsetlastname",testsetlastname),
-		new_TestFixture("testnullcharfullname",testnullcharfullname),
-		new_TestFixture("testnullpointerfullname",testnullpointerfullname),
-		new_TestFixture("testnosepfullname",testnosepfullname),
+	EMB_UNIT_TESTFUNCTIONS(fixtures) {
+		new_TestFunction("testfullname",testfullname),
+		new_TestFunction("testfirstname",testfirstname),
+		new_TestFunction("testlastname",testlastname),
+		new_TestFunction("testsetfullname",testsetfullname),
+		new_TestFunction("testsetfirstname",testsetfirstname),
+		new_TestFunction("testsetlastname",testsetlastname),
+		new_TestFunction("testnullcharfullname",testnullcharfullname),
+		new_TestFunction("testnullpointerfullname",testnullpointerfullname),
+		new_TestFunction("testnosepfullname",testnosepfullname),
 	};
-	EMB_UNIT_TESTCALLER(test,"PersonTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTFIXTURE(test,"PersonTest",setUp,tearDown,fixtures);
 
 	EMB_UNIT_RUN(test);
 }

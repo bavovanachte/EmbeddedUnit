@@ -78,20 +78,20 @@ int main(int argc, char* argv[]) {
 /*  fprintf(file, "TestRef %s_tests(void)\n" */ /* Changed to over come memory violations in OpenTv environment */
   fprintf(file, "TestRef %s_tests( TestCaller *test )\n"
   				"{\n"
- 			 	"	EMB_UNIT_TESTFIXTURES(fixtures) {\n"
+ 			 	"	EMB_UNIT_TESTFUNCTIONS(fixtures) {\n"
                 ,group
   );
 
   fprintf(file, "	/*embunit:fixtures=+ */\n");
   for ( i = 0; i < strvec_size(cases); ++i ) {
-  fprintf(file,	"		new_TestFixture(\x22%s\x22,%s),\n"
+  fprintf(file,	"		new_TestFunction(\x22%s\x22,%s),\n"
                   ,strvec_get(cases, i), strvec_get(cases, i)
   );
   }
   fprintf(file, "	/*embunit:fixtures=- */\n");
 
   fprintf(file,	"	};\n"
-				"	EMB_UNIT_TESTCALLER(test,\x22%s\x22,setUp,tearDown,fixtures);\n" /* "	EMB_UNIT_TESTCALLER(%s,\x22%s\x22,setUp,tearDown,fixtures);\n"*/ /* Changed to over come memory violations in OpenTv environment */
+				"	EMB_UNIT_TESTFIXTURE(test,\x22%s\x22,setUp,tearDown,fixtures);\n" /* "	EMB_UNIT_TESTFIXTURE(%s,\x22%s\x22,setUp,tearDown,fixtures);\n"*/ /* Changed to over come memory violations in OpenTv environment */
 				"	return (TestRef)test;\n" /*"	return (TestRef)&%s;\n" */ /* Changed to over come memory violations in OpenTv environment */
 				"};\n"
 				,group,group,group

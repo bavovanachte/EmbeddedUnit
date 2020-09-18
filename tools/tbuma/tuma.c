@@ -84,7 +84,7 @@ int main(int argc, char* argv[]) {
 
   for ( i = 0; i < strvec_size(cases); ++i ) {
     const char* name = strvec_get(cases,i);
-    sprintf(line,"		new_TestFixture(\x22%s\x22,%s),\n", name, name);
+    sprintf(line,"		new_TestFunction(\x22%s\x22,%s),\n", name, name);
     strvec_insert_before(target, suite_pos++, line);
   }
 

@@ -445,27 +445,27 @@ static void testASSERT(void)
 
 void assertTest_tests(void)
 {
-	EMB_UNIT_TESTFIXTURES(fixtures) {
-		new_TestFixture("testASSERT_EQUAL_STRING",testASSERT_EQUAL_STRING),
-		new_TestFixture("testASSERT_EQUAL_INT",testASSERT_EQUAL_INT),
-		new_TestFixture("testASSERT_EQUAL_INT_WITH_MARGIN",testASSERT_EQUAL_INT_WITH_MARGIN),
-		new_TestFixture("testASSERT_NOT_LOWER_THAN_INT",testASSERT_NOT_LOWER_THAN_INT),
-		new_TestFixture("testASSERT_NOT_HIGHER_THAN_INT",testASSERT_NOT_HIGHER_THAN_INT),
-		new_TestFixture("testASSERT_RANGE_INT",testASSERT_RANGE_INT),
-		new_TestFixture("testASSERT_EQUAL_HEX",testASSERT_EQUAL_HEX),
-		new_TestFixture("testASSERT_EQUAL_UINT",testASSERT_EQUAL_UINT),
-		new_TestFixture("testASSERT_EQUAL_UINT_WITH_MARGIN",testASSERT_EQUAL_UINT_WITH_MARGIN),
-		new_TestFixture("testASSERT_NOT_LOWER_THAN_UINT",testASSERT_NOT_LOWER_THAN_INT),
-		new_TestFixture("testASSERT_NOT_HIGHER_THAN_UINT",testASSERT_NOT_HIGHER_THAN_INT),
-		new_TestFixture("testASSERT_RANGE_UINT",testASSERT_RANGE_INT),
-		new_TestFixture("testASSERT_NULL",testASSERT_NULL),
-		new_TestFixture("testASSERT_EQUAL_PTR",testASSERT_EQUAL_PTR),
-		new_TestFixture("testASSERT_EQUAL_MEMORY",testASSERT_EQUAL_MEMORY),
-		new_TestFixture("testASSERT_NOT_NULL",testASSERT_NOT_NULL),
-		new_TestFixture("testASSERT_MESSAGE",testASSERT_MESSAGE),
-		new_TestFixture("testASSERT",testASSERT),
+	EMB_UNIT_TESTFUNCTIONS(fixtures) {
+		new_TestFunction("testASSERT_EQUAL_STRING",testASSERT_EQUAL_STRING),
+		new_TestFunction("testASSERT_EQUAL_INT",testASSERT_EQUAL_INT),
+		new_TestFunction("testASSERT_EQUAL_INT_WITH_MARGIN",testASSERT_EQUAL_INT_WITH_MARGIN),
+		new_TestFunction("testASSERT_NOT_LOWER_THAN_INT",testASSERT_NOT_LOWER_THAN_INT),
+		new_TestFunction("testASSERT_NOT_HIGHER_THAN_INT",testASSERT_NOT_HIGHER_THAN_INT),
+		new_TestFunction("testASSERT_RANGE_INT",testASSERT_RANGE_INT),
+		new_TestFunction("testASSERT_EQUAL_HEX",testASSERT_EQUAL_HEX),
+		new_TestFunction("testASSERT_EQUAL_UINT",testASSERT_EQUAL_UINT),
+		new_TestFunction("testASSERT_EQUAL_UINT_WITH_MARGIN",testASSERT_EQUAL_UINT_WITH_MARGIN),
+		new_TestFunction("testASSERT_NOT_LOWER_THAN_UINT",testASSERT_NOT_LOWER_THAN_INT),
+		new_TestFunction("testASSERT_NOT_HIGHER_THAN_UINT",testASSERT_NOT_HIGHER_THAN_INT),
+		new_TestFunction("testASSERT_RANGE_UINT",testASSERT_RANGE_INT),
+		new_TestFunction("testASSERT_NULL",testASSERT_NULL),
+		new_TestFunction("testASSERT_EQUAL_PTR",testASSERT_EQUAL_PTR),
+		new_TestFunction("testASSERT_EQUAL_MEMORY",testASSERT_EQUAL_MEMORY),
+		new_TestFunction("testASSERT_NOT_NULL",testASSERT_NOT_NULL),
+		new_TestFunction("testASSERT_MESSAGE",testASSERT_MESSAGE),
+		new_TestFunction("testASSERT",testASSERT),
 	};
 
-	EMB_UNIT_TESTCALLER(test,"AssertTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTFIXTURE(test,"AssertTest",setUp,tearDown,fixtures);
 	EMB_UNIT_RUN(test);
 }

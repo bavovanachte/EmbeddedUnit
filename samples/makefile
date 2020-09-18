@@ -3,7 +3,7 @@ CFLAGS = -O
 LIBS = ../lib
 RM = rm
 TARGET = samples
-OBJS = AllTests.o counter.o counterTest.o person.o personTest.o
+OBJS = AllTests.o counter.o testSuiteSample.o testFixtureSample.o repeatTestSample.o person.o personTest.o
 
 all: $(TARGET)
 

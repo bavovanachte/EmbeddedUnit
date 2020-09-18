@@ -88,15 +88,15 @@ static void testitoa(void)
 
 void stdImplTest_tests( void )
 {
-	EMB_UNIT_TESTFIXTURES(fixtures) {
-		new_TestFixture("teststrcpy",teststrcpy),
-		new_TestFixture("teststrcat",teststrcat),
-		new_TestFixture("teststrncat",teststrncat),
-		new_TestFixture("teststrlen",teststrlen),
-		new_TestFixture("teststrcmp",teststrcmp),
-		new_TestFixture("testitoa",testitoa),
+	EMB_UNIT_TESTFUNCTIONS(fixtures) {
+		new_TestFunction("teststrcpy",teststrcpy),
+		new_TestFunction("teststrcat",teststrcat),
+		new_TestFunction("teststrncat",teststrncat),
+		new_TestFunction("teststrlen",teststrlen),
+		new_TestFunction("teststrcmp",teststrcmp),
+		new_TestFunction("testitoa",testitoa),
 	};
-	EMB_UNIT_TESTCALLER(test,"stdImplTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTFIXTURE(test,"stdImplTest",setUp,tearDown,fixtures);
 
 	EMB_UNIT_RUN(test);
 }

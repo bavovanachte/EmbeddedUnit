@@ -11,55 +11,55 @@ static void tearDown(void)
 static void testOneFixture(void)
 {
 	TestFixture	testFixtures[] = {
-		new_TestFixture(NULL,NULL),
+		new_TestFunction(NULL,NULL),
 	};
 
-	TestCaller caller = new_TestCaller(NULL,NULL,NULL,1,testFixtures);
+	TestFixture fixture = new_TestFixture(NULL,NULL,NULL,1,testFixtures);
 	TestResult result = new_TestResult(NULL);
 
-	caller.isa->run(&caller,&result);
+	fixture.isa->run(&fixture,&result);
 
 	TEST_ASSERT_EQUAL_INT(1, result.runCount);
-	TEST_ASSERT_EQUAL_INT(1, caller.isa->countTestCases(&caller));
+	TEST_ASSERT_EQUAL_INT(1, fixture.isa->countTestCases(&fixture));
 }
 
 static void testMoreThanOne(void)
 {
 	TestFixture	fixtures[] = {
-		new_TestFixture(NULL,NULL),
-		new_TestFixture(NULL,NULL),
-		new_TestFixture(NULL,NULL),
-		new_TestFixture(NULL,NULL),
-		new_TestFixture(NULL,NULL),
+		new_TestFunction(NULL,NULL),
+		new_TestFunction(NULL,NULL),
+		new_TestFunction(NULL,NULL),
+		new_TestFunction(NULL,NULL),
+		new_TestFunction(NULL,NULL),
 	};
 
-	TestCaller caller =  new_TestCaller(NULL,NULL,NULL,5,fixtures);
+	TestFixture fixture =  new_TestFixture(NULL,NULL,NULL,5,fixtures);
 	TestResult result = new_TestResult(NULL);
 
-	caller.isa->run(&caller,&result);
+	fixture.isa->run(&fixture,&result);
 
 	TEST_ASSERT_EQUAL_INT(5, result.runCount);
-	TEST_ASSERT_EQUAL_INT(5, caller.isa->countTestCases(&caller));
+	TEST_ASSERT_EQUAL_INT(5, fixture.isa->countTestCases(&fixture));
 }
 
 static void testZeroFixture(void)
 {
-	TestCaller caller = new_TestCaller(NULL,NULL,NULL,0,NULL);
+	TestFixture fixture = new_TestFixture(NULL,NULL,NULL,0,NULL);
 	TestResult result = new_TestResult(NULL);
 
-	caller.isa->run(&caller,&result);
+	fixture.isa->run(&fixture,&result);
 
 	TEST_ASSERT_EQUAL_INT(0, result.runCount);
-	TEST_ASSERT_EQUAL_INT(0, caller.isa->countTestCases(&caller));
+	TEST_ASSERT_EQUAL_INT(0, fixture.isa->countTestCases(&fixture));
 }
 
-void TestCallerTest_tests( void )
+void TestFixtureTest_tests( void )
 {
-	EMB_UNIT_TESTFIXTURES(fixtures) {
-		new_TestFixture("testOneFixture",testOneFixture),
-		new_TestFixture("testMoreThanOne",testMoreThanOne),
-		new_TestFixture("testZeroFixture",testZeroFixture),
+	EMB_UNIT_TESTFUNCTIONS(fixtures) {
+		new_TestFunction("testOneFixture",testOneFixture),
+		new_TestFunction("testMoreThanOne",testMoreThanOne),
+		new_TestFunction("testZeroFixture",testZeroFixture),
 	};
-	EMB_UNIT_TESTCALLER(test,"TestCallerTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTFIXTURE(test,"TestFixtureTest",setUp,tearDown,fixtures);
 	EMB_UNIT_RUN(test);
 }

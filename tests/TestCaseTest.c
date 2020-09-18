@@ -54,12 +54,12 @@ static void testFailure(void)
 
 void TestCaseTest_tests( void )
 {
-	EMB_UNIT_TESTFIXTURES(fixtures) {
-		new_TestFixture("testName",testName),
-		new_TestFixture("testCountTestCases",testCountTestCases),
-		new_TestFixture("testSuccess",testSuccess),
-		new_TestFixture("testFailure",testFailure),
+	EMB_UNIT_TESTFUNCTIONS(fixtures) {
+		new_TestFunction("testName",testName),
+		new_TestFunction("testCountTestCases",testCountTestCases),
+		new_TestFunction("testSuccess",testSuccess),
+		new_TestFunction("testFailure",testFailure),
 	};
-	EMB_UNIT_TESTCALLER(test,"TestCaseTest",setUp,tearDown,fixtures);
+	EMB_UNIT_TESTFIXTURE(test,"TestCaseTest",setUp,tearDown,fixtures);
 	EMB_UNIT_RUN(test);
 }
